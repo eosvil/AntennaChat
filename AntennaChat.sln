@@ -1,0 +1,233 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antenna.Model", "Antenna.Model\Antenna.Model.csproj", "{3D5913F7-1120-471B-ADF3-229295480A88}"
+	ProjectSection(ProjectDependencies) = postProject
+		{804D5203-6578-4E5E-A5FB-86801C15F34B} = {804D5203-6578-4E5E-A5FB-86801C15F34B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antenna.Framework", "Antenna.Framework\Antenna.Framework.csproj", "{FAF11005-E7EE-4449-9902-50DB1C2250A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShareDLL", "ShareDLL", "{64315FDA-63CD-4458-A615-A09CA7FBFB76}"
+	ProjectSection(SolutionItems) = preProject
+		ShareDLL\CaptureImageTool.dll = ShareDLL\CaptureImageTool.dll
+		ShareDLL\cef.pak = ShareDLL\cef.pak
+		ShareDLL\cef_100_percent.pak = ShareDLL\cef_100_percent.pak
+		ShareDLL\cef_200_percent.pak = ShareDLL\cef_200_percent.pak
+		ShareDLL\cef_extensions.pak = ShareDLL\cef_extensions.pak
+		ShareDLL\CefSharp.BrowserSubprocess.Core.dll = ShareDLL\CefSharp.BrowserSubprocess.Core.dll
+		ShareDLL\CefSharp.BrowserSubprocess.exe = ShareDLL\CefSharp.BrowserSubprocess.exe
+		ShareDLL\CefSharp.Core.dll = ShareDLL\CefSharp.Core.dll
+		ShareDLL\CefSharp.Core.xml = ShareDLL\CefSharp.Core.xml
+		ShareDLL\CefSharp.dll = ShareDLL\CefSharp.dll
+		ShareDLL\CefSharp.Wpf.dll = ShareDLL\CefSharp.Wpf.dll
+		ShareDLL\CefSharp.Wpf.XML = ShareDLL\CefSharp.Wpf.XML
+		ShareDLL\CefSharp.XML = ShareDLL\CefSharp.XML
+		ShareDLL\ChnCharInfo.dll = ShareDLL\ChnCharInfo.dll
+		ShareDLL\d3dcompiler_43.dll = ShareDLL\d3dcompiler_43.dll
+		ShareDLL\d3dcompiler_47.dll = ShareDLL\d3dcompiler_47.dll
+		ShareDLL\devtools_resources.pak = ShareDLL\devtools_resources.pak
+		ShareDLL\icudtl.dat = ShareDLL\icudtl.dat
+		ShareDLL\Istrib.Sound.dll = ShareDLL\Istrib.Sound.dll
+		ShareDLL\Istrib.Sound.Mp3.dll = ShareDLL\Istrib.Sound.Mp3.dll
+		ShareDLL\lame_enc.dll = ShareDLL\lame_enc.dll
+		ShareDLL\libcef.dll = ShareDLL\libcef.dll
+		ShareDLL\libEGL.dll = ShareDLL\libEGL.dll
+		ShareDLL\libGLESv2.dll = ShareDLL\libGLESv2.dll
+		ShareDLL\log4net.dll = ShareDLL\log4net.dll
+		ShareDLL\Microsoft.DirectX.DirectSound.dll = ShareDLL\Microsoft.DirectX.DirectSound.dll
+		ShareDLL\Microsoft.DirectX.DirectSound.xml = ShareDLL\Microsoft.DirectX.DirectSound.xml
+		ShareDLL\Microsoft.DirectX.dll = ShareDLL\Microsoft.DirectX.dll
+		ShareDLL\Microsoft.DirectX.xml = ShareDLL\Microsoft.DirectX.xml
+		ShareDLL\Microsoft.Expression.Interactions.dll = ShareDLL\Microsoft.Expression.Interactions.dll
+		ShareDLL\Microsoft.Practices.Prism.dll = ShareDLL\Microsoft.Practices.Prism.dll
+		ShareDLL\Microsoft.Windows.Shell.dll = ShareDLL\Microsoft.Windows.Shell.dll
+		ShareDLL\msvcp100.dll = ShareDLL\msvcp100.dll
+		ShareDLL\msvcp120.dll = ShareDLL\msvcp120.dll
+		ShareDLL\msvcr100.dll = ShareDLL\msvcr100.dll
+		ShareDLL\msvcr120.dll = ShareDLL\msvcr120.dll
+		ShareDLL\natives_blob.bin = ShareDLL\natives_blob.bin
+		ShareDLL\NAudio.dll = ShareDLL\NAudio.dll
+		ShareDLL\Newtonsoft.Json.dll = ShareDLL\Newtonsoft.Json.dll
+		ShareDLL\Newtonsoft.Json.xml = ShareDLL\Newtonsoft.Json.xml
+		ShareDLL\nim.dll = ShareDLL\nim.dll
+		ShareDLL\nim_audio.dll = ShareDLL\nim_audio.dll
+		ShareDLL\nim_audio_hook.dll = ShareDLL\nim_audio_hook.dll
+		ShareDLL\nim_tools_http.dll = ShareDLL\nim_tools_http.dll
+		ShareDLL\NimAudio.dll = ShareDLL\NimAudio.dll
+		ShareDLL\NimCore.dll = ShareDLL\NimCore.dll
+		ShareDLL\NimUtility.dll = ShareDLL\NimUtility.dll
+		ShareDLL\nrtc.dll = ShareDLL\nrtc.dll
+		ShareDLL\nrtc_audio_process.dll = ShareDLL\nrtc_audio_process.dll
+		ShareDLL\OpenNETCF.Extensions.dll = ShareDLL\OpenNETCF.Extensions.dll
+		ShareDLL\snapshot_blob.bin = ShareDLL\snapshot_blob.bin
+		ShareDLL\System.Data.SQLite.dll = ShareDLL\System.Data.SQLite.dll
+		ShareDLL\System.Windows.Interactivity.dll = ShareDLL\System.Windows.Interactivity.dll
+		ShareDLL\System.Windows.Interactivity.xml = ShareDLL\System.Windows.Interactivity.xml
+		ShareDLL\WFdExtend.dll = ShareDLL\WFdExtend.dll
+		ShareDLL\widevinecdmadapter.dll = ShareDLL\widevinecdmadapter.dll
+		ShareDLL\yeti.mmedia.dll = ShareDLL\yeti.mmedia.dll
+		ShareDLL\yeti.mp3.dll = ShareDLL\yeti.mp3.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntennaChat", "AntennaChat\AntennaChat.csproj", "{52A2081B-6D47-43CA-BD76-58BD32B64D8D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{804D5203-6578-4E5E-A5FB-86801C15F34B} = {804D5203-6578-4E5E-A5FB-86801C15F34B}
+		{2209799F-5B06-449F-86FF-0807DECF9289} = {2209799F-5B06-449F-86FF-0807DECF9289}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antenna.MQTT", "Antenna.MQTT\Antenna.MQTT.csproj", "{2209799F-5B06-449F-86FF-0807DECF9289}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoUpdate", "AutoUpdate\AutoUpdate.csproj", "{86B46B31-E606-460C-95F3-6B811B3BA8FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "locales", "locales", "{2AF31F08-44AC-4FCB-A106-F3A36194BB33}"
+	ProjectSection(SolutionItems) = preProject
+		ShareDLL\locales\am.pak = ShareDLL\locales\am.pak
+		ShareDLL\locales\ar.pak = ShareDLL\locales\ar.pak
+		ShareDLL\locales\bg.pak = ShareDLL\locales\bg.pak
+		ShareDLL\locales\bn.pak = ShareDLL\locales\bn.pak
+		ShareDLL\locales\ca.pak = ShareDLL\locales\ca.pak
+		ShareDLL\locales\cs.pak = ShareDLL\locales\cs.pak
+		ShareDLL\locales\da.pak = ShareDLL\locales\da.pak
+		ShareDLL\locales\de.pak = ShareDLL\locales\de.pak
+		ShareDLL\locales\el.pak = ShareDLL\locales\el.pak
+		ShareDLL\locales\en-GB.pak = ShareDLL\locales\en-GB.pak
+		ShareDLL\locales\en-US.pak = ShareDLL\locales\en-US.pak
+		ShareDLL\locales\es-419.pak = ShareDLL\locales\es-419.pak
+		ShareDLL\locales\es.pak = ShareDLL\locales\es.pak
+		ShareDLL\locales\et.pak = ShareDLL\locales\et.pak
+		ShareDLL\locales\fa.pak = ShareDLL\locales\fa.pak
+		ShareDLL\locales\fi.pak = ShareDLL\locales\fi.pak
+		ShareDLL\locales\fil.pak = ShareDLL\locales\fil.pak
+		ShareDLL\locales\fr.pak = ShareDLL\locales\fr.pak
+		ShareDLL\locales\gu.pak = ShareDLL\locales\gu.pak
+		ShareDLL\locales\he.pak = ShareDLL\locales\he.pak
+		ShareDLL\locales\hi.pak = ShareDLL\locales\hi.pak
+		ShareDLL\locales\hr.pak = ShareDLL\locales\hr.pak
+		ShareDLL\locales\hu.pak = ShareDLL\locales\hu.pak
+		ShareDLL\locales\id.pak = ShareDLL\locales\id.pak
+		ShareDLL\locales\it.pak = ShareDLL\locales\it.pak
+		ShareDLL\locales\ja.pak = ShareDLL\locales\ja.pak
+		ShareDLL\locales\kn.pak = ShareDLL\locales\kn.pak
+		ShareDLL\locales\ko.pak = ShareDLL\locales\ko.pak
+		ShareDLL\locales\lt.pak = ShareDLL\locales\lt.pak
+		ShareDLL\locales\lv.pak = ShareDLL\locales\lv.pak
+		ShareDLL\locales\ml.pak = ShareDLL\locales\ml.pak
+		ShareDLL\locales\mr.pak = ShareDLL\locales\mr.pak
+		ShareDLL\locales\ms.pak = ShareDLL\locales\ms.pak
+		ShareDLL\locales\nb.pak = ShareDLL\locales\nb.pak
+		ShareDLL\locales\nl.pak = ShareDLL\locales\nl.pak
+		ShareDLL\locales\pl.pak = ShareDLL\locales\pl.pak
+		ShareDLL\locales\pt-BR.pak = ShareDLL\locales\pt-BR.pak
+		ShareDLL\locales\pt-PT.pak = ShareDLL\locales\pt-PT.pak
+		ShareDLL\locales\ro.pak = ShareDLL\locales\ro.pak
+		ShareDLL\locales\ru.pak = ShareDLL\locales\ru.pak
+		ShareDLL\locales\sk.pak = ShareDLL\locales\sk.pak
+		ShareDLL\locales\sl.pak = ShareDLL\locales\sl.pak
+		ShareDLL\locales\sr.pak = ShareDLL\locales\sr.pak
+		ShareDLL\locales\sv.pak = ShareDLL\locales\sv.pak
+		ShareDLL\locales\sw.pak = ShareDLL\locales\sw.pak
+		ShareDLL\locales\ta.pak = ShareDLL\locales\ta.pak
+		ShareDLL\locales\te.pak = ShareDLL\locales\te.pak
+		ShareDLL\locales\th.pak = ShareDLL\locales\th.pak
+		ShareDLL\locales\tr.pak = ShareDLL\locales\tr.pak
+		ShareDLL\locales\uk.pak = ShareDLL\locales\uk.pak
+		ShareDLL\locales\vi.pak = ShareDLL\locales\vi.pak
+		ShareDLL\locales\zh-CN.pak = ShareDLL\locales\zh-CN.pak
+		ShareDLL\locales\zh-TW.pak = ShareDLL\locales\zh-TW.pak
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDK.Service", "SDK.MessageService\SDK.Service.csproj", "{1255AE05-D24A-432C-998C-0BE44AF15D93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDK.AntSdk", "SDK.AntSdk\SDK.AntSdk.csproj", "{804D5203-6578-4E5E-A5FB-86801C15F34B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1255AE05-D24A-432C-998C-0BE44AF15D93} = {1255AE05-D24A-432C-998C-0BE44AF15D93}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotifyIconWpf", "NotifyIconWpf\NotifyIconWpf.csproj", "{B354B9E3-864C-44C3-98C1-EF1BB88F33F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D5913F7-1120-471B-ADF3-229295480A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D5913F7-1120-471B-ADF3-229295480A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D5913F7-1120-471B-ADF3-229295480A88}.Debug|x86.ActiveCfg = Debug|x86
+		{3D5913F7-1120-471B-ADF3-229295480A88}.Debug|x86.Build.0 = Debug|x86
+		{3D5913F7-1120-471B-ADF3-229295480A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D5913F7-1120-471B-ADF3-229295480A88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D5913F7-1120-471B-ADF3-229295480A88}.Release|x86.ActiveCfg = Release|x86
+		{3D5913F7-1120-471B-ADF3-229295480A88}.Release|x86.Build.0 = Release|x86
+		{FAF11005-E7EE-4449-9902-50DB1C2250A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF11005-E7EE-4449-9902-50DB1C2250A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF11005-E7EE-4449-9902-50DB1C2250A3}.Debug|x86.ActiveCfg = Debug|x86
+		{FAF11005-E7EE-4449-9902-50DB1C2250A3}.Debug|x86.Build.0 = Debug|x86
+		{FAF11005-E7EE-4449-9902-50DB1C2250A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF11005-E7EE-4449-9902-50DB1C2250A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAF11005-E7EE-4449-9902-50DB1C2250A3}.Release|x86.ActiveCfg = Release|x86
+		{FAF11005-E7EE-4449-9902-50DB1C2250A3}.Release|x86.Build.0 = Release|x86
+		{52A2081B-6D47-43CA-BD76-58BD32B64D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A2081B-6D47-43CA-BD76-58BD32B64D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A2081B-6D47-43CA-BD76-58BD32B64D8D}.Debug|x86.ActiveCfg = Debug|x86
+		{52A2081B-6D47-43CA-BD76-58BD32B64D8D}.Debug|x86.Build.0 = Debug|x86
+		{52A2081B-6D47-43CA-BD76-58BD32B64D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A2081B-6D47-43CA-BD76-58BD32B64D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52A2081B-6D47-43CA-BD76-58BD32B64D8D}.Release|x86.ActiveCfg = Release|x86
+		{52A2081B-6D47-43CA-BD76-58BD32B64D8D}.Release|x86.Build.0 = Release|x86
+		{2209799F-5B06-449F-86FF-0807DECF9289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2209799F-5B06-449F-86FF-0807DECF9289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2209799F-5B06-449F-86FF-0807DECF9289}.Debug|x86.ActiveCfg = Debug|x86
+		{2209799F-5B06-449F-86FF-0807DECF9289}.Debug|x86.Build.0 = Debug|x86
+		{2209799F-5B06-449F-86FF-0807DECF9289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2209799F-5B06-449F-86FF-0807DECF9289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2209799F-5B06-449F-86FF-0807DECF9289}.Release|x86.ActiveCfg = Release|x86
+		{2209799F-5B06-449F-86FF-0807DECF9289}.Release|x86.Build.0 = Release|x86
+		{86B46B31-E606-460C-95F3-6B811B3BA8FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86B46B31-E606-460C-95F3-6B811B3BA8FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86B46B31-E606-460C-95F3-6B811B3BA8FE}.Debug|x86.ActiveCfg = Debug|x86
+		{86B46B31-E606-460C-95F3-6B811B3BA8FE}.Debug|x86.Build.0 = Debug|x86
+		{86B46B31-E606-460C-95F3-6B811B3BA8FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86B46B31-E606-460C-95F3-6B811B3BA8FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86B46B31-E606-460C-95F3-6B811B3BA8FE}.Release|x86.ActiveCfg = Release|x86
+		{86B46B31-E606-460C-95F3-6B811B3BA8FE}.Release|x86.Build.0 = Release|x86
+		{1255AE05-D24A-432C-998C-0BE44AF15D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1255AE05-D24A-432C-998C-0BE44AF15D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1255AE05-D24A-432C-998C-0BE44AF15D93}.Debug|x86.ActiveCfg = Debug|x86
+		{1255AE05-D24A-432C-998C-0BE44AF15D93}.Debug|x86.Build.0 = Debug|x86
+		{1255AE05-D24A-432C-998C-0BE44AF15D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1255AE05-D24A-432C-998C-0BE44AF15D93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1255AE05-D24A-432C-998C-0BE44AF15D93}.Release|x86.ActiveCfg = Release|x86
+		{1255AE05-D24A-432C-998C-0BE44AF15D93}.Release|x86.Build.0 = Release|x86
+		{804D5203-6578-4E5E-A5FB-86801C15F34B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804D5203-6578-4E5E-A5FB-86801C15F34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804D5203-6578-4E5E-A5FB-86801C15F34B}.Debug|x86.ActiveCfg = Debug|x86
+		{804D5203-6578-4E5E-A5FB-86801C15F34B}.Debug|x86.Build.0 = Debug|x86
+		{804D5203-6578-4E5E-A5FB-86801C15F34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804D5203-6578-4E5E-A5FB-86801C15F34B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{804D5203-6578-4E5E-A5FB-86801C15F34B}.Release|x86.ActiveCfg = Release|Any CPU
+		{804D5203-6578-4E5E-A5FB-86801C15F34B}.Release|x86.Build.0 = Release|Any CPU
+		{B354B9E3-864C-44C3-98C1-EF1BB88F33F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B354B9E3-864C-44C3-98C1-EF1BB88F33F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B354B9E3-864C-44C3-98C1-EF1BB88F33F3}.Debug|x86.ActiveCfg = Debug|x86
+		{B354B9E3-864C-44C3-98C1-EF1BB88F33F3}.Debug|x86.Build.0 = Debug|x86
+		{B354B9E3-864C-44C3-98C1-EF1BB88F33F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B354B9E3-864C-44C3-98C1-EF1BB88F33F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B354B9E3-864C-44C3-98C1-EF1BB88F33F3}.Release|x86.ActiveCfg = Release|Any CPU
+		{B354B9E3-864C-44C3-98C1-EF1BB88F33F3}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2AF31F08-44AC-4FCB-A106-F3A36194BB33} = {64315FDA-63CD-4458-A615-A09CA7FBFB76}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3311FBEB-BE19-49AE-AEC8-BE2D1A009EB0}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+﻿<Window x:Class="AntennaChat.Views.VerifyResultView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AntennaChat.Views"
+        mc:Ignorable="d"
+        Title="VerifyResultView" Height="34" Width="100"   WindowStyle="None" ResizeMode="CanMinimize"  AllowDrop="True" ShowInTaskbar="False">
+    <Grid Background="Transparent" Width="100">
+        <Border Background="#474747" BorderThickness="0" BorderBrush="#474747" CornerRadius="2" Width="100" >
+            <TextBlock Text="签到成功" FontSize="14" Foreground="#CDCED0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+    </Grid>
+</Window>

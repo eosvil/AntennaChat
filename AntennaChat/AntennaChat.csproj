@@ -1,0 +1,1354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52A2081B-6D47-43CA-BD76-58BD32B64D8D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AntennaChat</RootNamespace>
+    <AssemblyName>AntennaChat</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\七讯.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CaptureImageTool">
+      <HintPath>..\ShareDLL\CaptureImageTool.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp">
+      <HintPath>..\ShareDLL\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.BrowserSubprocess">
+      <HintPath>..\ShareDLL\CefSharp.BrowserSubprocess.exe</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.BrowserSubprocess.Core">
+      <HintPath>..\ShareDLL\CefSharp.BrowserSubprocess.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core">
+      <HintPath>..\ShareDLL\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Wpf">
+      <HintPath>..\ShareDLL\CefSharp.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ShareDLL\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism">
+      <HintPath>..\ShareDLL\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Shell">
+      <HintPath>..\ShareDLL\Microsoft.Windows.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ShareDLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NimAudio, Version=2.7.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ShareDLL\NimAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NimCore, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ShareDLL\NimCore.dll</HintPath>
+    </Reference>
+    <Reference Include="NimUtility, Version=2.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ShareDLL\NimUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ShareDLL\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WFdExtend, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ShareDLL\WFdExtend.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CefSealedHelper\MultiFileUpload.cs" />
+    <Compile Include="CefSealedHelper\OneAndGroupCommon\PictureAndTextMixMethod.cs" />
+    <Compile Include="CefSealedHelper\OneToGroup\Activity\GroupActivity.cs" />
+    <Compile Include="CefSealedHelper\OneToGroup\PictureAndTextMix\GroupSendPicAndText.cs" />
+    <Compile Include="CefSealedHelper\OneToGroup\Vote\GroupVote.cs" />
+    <Compile Include="CefSealedHelper\OneToOne\PictureAndTextMix\OneRightSendPicAndText.cs" />
+    <Compile Include="Command\DefaultCommand.cs" />
+    <Compile Include="Helper\GetInternetConStatus.cs" />
+    <Compile Include="Helper\IHelper\IMessageHelper.cs" />
+    <Compile Include="Helper\IHelper\IWindowHelper.cs" />
+    <Compile Include="Helper\MessageHelper.cs" />
+    <Compile Include="Helper\MessageMonitor.cs" />
+    <Compile Include="Helper\PublicMessageFunction.cs" />
+    <Compile Include="Helper\SessionMonitor.cs" />
+    <Compile Include="Helper\WindowHelper.cs" />
+    <Compile Include="Helper\WindowMonitor.cs" />
+    <Compile Include="OnceSendMessage\GroupToGroup.cs" />
+    <Compile Include="OnceSendMessage\OneToOne.cs" />
+    <Compile Include="RegexHelper\RegexHelper.cs" />
+    <Compile Include="Resource\AntennaChatHtmlFilter.cs" />
+    <Compile Include="Resource\ClipBoardMethod.cs" />
+    <Compile Include="Resource\CommonMethods.cs" />
+    <Compile Include="Resource\FileHelper.cs" />
+    <Compile Include="Resource\GifImage.cs" />
+    <Compile Include="Resource\MsgEditAssistant.cs" />
+    <Compile Include="Resource\Converter.cs" />
+    <Compile Include="Resource\PreviewKeyDownBehavior.cs" />
+    <Compile Include="Resource\FocusBehavior.cs" />
+    <Compile Include="Resource\NotifyIconControl.cs" />
+    <Compile Include="Resource\RequiredValidationRule.cs" />
+    <Compile Include="Resource\RichTextBoxEx.cs" />
+    <Compile Include="Resource\ValidCode.cs" />
+    <Compile Include="Resource\WatermarkTextBehavior.cs" />
+    <Compile Include="ViewModel\Activity\ActivityDetailsViewModel.cs" />
+    <Compile Include="ViewModel\AudioVideo\AudioChatViewModel.cs" />
+    <Compile Include="ViewModel\Activity\ActivityListViewModel.cs" />
+    <Compile Include="ViewModel\Activity\ReleaseActivityViewModel.cs" />
+    <Compile Include="ViewModel\AudioVideo\RequestViewModel.cs" />
+    <Compile Include="ViewModel\CheckIn\CheckInListViewModel.cs" />
+    <Compile Include="ViewModel\CheckIn\CheckInVerifyViewModel.cs" />
+    <Compile Include="ViewModel\Contacts\GroupPublicFunction.cs" />
+    <Compile Include="ViewModel\Contacts\MultiContactsSelectViewModel.cs" />
+    <Compile Include="ViewModel\Contacts\MassMsgSentViewModel.cs" />
+    <Compile Include="ViewModel\Contacts\SqliteQueneHelper.cs" />
+    <Compile Include="ViewModel\Contacts\StructureDetailsViewModel.cs" />
+    <Compile Include="ViewModel\Contacts\UserInfoViewModel.cs" />
+    <Compile Include="ViewModel\Contacts\Win_UserInfoViewModel.cs" />
+    <Compile Include="ViewModel\Contacts\GroupEditWindowViewModel.cs" />
+    <Compile Include="ViewModel\Contacts\GroupInfoViewModel.cs" />
+    <Compile Include="ViewModel\FileUpload\FileMutiUploadViewModel.cs" />
+    <Compile Include="ViewModel\FileUpload\fileShowImage.cs" />
+    <Compile Include="ViewModel\FileUpload\FileUserControlViewModel.cs" />
+    <Compile Include="ViewModel\ImageAttached.cs" />
+    <Compile Include="ViewModel\ImageHandle.cs" />
+    <Compile Include="ViewModel\Menu\MenuViewModel.cs" />
+    <Compile Include="ViewModel\Notice\AttachControlViewModel.cs" />
+    <Compile Include="ViewModel\Notice\NoticeAddWindowViewModel.cs" />
+    <Compile Include="ViewModel\Notice\NoticeDetailsWindowViewModel.cs" />
+    <Compile Include="ViewModel\Notice\NoticeNoWindowViewModel.cs" />
+    <Compile Include="ViewModel\Notice\NoticeReadViewModel.cs" />
+    <Compile Include="ViewModel\Notice\NoticeWindowListsViewModel.cs" />
+    <Compile Include="ViewModel\Notice\statusConverter.cs" />
+    <Compile Include="ViewModel\Setting\ChangeKeyViewModel.cs" />
+    <Compile Include="ViewModel\Setting\ChangePasswordViewModel.cs" />
+    <Compile Include="ViewModel\Talk\AfterReadBrunViewModel.cs" />
+    <Compile Include="ViewModel\Talk\AudioChat.cs" />
+    <Compile Include="ViewModel\Talk\BackgroundWorkers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Talk\ChromiumWebBrowsers.cs" />
+    <Compile Include="ViewModel\Talk\DispatcherTimers.cs" />
+    <Compile Include="ViewModel\Talk\GroupMemberListViewModel.cs" />
+    <Compile Include="ViewModel\Talk\GroupMemberViewModel.cs" />
+    <Compile Include="ViewModel\Talk\Images.cs" />
+    <Compile Include="ViewModel\Talk\MassMsgListViewModel.cs" />
+    <Compile Include="ViewModel\Talk\MassMsgViewModel.cs" />
+    <Compile Include="ViewModel\Talk\MediaPlayers.cs" />
+    <Compile Include="ViewModel\Talk\MenuHandler.cs" />
+    <Compile Include="ViewModel\Talk\MtpConvertMsgType.cs" />
+    <Compile Include="ViewModel\Talk\NoticeAddViewModel.cs" />
+    <Compile Include="ViewModel\Talk\PictureViewerViewModel.cs" />
+    <Compile Include="ViewModel\Talk\PublicTalkMothed.cs" />
+    <Compile Include="ViewModel\Talk\SendMsgListMonitor.cs" />
+    <Compile Include="ViewModel\Talk\SendMsgListPointMonitor.cs" />
+    <Compile Include="ViewModel\Talk\SendMsgOperate.cs" />
+    <Compile Include="ViewModel\Talk\SendMsgStateMonitor.cs" />
+    <Compile Include="ViewModel\Talk\SendOrReceiveMsgStateOperate.cs" />
+    <Compile Include="ViewModel\Talk\TalkGroupViewModel.cs" />
+    <Compile Include="ViewModel\Talk\TalkHistoryViewModel.cs" />
+    <Compile Include="ViewModel\Talk\TalkViewModel.cs" />
+    <Compile Include="ViewModel\Update\UpdateWindowViewModel.cs" />
+    <Compile Include="ViewModel\Vote\CreateVoteViewModel.cs" />
+    <Compile Include="ViewModel\Vote\VoteDetailViewModel.cs" />
+    <Compile Include="ViewModel\Vote\VoteListViewModel.cs" />
+    <Compile Include="Views\Activity\ActivityDetailsView.xaml.cs">
+      <DependentUpon>ActivityDetailsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Activity\ActivityListView.xaml.cs">
+      <DependentUpon>ActivityListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Activity\ActivityMapLocationView.xaml.cs">
+      <DependentUpon>ActivityMapLocationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Activity\ActivityMapView.xaml.cs">
+      <DependentUpon>ActivityMapView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Activity\ReleaseActivityView.xaml.cs">
+      <DependentUpon>ReleaseActivityView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Activity\WebBrowserOverlay.xaml.cs">
+      <DependentUpon>WebBrowserOverlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Activity\Win32.cs" />
+    <Compile Include="Views\AudioVideo\AudioChatView.xaml.cs">
+      <DependentUpon>AudioChatView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AudioVideo\RequestView.xaml.cs">
+      <DependentUpon>RequestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CheckIn\CheckInListView.xaml.cs">
+      <DependentUpon>CheckInListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CheckIn\CheckInVerifyResultView.xaml.cs">
+      <DependentUpon>CheckInVerifyResultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CheckIn\CheckInVerifyView.xaml.cs">
+      <DependentUpon>CheckInVerifyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CheckIn\VerifyResultView.xaml.cs">
+      <DependentUpon>VerifyResultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts\GroupInfoView.xaml.cs">
+      <DependentUpon>GroupInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts\MassMsgSentView.xaml.cs">
+      <DependentUpon>MassMsgSentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts\MultiContactsSelectView.xaml.cs">
+      <DependentUpon>MultiContactsSelectView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts\StructureDetailsView.xaml.cs">
+      <DependentUpon>StructureDetailsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts\UserInfoView.xaml.cs">
+      <DependentUpon>UserInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts\Win_UserInfoView.xaml.cs">
+      <DependentUpon>Win_UserInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Control\CompanyDetailView.xaml.cs">
+      <DependentUpon>CompanyDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Control\DepartmentDetailView.xaml.cs">
+      <DependentUpon>DepartmentDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Control\GroupDetailView.xaml.cs">
+      <DependentUpon>GroupDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Control\UserDetailView.xaml.cs">
+      <DependentUpon>UserDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FileUpload\FileMultiUpload.xaml.cs">
+      <DependentUpon>FileMultiUpload.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FileUpload\FileUserControl.xaml.cs">
+      <DependentUpon>FileUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Menu\MenuView.xaml.cs">
+      <DependentUpon>MenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MessageBoxWindow.xaml.cs">
+      <DependentUpon>MessageBoxWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\ModernProgressRing.cs" />
+    <Compile Include="Resource\PasswordBoxHelper.cs" />
+    <Compile Include="Resource\WatermarkPasswordBox.cs" />
+    <Compile Include="ViewModel\Contacts\QueryContactListViewModel.cs" />
+    <Compile Include="ViewModel\WindowBaseViewModel.cs" />
+    <Compile Include="ViewModel\Contacts\ContactInfoViewModel.cs" />
+    <Compile Include="ViewModel\Contacts\ContactListViewModel.cs" />
+    <Compile Include="ViewModel\Contacts\SessionInfoViewModel.cs" />
+    <Compile Include="ViewModel\Contacts\SessionListViewModel.cs" />
+    <Compile Include="ViewModel\Contacts\GroupListViewModel.cs" />
+    <Compile Include="ViewModel\LoginWindowViewModel.cs" />
+    <Compile Include="Resource\SJTextBox.cs" />
+    <Compile Include="Resource\WateMarkTextBox.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\PropertyNotifyObject .cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Setting\HeadImageViewModel.cs" />
+    <Compile Include="ViewModel\Setting\ProfileViewModel.cs" />
+    <Compile Include="ViewModel\Setting\Win_ProfileViewModel.cs" />
+    <Compile Include="Views\Contacts\ContactInfoView.xaml.cs">
+      <DependentUpon>ContactInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts\ContactListView.xaml.cs">
+      <DependentUpon>ContactListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts\GroupEditWindowView.xaml.cs">
+      <DependentUpon>GroupEditWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts\QueryContactListView.xaml.cs">
+      <DependentUpon>QueryContactListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts\SessionInfoView.xaml.cs">
+      <DependentUpon>SessionInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts\SessionListView.xaml.cs">
+      <DependentUpon>SessionListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts\GroupListView.xaml.cs">
+      <DependentUpon>GroupListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginWindowView.xaml.cs">
+      <DependentUpon>LoginWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindowView.xaml.cs">
+      <DependentUpon>MainWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Notice\AttachControlView.xaml.cs">
+      <DependentUpon>AttachControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Notice\NoticeAddWindow.xaml.cs">
+      <DependentUpon>NoticeAddWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Notice\NoticeCustomButton.cs" />
+    <Compile Include="Views\Notice\NoticeDetailsWindow.xaml.cs">
+      <DependentUpon>NoticeDetailsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Notice\NoticeListWindow.xaml.cs">
+      <DependentUpon>NoticeListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Notice\NoticeNoWindow.xaml.cs">
+      <DependentUpon>NoticeNoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Notice\NoticeRead.xaml.cs">
+      <DependentUpon>NoticeRead.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Setting\ChangeKey.xaml.cs">
+      <DependentUpon>ChangeKey.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Setting\ChangePasswordView.xaml.cs">
+      <DependentUpon>ChangePasswordView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Setting\HeadImageView.xaml.cs">
+      <DependentUpon>HeadImageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Setting\ImageDealer.xaml.cs">
+      <DependentUpon>ImageDealer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Setting\ImageDealerUnsafe.xaml.cs">
+      <DependentUpon>ImageDealerUnsafe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Setting\ProfileView.xaml.cs">
+      <DependentUpon>ProfileView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Setting\Win_ProfileView.xaml.cs">
+      <DependentUpon>Win_ProfileView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Talk\AfterReadBrunWindow.xaml.cs">
+      <DependentUpon>AfterReadBrunWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Talk\GroupMemberListView.xaml.cs">
+      <DependentUpon>GroupMemberListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Talk\GroupMemberView.xaml.cs">
+      <DependentUpon>GroupMemberView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Talk\MassMsgListView.xaml.cs">
+      <DependentUpon>MassMsgListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Talk\PictureViewerView.xaml.cs">
+      <DependentUpon>PictureViewerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Talk\RenderProcessMessageHandler.cs" />
+    <Compile Include="Views\Talk\TalkGroupWindowView.xaml.cs">
+      <DependentUpon>TalkGroupWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Talk\TalkHistoryView.xaml.cs">
+      <DependentUpon>TalkHistoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Talk\TalkWindowView.xaml.cs">
+      <DependentUpon>TalkWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Talk\TestBrowser.xaml.cs">
+      <DependentUpon>TestBrowser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Update\UpdateWindowView.xaml.cs">
+      <DependentUpon>UpdateWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Vote\CreateVoteView.xaml.cs">
+      <DependentUpon>CreateVoteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Vote\CustomRectangleControl.xaml.cs">
+      <DependentUpon>CustomRectangleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Vote\VoteDetailView.xaml.cs">
+      <DependentUpon>VoteDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Vote\VoteListView.xaml.cs">
+      <DependentUpon>VoteListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Vote\VoteResultView.xaml.cs">
+      <DependentUpon>VoteResultView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="Images\语音聊天-操作栏-悬停.png" />
+    <Resource Include="Images\语音聊天-操作栏-默认.png" />
+    <Resource Include="Images\groupadmin.png" />
+    <Resource Include="Images\groupowner.png" />
+    <Resource Include="Images\ant_busy.ico" />
+    <Resource Include="Images\ant_leave.ico" />
+    <Resource Include="ant_offLine.ico" />
+    <Content Include="Images\ant_offLine.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\录音-设备提示.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\未读语音提示.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\语音-右.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\语音-左.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\语音left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\语音right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\OnLineStatus\busy_max.png" />
+    <Resource Include="Images\OnLineStatus\busy_min.png" />
+    <Resource Include="Images\OnLineStatus\leave_max.png" />
+    <Resource Include="Images\OnLineStatus\leave_min.png" />
+    <Resource Include="Images\OnLineStatus\MobilePhoneOnline_max.png" />
+    <Resource Include="Images\OnLineStatus\MobilePhoneOnline_min.png" />
+    <Resource Include="Images\OnLineStatus\online_max.png" />
+    <Resource Include="Images\OnLineStatus\online_min.png" />
+    <Resource Include="Images\groupVoteIcon.png" />
+    <Resource Include="Images\groupActivityIcon.png" />
+    <Resource Include="Images\groupVoteIcon_IsMouseEnter.png" />
+    <Resource Include="Images\groupActivityIcon_IsMouseEnter.png" />
+    <Resource Include="Images\noActivityData.png" />
+    <Resource Include="Images\location.png" />
+    <Resource Include="Images\addActivityThemePic.png" />
+    <Resource Include="Images\activityDate.png" />
+    <Resource Include="Images\语音电话-操作栏-悬停.png" />
+    <Resource Include="Images\语音电话-操作栏-默认.png" />
+    <Resource Include="Images\语音电话-挂断-悬停-点击.png" />
+    <Resource Include="Images\语音电话-接听-悬停.png" />
+    <Resource Include="Images\语音电话-接听-默认.png" />
+    <Resource Include="Images\语音电话-静音-开-悬停.png" />
+    <Resource Include="Images\语音电话-静音-开-默认.png" />
+    <Resource Include="Images\语音电话-静音-悬停.png" />
+    <Resource Include="Images\语音电话-静音-默认.png" />
+    <Resource Include="Images\logoIcon\logo.png" />
+    <Resource Include="Images\logoIcon\空白页-默认图标.png" />
+    <Content Include="Images\htmlImages\语音通话-气泡-右.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\语音通话-气泡-左.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\vote70X70.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\静音-关-悬停.png" />
+    <Resource Include="Images\静音-关-默认.png" />
+    <Resource Include="Images\静音-开-悬停.png" />
+    <Resource Include="Images\静音-开-默认.png" />
+    <Resource Include="Images\右下角-语音提醒.png" />
+    <Resource Include="Images\语音电话-挂断-默认.png" />
+    <Resource Include="Images\AttendValidationFails.png" />
+    <Resource Include="Images\AttendVerificationFailed.png" />
+    <Resource Include="Images\AttendanceAssistant.png" />
+    <Content Include="Images\默认头像.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InitializeSQLite.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\ant_onLine.ico" />
+    <Content Include="Sdk.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resource\ImageResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\LineStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\NoticeAddStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Activity\ActivityDetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Activity\ActivityListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Activity\ActivityMapLocationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Activity\ActivityMapView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Activity\ReleaseActivityView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Activity\WebBrowserOverlay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AudioVideo\AudioChatView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AudioVideo\RequestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CheckIn\CheckInListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CheckIn\CheckInVerifyResultView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CheckIn\CheckInVerifyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CheckIn\VerifyResultView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts\GroupInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts\MassMsgSentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts\MultiContactsSelectView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts\StructureDetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts\UserInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts\Win_UserInfoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Control\CompanyDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Control\DepartmentDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Control\GroupDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Control\UserDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FileUpload\FileMultiUpload.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FileUpload\FileUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Menu\MenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MessageBoxWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\BaseStyleDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\ContextMenuStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\ExpanderStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\StyleDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\talkWindowStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts\ContactInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts\ContactListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts\GroupEditWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts\QueryContactListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts\SessionInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts\SessionListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts\GroupListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Notice\AttachControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Notice\NoticeAddWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Notice\NoticeDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Notice\NoticeListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Notice\NoticeNoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Notice\NoticeRead.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Setting\ChangeKey.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Setting\ChangePasswordView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Setting\HeadImageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Setting\ImageDealer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Setting\ImageDealerUnsafe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Setting\ProfileView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Setting\Win_ProfileView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Talk\AfterReadBrunWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Talk\GroupMemberListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Talk\GroupMemberView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Talk\MassMsgListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Talk\PictureViewerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Talk\TalkGroupWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Talk\TalkHistoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Talk\TalkWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Talk\TestBrowser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Update\UpdateWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Vote\CreateVoteView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Vote\CustomRectangleControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Vote\VoteDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Vote\VoteListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Vote\VoteResultView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\置顶.png" />
+    <Resource Include="Images\取消置顶.png" />
+    <Resource Include="Images\groupSearch.png" />
+    <Resource Include="Images\groupSearchSelected.png" />
+    <Content Include="BurnStates.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Resource Include="Images\groupNoticeIcon.png" />
+    <Resource Include="Images\groupNoticeIcon_IsMouseEnter.png" />
+    <Resource Include="Images\invitGroupMemberIcon.png" />
+    <Resource Include="Images\invitGroupMemberIcon_IsMouseEnter.png" />
+    <Resource Include="Images\cutImg.png" />
+    <Resource Include="Images\cutImg_IsMouseEnter.png" />
+    <Resource Include="Images\face.png" />
+    <Resource Include="Images\face_IsMouseEnter.png" />
+    <Resource Include="Images\delIncognitoModeMsg.png" />
+    <Resource Include="Images\delIncognitoModeMsg_MouseEnter.png" />
+    <Resource Include="Images\exitIncognitoMode.png" />
+    <Resource Include="Images\exitIncognitoMode_MouseEnter.png" />
+    <Resource Include="Images\incognitoMode.png" />
+    <Resource Include="Images\incognitoMode_MouseEnter.png" />
+    <Content Include="Images\burnAfterRead\阅后即焚-消息-左.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\burnAfterRead\阅后即焚-默认.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\CompanyLogo.png" />
+    <Resource Include="Images\DepartmentLogo.png" />
+    <Content Include="Images\loading.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\发送失败-session.png" />
+    <Resource Include="Images\MenuImages\关闭-悬停-点击.png" />
+    <Resource Include="Images\MenuImages\关闭-默认-右上角.png" />
+    <Resource Include="Images\MenuImages\大窗口-悬停-点击右上角.png" />
+    <Resource Include="Images\MenuImages\大窗口-默认-右上角.png" />
+    <Resource Include="Images\MenuImages\小窗口-悬停-点击-右上角.png" />
+    <Resource Include="Images\MenuImages\小窗口-默认-右上角.png" />
+    <Resource Include="Images\MenuImages\最小化-悬停-点击.png" />
+    <Resource Include="Images\MenuImages\最小化-默认-右上角.png" />
+    <Resource Include="Images\MenuImages\消息-icon-01.png" />
+    <Resource Include="Images\MenuImages\消息-icon-02.png" />
+    <Resource Include="Images\MenuImages\群组-icon--01.png" />
+    <Resource Include="Images\MenuImages\群组-icon--02.png" />
+    <Resource Include="Images\MenuImages\联系人-01.png" />
+    <Resource Include="Images\MenuImages\联系人-02.png" />
+    <Resource Include="Images\talkGroupIcon.png" />
+    <Resource Include="Images\talkGroupIcon_IsMouseEnter.png" />
+    <Resource Include="Images\selectFile.png" />
+    <Resource Include="Images\selectFile_IsMouseEnter.png" />
+    <Resource Include="Images\selectImg.png" />
+    <Resource Include="Images\selectImg_IsMouseEnter.png" />
+    <Resource Include="Images\incognitoModeState.png" />
+    <Resource Include="Images\readBurn.png" />
+    <Resource Include="Images\readBurn_IsMouseEnter.png" />
+    <Resource Include="Images\readBurnState.png" />
+    <Resource Include="Images\通知-右上角-悬停.png" />
+    <Resource Include="Images\noticedDetailsIcon.png" />
+    <Resource Include="Images\noticeAdjunctIcon.png" />
+    <Resource Include="Images\[%40].png" />
+    <Resource Include="Images\免打扰new.png" />
+    <Resource Include="Images\群公告-消息列表.png" />
+    <Resource Include="Images\阅后即焚-消息列表.png" />
+    <Resource Include="Images\群发头像-2.png" />
+    <Resource Include="Images\创建讨论组-悬停-点击.png" />
+    <Resource Include="Images\提示.png" />
+    <Resource Include="Images\成功提示.png" />
+    <Resource Include="Images\UserHeadPic.png" />
+    <Resource Include="Images\NoRemindMsgIcon.png" />
+    <Resource Include="Images\RemindMsgIcon.png" />
+    <Content Include="UpdateSQLite.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ActivityReminderTime.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Activity\BMap.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Activity\Index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web_content\css\contextmenu.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web_content\HTMLPage1.html" />
+    <Content Include="web_content\js\common.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web_content\js\jquery-2.1.1.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web_content\js\jquery.contextmenu.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\36-头像.png" />
+    <Resource Include="Images\44-头像.png" />
+    <Resource Include="Images\198-头像.png" />
+    <Resource Include="Images\50-头像.png" />
+    <Resource Include="Images\27-头像.png" />
+    <Content Include="Images\36-头像-copy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\blank.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\excel.png" />
+    <Resource Include="Images\fileTypeImage\excel.png" />
+    <Resource Include="Images\fileTypeImage\exe.png" />
+    <Resource Include="Images\fileTypeImage\html.png" />
+    <Resource Include="Images\fileTypeImage\mp3.png" />
+    <Resource Include="Images\fileTypeImage\mp4.png" />
+    <Resource Include="Images\fileTypeImage\ppt.png" />
+    <Resource Include="Images\fileTypeImage\test.png" />
+    <Resource Include="Images\fileTypeImage\word.png" />
+    <Resource Include="Images\fileTypeImage\zip.png" />
+    <Resource Include="Images\fileTypeImage\其他.png" />
+    <Content Include="Images\burnAfterRead\阅后即焚-消息上角.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\excel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\html.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\mp3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\mp4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\pdf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\ppt.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\txt.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\word.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\zip.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\exe.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\其他.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\音频.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\上传中.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\上传失败.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\上传成功.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\接受中.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\接受成功.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\htmlImages\接收失败.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\PictureViewer\上一张-1.png" />
+    <Resource Include="Images\PictureViewer\上一张-2.png" />
+    <Resource Include="Images\PictureViewer\下一张-1.png" />
+    <Resource Include="Images\PictureViewer\下一张-2.png" />
+    <Resource Include="Images\PictureViewer\保存-1.png" />
+    <Resource Include="Images\PictureViewer\保存-2.png" />
+    <Resource Include="Images\PictureViewer\关闭-1-查看图片.png" />
+    <Resource Include="Images\PictureViewer\关闭-2-查看图片.png" />
+    <Resource Include="Images\PictureViewer\旋转-1.png" />
+    <Resource Include="Images\PictureViewer\旋转-2.png" />
+    <Resource Include="Images\word.png" />
+    <Resource Include="Images\二次确认按钮-1.png" />
+    <Resource Include="Images\二次确认按钮-2.png" />
+    <Resource Include="Images\人员删除-1.png" />
+    <Resource Include="Images\人员删除-2.png" />
+    <Resource Include="Images\免打扰.png" />
+    <Resource Include="Images\关闭-1.png" />
+    <Resource Include="Images\关闭-2.png" />
+    <Resource Include="Images\关闭-灰.png" />
+    <Resource Include="Images\关闭-红.png" />
+    <Resource Include="Images\创建讨论组-1.png" />
+    <Resource Include="Images\删除.png" />
+    <Resource Include="Images\勾选1.png" />
+    <Resource Include="Images\删除红.png" />
+    <Resource Include="Images\删除灰.png" />
+    <Resource Include="Images\历史记录-1.png" />
+    <Resource Include="Images\历史记录-2.png" />
+    <Resource Include="Images\发送消息.png" />
+    <Resource Include="七讯.ico" />
+    <Resource Include="Images\OnLineStatus\在线.png" />
+    <Resource Include="Images\OnLineStatus\忙碌.png" />
+    <Resource Include="Images\已读.png" />
+    <Resource Include="Images\已读-1.png" />
+    <Resource Include="Images\接受成功.png" />
+    <Resource Include="Images\接收不提示.png" />
+    <Resource Include="Images\接收提示.png" />
+    <Resource Include="Images\搜索-清除.png" />
+    <Resource Include="Images\搜索.png" />
+    <Resource Include="Images\收缩.png" />
+    <Resource Include="Images\收联系人-缩.png" />
+    <Resource Include="Images\文件-1.png" />
+    <Resource Include="Images\文件-2.png" />
+    <Resource Include="Images\文件夹.png" />
+    <Resource Include="Images\新建通知.png" />
+    <Resource Include="Images\新建通知-1.png" />
+    <Resource Include="Images\日期-1.png" />
+    <Resource Include="Images\日期-2.png" />
+    <Resource Include="Images\最大化-1.png" />
+    <Resource Include="Images\最大化-2.png" />
+    <Resource Include="Images\最小化-1.png" />
+    <Resource Include="Images\最小化-2.png" />
+    <Resource Include="Images\查看资料.png" />
+    <Resource Include="Images\登录-背景-1-气泡.png" />
+    <Resource Include="Images\OnLineStatus\离开.png" />
+    <Resource Include="Images\OnLineStatus\离线.png" />
+    <Content Include="Images\离职人员.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\移除.png" />
+    <Resource Include="Images\空白页展示-logo.png" />
+    <Resource Include="Images\系统设置-选中.png" />
+    <Resource Include="Images\联系人-展开.png" />
+    <Resource Include="Images\背景-2.png" />
+    <Resource Include="Images\艾特.png" />
+    <Resource Include="Images\表情-丧气.png" />
+    <Resource Include="Images\没有通知.png" />
+    <Resource Include="Images\图片-2.png" />
+    <Resource Include="Images\图片.png" />
+    <Resource Include="Images\群发消息.png" />
+    <Resource Include="Images\发送中.png" />
+    <Resource Include="Images\群发小头像.png" />
+    <Content Include="Images\发送失败.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\按钮背景.png" />
+    <Resource Include="Images\删除-1.png" />
+    <Resource Include="Images\删除-default.png" />
+    <Resource Include="Images\列表%40.png" />
+    <Resource Include="Images\关.png" />
+    <Resource Include="Images\开.png" />
+    <Content Include="Images\查看历史消息.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\七讯.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\设置-1.png" />
+    <Resource Include="Images\设置-2.png" />
+    <Resource Include="Images\设置弹框.png" />
+    <Resource Include="Images\返回.png" />
+    <Resource Include="Images\返回-1.png" />
+    <Resource Include="Images\退出-1.png" />
+    <Resource Include="Images\退出-2.png" />
+    <Resource Include="Images\选中-灰色.png" />
+    <Resource Include="Images\选中.png" />
+    <Resource Include="Images\通知-蓝.png" />
+    <Resource Include="Images\通知.png" />
+    <Resource Include="Images\通知详情-头像.png" />
+    <Resource Include="Images\附件.png" />
+    <Resource Include="Images\附件-1.png" />
+    <Resource Include="Images\默认.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Antenna.Framework\Antenna.Framework.csproj">
+      <Project>{faf11005-e7ee-4449-9902-50db1c2250a3}</Project>
+      <Name>Antenna.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Antenna.Model\Antenna.Model.csproj">
+      <Project>{3d5913f7-1120-471b-adf3-229295480a88}</Project>
+      <Name>Antenna.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NotifyIconWpf\NotifyIconWpf.csproj">
+      <Project>{b354b9e3-864c-44c3-98c1-ef1bb88f33f3}</Project>
+      <Name>NotifyIconWpf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SDK.AntSdk\SDK.AntSdk.csproj">
+      <Project>{804d5203-6578-4e5e-a5fb-86801c15f34b}</Project>
+      <Name>SDK.AntSdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SDK.MessageService\SDK.Service.csproj">
+      <Project>{1255AE05-D24A-432C-998C-0BE44AF15D93}</Project>
+      <Name>SDK.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\气泡.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\发送-1-02.png" />
+    <Resource Include="Images\发送-1.png" />
+    <Resource Include="Images\发送-2-02.png" />
+    <Resource Include="Images\发送-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Emoji\1f01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f03.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f04.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f05.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f06.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f07.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f08.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f09.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f11.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f12.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f13.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f14.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f15.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f17.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f18.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f19.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f20.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f21.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f22.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f23.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f25.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f26.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f27.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f28.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f30.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f31.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f33.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f34.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f35.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\1f36.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Emoji\face.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\发送按钮.png" />
+    <Resource Include="Images\取消按钮.png" />
+    <Resource Include="Images\发送按钮-2.png" />
+    <Resource Include="Images\取消按钮-2.png" />
+    <Resource Include="Images\消息设置.png" />
+    <Resource Include="Images\退出讨论组.png" />
+    <Resource Include="Images\通知列表-附件.png" />
+    <Resource Include="Images\阅后即焚-1.png" />
+    <Resource Include="Images\阅后即焚.png" />
+    <Resource Include="Images\退出--1.png" />
+    <Resource Include="Images\退出-.png" />
+    <Resource Include="Images\阅后即焚-会话.png" />
+    <Resource Include="Images\转让管理员.png" />
+    <Content Include="projectStatic.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="version.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="web_content\css\group.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web_content\css\groupBurn.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web_content\css\mainApp.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web_content\group.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web_content\groupBurn.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="web_content\images\查看历史消息.png" />
+    <Content Include="web_content\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

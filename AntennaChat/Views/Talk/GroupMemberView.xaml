@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="AntennaChat.Views.Talk.GroupMemberView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:local="clr-namespace:AntennaChat.Views.Talk"
+             xmlns:vm="clr-namespace:AntennaChat.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="28" d:DesignWidth="180" Background="{Binding Background}" Name="groupMemberView" ToolTip="{Binding PromptToolTip}" >
+    <i:Interaction.Triggers>
+        <!--<i:EventTrigger EventName="MouseEnter">
+            <i:InvokeCommandAction Command="{Binding MouseEnter}" CommandParameter="{Binding ElementName=groupMemberView}"/>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="MouseLeave">
+            <i:InvokeCommandAction Command="{Binding MouseLeave}" CommandParameter="{Binding ElementName=groupMemberView}"/>
+        </i:EventTrigger>-->
+        <!--<i:EventTrigger EventName="">
+            <i:InvokeCommandAction Command="{Binding MouseDoubleClick}" CommandParameter="{Binding ElementName=groupMemberView}"/>
+        </i:EventTrigger>-->
+        <!--<i:EventTrigger EventName="MouseDoubleClick">
+            <i:InvokeCommandAction Command="{Binding MouseDoubleClick}" CommandParameter="{Binding ElementName=groupMemberView}"/>
+        </i:EventTrigger>-->
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}" CommandParameter="{Binding ElementName=tbName}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <UserControl.ContextMenu>
+        <ContextMenu x:Name="contextMenu" Width="Auto">
+            <MenuItem Header="发送消息" x:Name="menuItemSendMsg" Visibility="{Binding SendMsgVisibility}" 
+                      Command="{Binding MouseDoubleClick}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContextMenu},  Path=PlacementTarget}"/>
+            <MenuItem Header="查看资料" Command="{Binding GetUserInfo}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContextMenu},  Path=PlacementTarget}"/>
+            <MenuItem Header="@TA"  Visibility="Collapsed"/>
+            <MenuItem Header="移除讨论组" Visibility="{Binding KickoutGroupVisibility}" Command="{Binding KickoutGroup}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContextMenu},  Path=PlacementTarget}"/>
+            <MenuItem Header="{Binding GroupMenuContent}" Visibility="{Binding IsSetGroupManager,Converter={StaticResource BooleanToVisibilityConverter}}" Command="{Binding SetGroupManagerCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContextMenu},  Path=PlacementTarget}"/>
+            <MenuItem Header="群主转让" Visibility="{Binding ChangeMangerVisibility}" Command="{Binding ChangeManagerCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContextMenu},  Path=PlacementTarget}"/>
+        </ContextMenu>
+    </UserControl.ContextMenu>
+    <Grid  x:Name="gridContent" Background="Transparent">
+        <Grid.ColumnDefinitions>
+           
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="10*"  />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <Image x:Name="imageAdmin"  Width="20"  Grid.Column="2" ToolTip="群主"  HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="6,0,0,0"     Source="../../Images/groupowner.png" Visibility="{Binding AdminImageVisibility}" Stretch="None"/>
+        <Image x:Name="imageGroupAdmin"  Width="20"  Grid.Column="2" ToolTip="管理员"  HorizontalAlignment="Center" VerticalAlignment="Center"    Margin="6,0,0,0"    Source="../../Images/groupadmin.png" 
+               Visibility="{Binding IsGroupAdminImage,Converter={StaticResource BooleanToVisibilityConverter}}" Stretch="None"/>
+        <Rectangle Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="25" Height="25" Stroke="#e0e0e0" RadiusX="2" RadiusY="2">
+            <Rectangle.Fill>
+                <ImageBrush x:Name="imagePhoto" ImageSource="{Binding Photo}"  vm:ImageAttached.IsOffline="{Binding IsOfflineState}"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Stretch="None" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Source="{Binding UserOnlineStateIcon}" Margin="1,0,0,6"/>
+        <TextBlock    x:Name="tbName"  Margin="8,0,0,0"  Grid.Column="1" Foreground="#333333" HorizontalAlignment="Stretch"  VerticalAlignment="Center"     FontSize="12" Text="{Binding Name}" />
+        <TextBlock  x:Name="tbPosition"  Grid.Column="3"     HorizontalAlignment="Right"  VerticalAlignment="Center"   TextTrimming="WordEllipsis"     Foreground="#999999" FontSize="10"  Text="{Binding Position}" />
+        <!--<TextBlock    Grid.Column="2"  Padding="0,0,10,0"   HorizontalAlignment="Stretch"   VerticalAlignment="Stretch"     Foreground="#999999" FontSize="10" Grid.ColumnSpan="2" />-->
+    </Grid>
+</UserControl>

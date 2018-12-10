@@ -1,0 +1,207 @@
+﻿<UserControl xmlns:FileUpload="clr-namespace:AntennaChat.Views.FileUpload"  x:Class="AntennaChat.Views.Talk.TalkWindowView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AntennaChat.Views.Talk"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             xmlns:VM="clr-namespace:AntennaChat.ViewModel.Talk"
+             xmlns:conVM="clr-namespace:AntennaChat.ViewModel.Contacts"
+             xmlns:conV="clr-namespace:AntennaChat.Views.Contacts"
+             xmlns:cef="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <!--<Interactivity:Interaction.Triggers>
+        <Interactivity:EventTrigger EventName="Loaded">
+            -->
+    <!--<Interactivity:InvokeCommandAction Command="{Binding IsBrowserChanged}" CommandParameter="{Binding ElementName=browser}"/>-->
+    <!--
+            <Interactivity:InvokeCommandAction Command="{Binding IsUpChanged}" CommandParameter="{Binding ElementName=fileUploadShow}"/>
+            -->
+    <!--<Interactivity:InvokeCommandAction Command="{Binding IsWapnel}" CommandParameter="{Binding ElementName=wPanel}"/>-->
+    <!--
+        </Interactivity:EventTrigger>
+    </Interactivity:Interaction.Triggers>-->
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/AntennaChat;component/Resource/talkWindowStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <!--自定义ContextMenu的外观样式-->
+
+            <DataTemplate DataType="{x:Type VM:TalkHistoryViewModel}">
+                <local:TalkHistoryView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type conVM:UserInfoViewModel}">
+                <conV:UserInfoView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition  x:Name="fileUploadShow" Height="{Binding FileUploadShowHeight}"/>
+            <RowDefinition Height="{Binding SoundRecordShowHeight}"/>
+            <RowDefinition Height="{Binding TextShowRowHeight}"/>
+            <RowDefinition Height="38"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="52"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#f5f5f5">
+            <TextBlock x:Name="userName"  FontSize="18" Foreground="#333333" VerticalAlignment="Center" Text="{Binding UserName}" HorizontalAlignment="Left" Margin="20,0,0,0" Cursor="Hand">
+             <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding HeadCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </TextBlock>
+            <Button x:Name="btnAddGroups" Style="{StaticResource ResourceKey=btnAddGroup}" Command="{Binding CreateGroupCommand}" />
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0" Margin="0,0,0,0" Background="#f5f5f5">
+            <ContentControl Content="{Binding  chromiumWebBrowser,Mode=TwoWay}" Margin="0,0,6,0"></ContentControl>
+            <Border Background="Black" Opacity="0.5" HorizontalAlignment="Center" Visibility="{Binding IsRevocationShowPopup,Converter={StaticResource BooleanToVisibilityConverter}}" VerticalAlignment="Center" CornerRadius="2">
+                <TextBlock Text="发出超过2分钟，无法撤回。" Foreground="White" Margin="10"/>
+            </Border>
+        </Grid>
+        <ContentControl Content="{Binding Path=TalkHistoryViewModel,Mode=TwoWay}" Visibility="{Binding TalkHistoryVisibility}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
+        <!--上传文件显示区域-->
+        <Grid x:Name="fileUploadShows" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="126"/>
+            </Grid.ColumnDefinitions>
+            <Border BorderThickness="0,1,0,0" BorderBrush="#EAEFF3"/>
+            <Grid Grid.Row="0" Grid.Column="0">
+                <ScrollViewer x:Name="SV" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                    <ContentControl Content="{Binding  wrapPanel}"></ContentControl>
+                </ScrollViewer>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Border BorderThickness="0,1,0,0" BorderBrush="#EAEFF3"></Border>
+                <StackPanel Orientation="Vertical">
+                    <Button x:Name="btnOkUploadFile" Style="{StaticResource btnOkUploadFileStyle}" Content="发送" Command="{Binding btnSendUploadFile}"></Button>
+                    <Button x:Name="btnCanelUploadFile" Style="{StaticResource btnCanelUploadFileStyle}" Command="{Binding btnCanelUpLoadFile}" Content="取消"></Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <!--录制语音显示区域-->
+        <Grid Grid.Row="3">
+            <Border BorderThickness="0,1,0,0" BorderBrush="#EAEFF3"/>
+            <Grid>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left"  Panel.ZIndex="1" Orientation="Horizontal">
+                    <Ellipse Height="7" Width="7" Fill="#1DB300"  Margin="20,1,0,0"/>
+                    <TextBlock Text="正在录音..." HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#333333"/>
+                </StackPanel>
+                <ProgressBar Name="ProgressBar" HorizontalAlignment="Stretch"  Height="32"  Style="{DynamicResource SimpleProgressBar}" Value="{Binding SoundProValue}" VerticalAlignment="Center" Margin="0" Maximum="360"/>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right"  Panel.ZIndex="1" Orientation="Horizontal">
+                    <Button Height="22" Width="44" Content="发送" Style="{StaticResource SoundButtonStyle}" BorderBrush="#1991ED" BorderThickness="1" Foreground="#1991ED" Command="{Binding SendSoundCommand}"/>
+                    <Button Height="22" Width="44" Content="取消" Margin="10,0,20,0" Style="{StaticResource SoundButtonStyle}" BorderBrush="#FE3203" BorderThickness="1" Foreground="#FE3203" Command="{Binding CancelSoundCommand}"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="4" Background="#D2EBFF">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDown">
+                    <i:InvokeCommandAction Command="{Binding textBlockCommand}" CommandParameter="{Binding ElementName=TextBlockShow}"></i:InvokeCommandAction>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TextBlock x:Name="TextBlockShow" TextTrimming="CharacterEllipsis" Cursor="Hand" Text="{Binding TextShowReceiveMsg}"  VerticalAlignment="Center" Foreground="Gray" Height="32" Padding="10,8"></TextBlock>
+        </Grid>
+        <Popup x:Name="emojiShow" PlacementTarget="{Binding ElementName=hello}" PopupAnimation="None" Width="210" Height="150" StaysOpen="False" IsOpen="False">
+            <!--<StackPanel x:Name="emojiStackPanel" Height="100" Width="200" Background="AliceBlue"></StackPanel>-->
+            <WrapPanel x:Name="emojiStackPanel" Background="AliceBlue"/>
+        </Popup>
+        <!--功能栏位-->
+        <Grid Grid.Row="5" Grid.Column="1" x:Name="hello" Background="#f5f5f5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border BorderThickness="0,1,0,0" BorderBrush="#EAEFF3" Grid.Row="0" Grid.ColumnSpan="10"></Border>
+            <Grid Grid.Row="0" Grid.Column="0" Margin="16,0,0,0" Visibility="{Binding isShowEmoji}">
+                <Button x:Name="btnImageShow" ToolTip="选择表情" Command="{Binding btnShowPopupCommand}" Style="{StaticResource btnImageShowStyle}" CommandParameter="{Binding ElementName=emojiShow}"></Button>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1" Margin="16,0,0,0" Visibility="{Binding isShowCutImage}">
+                <Button x:Name="btnCutImage" ToolTip="屏幕截图" Style="{StaticResource btnCutImageStyle}" Command="{Binding btnCutImageCommand}"></Button>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="2" Margin="16,0,0,0">
+                <Button x:Name="btnSendImage" ToolTip="选择图片" Style="{StaticResource btnSendImagesStyle}" Command="{Binding btnImagesUploadCommand}"></Button>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3" Margin="16,0,0,0">
+                <Button x:Name="btnSendFile" ToolTip="上传文件" Style="{StaticResource btnSendFileStyle}" Command="{Binding btnFileUploadCommand}" CommandParameter="{Binding ElementName=fileUploadShow}"></Button>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="4" Margin="16,0,0,0">
+                <Button x:Name="btnSendSound" ToolTip="录制语音" Style="{StaticResource btnSendSoundStyle}" Command="{Binding BtnSoundCommand}" CommandParameter="{Binding ElementName=btnSendSound}"></Button>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="5" Margin="16,0,0,0" Visibility="{Binding isShowAudio}">
+                <Button x:Name="btnAudio" ToolTip="语音电话" Style="{StaticResource btnAudioStyle}" Command="{Binding BtnAudioCommand}" CommandParameter="{Binding ElementName=btnAudio}"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="6" Margin="16,0,0,0" Visibility="{Binding isShowBurn}">
+                <Button x:Name="btnBurnAfter" ToolTip="切换阅后即焚模式" Style="{StaticResource btnReadBurnAfterStyle}" Command="{Binding btnReadBurnAfterCommand}" CommandParameter="{Binding ElementName=btnBurnAfter}"></Button>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="7" Margin="16,0,0,0" Visibility="{Binding isShowExit}">
+                <Button x:Name="btnBurnExit" ToolTip="退出阅后即焚模式" Style="{StaticResource btnBurnExitStyle}" Command="{Binding btnBurnExitCommand}" CommandParameter="{Binding ElementName=btnBurnExit}"></Button>
+            </Grid>
+            <Grid Grid.Column="8" Visibility="{Binding IsBurnState,Converter={StaticResource BooleanToVisibilityConverter}}">
+                <Rectangle  Height="14" Fill="Gray" Width="1" HorizontalAlignment="Left" Margin="14,0,0,0" />
+                <Image  Source="{DynamicResource BitmapReadBurnState}" ToolTip="当前处于阅后即焚模式" Stretch="None" Margin="28,0,0,0" />
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="9">
+                <Button x:Name="btnHistoryMsg" Visibility="Hidden" Style="{StaticResource btnHistoryMsgStyle}" Command="{Binding HistoryCommand}" ToolTip="历史记录"></Button>
+            </Grid>
+        </Grid>
+        <!--发送文字栏位-->
+        <Grid Grid.Row="6" Grid.Column="1">
+            <ContentControl Content="{Binding richTextBox}" x:FieldModifier="public" x:Name="rich" Background="#f5f5f5" LostFocus="Rich_OnLostFocus" GotFocus="Rich_OnGotFocus"></ContentControl>
+            <!--<RichTextBox x:Name="richSendMsg" BorderThickness="0" VerticalScrollBarVisibility="Auto" Padding="20,10,20,0" FontSize="14">
+                <FlowDocument x:Name="Fdocument" LineHeight="2" Foreground="#333333">
+                    
+                </FlowDocument>
+            </RichTextBox>-->
+        </Grid>
+        <!--发送按钮栏位-->
+        <Grid Grid.Row="7" Grid.Column="1" x:Name="gridSend" Background="#f5f5f5">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0">
+                <Button x:Name="btnSendMsg" Style="{StaticResource BtnTalkSendMsgStyle}" Content="发送" Command="{Binding btnSendMsgCommand}" Width="56" Height="28"/>
+                <Button x:Name="btnSenMsgSetting" Style="{StaticResource BtnSendMsgSettingStyle}" BorderThickness="0,1,1,1" Margin="-1,0,0,0" Command="{Binding btnSetShortCuts}" Width="30" Height="28" CommandParameter="{Binding ElementName=btnSenMsgSetting}" />
+            </StackPanel>
+            <Border Width="1" Background="#e0e0e0" Margin="0,0,50,0"  Height="12" HorizontalAlignment="Right"/>
+        </Grid>
+        <Border SnapsToDevicePixels="True" CornerRadius="2"  
+         VerticalAlignment="Bottom" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,0,30,-10"   Visibility="{Binding isShowPopup,Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Border.Background>
+                <VisualBrush Stretch="Fill">
+                    <VisualBrush.Visual>
+                        <Path  Fill="White" Stroke="#cccccc" StrokeThickness="1" Data="M0.5,0.49999999 L0.5,0.49999999 190.5,0.49999999 190.5,0.49999999 190.5,90.5 190.5,90.5 161.83334,90.5 161.83334,90.5 156.50001,109.83333 156.50001,109.83333 151.83334,90.5 151.83334,90.5 0.5,90.5 z">
+                            <Path.Effect>
+                                <DropShadowEffect Color="Gainsboro" BlurRadius="12" ShadowDepth="0" Opacity="0.7" />
+                            </Path.Effect>
+                        </Path>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Grid Margin="24,12,16,14">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Ellipse Height="15" Width="15" Fill="Red"  Margin="0,0,0,2"/>
+                <TextBlock Text="!" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,2" Foreground="White"/>
+                <TextBlock FontSize="12" Grid.Column="1" Margin="6,0,10,2" HorizontalAlignment="Center" VerticalAlignment="Center"   Opacity="0.8" Text="{Binding showText}"/>
+            </Grid>
+        </Border>
+        <Popup Grid.Row="1" Grid.Column="0" Name="PopUserInfo" PopupAnimation="Fade" HorizontalOffset="4" Height="326" Width="310" Placement="Mouse"  StaysOpen="False" IsOpen="{Binding PopUserInfoIsOpen}" AllowsTransparency="True">
+            <ContentControl Content="{Binding Path=UserInfoControl}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Popup>
+    </Grid>
+</UserControl>

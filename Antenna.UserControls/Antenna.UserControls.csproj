@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F28E3300-FF9A-467D-B880-71F52316F64D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Antenna.UserControls</RootNamespace>
+    <AssemblyName>Antenna.UserControls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingAndMessageBox\HeadImageControl.xaml.cs">
+      <DependentUpon>HeadImageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingAndMessageBox\MessageBoxWindow.xaml.cs">
+      <DependentUpon>MessageBoxWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingAndMessageBox\ProfileControl.xaml.cs">
+      <DependentUpon>ProfileControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingAndMessageBox\Win_Profile.xaml.cs">
+      <DependentUpon>Win_Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingAndMessageBox\Win_SystemSetting.xaml.cs">
+      <DependentUpon>Win_SystemSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SJTextBox.cs" />
+    <Compile Include="Suggestion\SugDefaultControl.xaml.cs">
+      <DependentUpon>SugDefaultControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Suggestion\SugDetailControl.xaml.cs">
+      <DependentUpon>SugDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Suggestion\Win_Suggestion.xaml.cs">
+      <DependentUpon>Win_Suggestion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WateMarkTextBox.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ResourceDictionary\defaultStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SettingAndMessageBox\HeadImageControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingAndMessageBox\MessageBoxWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingAndMessageBox\ProfileControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingAndMessageBox\Win_Profile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingAndMessageBox\Win_SystemSetting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Suggestion\SugDefaultControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Suggestion\SugDetailControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Suggestion\Win_Suggestion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Antenna.Framework\Antenna.Framework.csproj">
+      <Project>{faf11005-e7ee-4449-9902-50db1c2250a3}</Project>
+      <Name>Antenna.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\excel.png" />
+    <Resource Include="Images\logo-leading.png" />
+    <Resource Include="Images\logo-预览-100.png" />
+    <Resource Include="Images\word.png" />
+    <Resource Include="Images\二次确认按钮-1.png" />
+    <Resource Include="Images\二次确认按钮-2.png" />
+    <Resource Include="Images\人员删除-1.png" />
+    <Resource Include="Images\人员删除-2.png" />
+    <Resource Include="Images\关闭-1.png" />
+    <Resource Include="Images\关闭-2.png" />
+    <Resource Include="Images\创建讨论组-1.png" />
+    <Resource Include="Images\创建讨论组-2.png" />
+    <Resource Include="Images\删除.png" />
+    <Resource Include="Images\历史记录-1.png" />
+    <Resource Include="Images\历史记录-2.png" />
+    <Resource Include="Images\发送消息.png" />
+    <Resource Include="Images\在线.png" />
+    <Resource Include="Images\忙碌.png" />
+    <Resource Include="Images\截图-1.png" />
+    <Resource Include="Images\截图-2.png" />
+    <Resource Include="Images\接受成功.png" />
+    <Resource Include="Images\接收不提示.png" />
+    <Resource Include="Images\接收提示.png" />
+    <Resource Include="Images\搜索-清除.png" />
+    <Resource Include="Images\搜索.png" />
+    <Resource Include="Images\收缩.png" />
+    <Resource Include="Images\收联系人-缩.png" />
+    <Resource Include="Images\文件-1.png" />
+    <Resource Include="Images\文件-2.png" />
+    <Resource Include="Images\文件夹.png" />
+    <Resource Include="Images\日期-1.png" />
+    <Resource Include="Images\日期-2.png" />
+    <Resource Include="Images\最大化-1.png" />
+    <Resource Include="Images\最大化-2.png" />
+    <Resource Include="Images\最小化-1.png" />
+    <Resource Include="Images\最小化-2.png" />
+    <Resource Include="Images\查看资料.png" />
+    <Resource Include="Images\消息-icon-1.png" />
+    <Resource Include="Images\消息-icon-2.png" />
+    <Resource Include="Images\登录-背景-1-气泡.png" />
+    <Resource Include="Images\离开.png" />
+    <Resource Include="Images\离线.png" />
+    <Resource Include="Images\空白页展示-logo.png" />
+    <Resource Include="Images\系统设置-选中.png" />
+    <Resource Include="Images\群成员-1.png" />
+    <Resource Include="Images\群成员-2.png" />
+    <Resource Include="Images\群组-icon-1.png" />
+    <Resource Include="Images\群组-icon-2.png" />
+    <Resource Include="Images\联系人-icon-1.png" />
+    <Resource Include="Images\联系人-icon-2.png" />
+    <Resource Include="Images\联系人-展开.png" />
+    <Resource Include="Images\背景-2.png" />
+    <Resource Include="Images\表情-1.png" />
+    <Resource Include="Images\表情-2.png" />
+    <Resource Include="Images\触角-logo.png" />
+    <Resource Include="Images\设置-1.png" />
+    <Resource Include="Images\设置-2.png" />
+    <Resource Include="Images\设置弹框.png" />
+    <Resource Include="Images\退出-1.png" />
+    <Resource Include="Images\退出-2.png" />
+    <Resource Include="Images\选中.png" />
+    <Resource Include="Images\邀请人员-1.png" />
+    <Resource Include="Images\邀请人员-2.png" />
+    <Resource Include="Images\默认.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{804D5203-6578-4E5E-A5FB-86801C15F34B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SDK.AntSdk</RootNamespace>
+    <AssemblyName>SDK.AntSdk</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\ShareDLL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\ShareDLL\SDK.AntSdk.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\ShareDLL\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\ShareDLL\SDK.AntSdk.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\ShareDLL\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\ShareDLL\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ShareDLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SDK.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ShareDLL\SDK.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.105.2, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\02Development\05Pc\AntennaChat_SDK\ShareDLL\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AntAsInternal\AntSdkBaseOutput.cs" />
+    <Compile Include="AntAsInternal\AntSdkCustomerLoginInput.cs" />
+    <Compile Include="AntAsInternal\AntSdkInternalEnum.cs" />
+    <Compile Include="AntAsInternal\AntSdkLoginInput.cs" />
+    <Compile Include="AntAsInternal\AntSdkSetResource.cs" />
+    <Compile Include="AntAsInternal\AntSdkUpgradeInput.cs" />
+    <Compile Include="AntHttp\AntSdkHttpCommon.cs" />
+    <Compile Include="AntHttp\AntSdkHttpService.cs" />
+    <Compile Include="AntInterface\IAntSdkInputPrefPath.cs" />
+    <Compile Include="AntInterface\IAntSdkInputQuery.cs" />
+    <Compile Include="AntInterface\IAntSdkInputSuffPath.cs" />
+    <Compile Include="AntModels\AntSdkMassMsgContent.cs" />
+    <Compile Include="AntModels\AntSdkMember.cs" />
+    <Compile Include="AntModels\AntSdkTsession.cs" />
+    <Compile Include="AntModels\Http\AntSdkAddIdeaFeedBackInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkAddListContactsInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkAddListContactsOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkBaseInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkChangePasswordInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkChangeUserStateInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkConfigInfo.cs" />
+    <Compile Include="AntModels\Http\AntSdkConfirmPunchInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkCreateGroupVoteInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkFileUpLoadOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetCompayInfoOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetFaceInfoInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetFaceInfoOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetGroupAbstentionVoteInfoOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetGroupVotesOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetPunchClocksOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetUserIdeaTypeInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetUserIdeaTypeOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetUserInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetUserReturnSettingInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetUserReturnSettingOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetUserStateInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetUserStateOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkBothwaySdk.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetVoteInfoOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkListContactsOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkLoginOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkLoginUserInfo.cs" />
+    <Compile Include="AntModels\Http\AntSdkQueryOfflineMsg.cs" />
+    <Compile Include="AntModels\Http\AntSdkQuerySystemDateOuput.cs" />
+    <Compile Include="AntModels\Http\AntSdkResetPassWoldInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkSendCutImageDto.cs" />
+    <Compile Include="AntModels\Http\AntSdkSendFileInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkSendVerifyCodeInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkUpdateUserInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkUpdateUserSystemSettingInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkUpgradeOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkUserInfo.cs" />
+    <Compile Include="AntModels\Http\AntSdkGetUserStateListOutput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGroupActivityInput.cs" />
+    <Compile Include="AntModels\Http\AntSdkGroupActivityOutput.cs" />
+    <Compile Include="AntModels\Mqtt\AntSdkBaseEntity.cs" />
+    <Compile Include="AntModels\Mqtt\AntSdkOffLineSimpleMsg.cs" />
+    <Compile Include="AntModels\Mqtt\AntSdkOtherMsg.cs" />
+    <Compile Include="AntModels\Mqtt\AntSdkReceiptMsg.cs" />
+    <Compile Include="AntModels\Mqtt\AntSdkReceivedGroupMsg.cs" />
+    <Compile Include="AntModels\Mqtt\AntSdkChatMsg.cs" />
+    <Compile Include="AntModels\Mqtt\AntSdkReceivedOtherMsg.cs" />
+    <Compile Include="AntModels\Mqtt\AntSdkReceivedRoomMsg.cs" />
+    <Compile Include="AntModels\Mqtt\AntSdkReceivedUserMsg.cs" />
+    <Compile Include="AntModels\Mqtt\AntSdkSendMsg.cs" />
+    <Compile Include="AntSdkBLL\BaseBLL.cs" />
+    <Compile Include="AntSdkDAL\C_DepartmentDAL.cs" />
+    <Compile Include="AntSdkDAL\C_GROUP.cs" />
+    <Compile Include="AntSdkDAL\C_User_InfoDAL.cs" />
+    <Compile Include="AntSdkDAL\C_Version.cs" />
+    <Compile Include="AntSdkDAL\IBaseDAL.cs" />
+    <Compile Include="AntSdkDAL\IDAL.cs" />
+    <Compile Include="AntSdkDAL\T_Chat_MessageDAL.cs" />
+    <Compile Include="AntSdkDAL\T_Chat_Message_GroupBurnDAL.cs" />
+    <Compile Include="AntSdkDAL\T_Chat_Message_GroupDAL.cs" />
+    <Compile Include="AntSdkDAL\T_MassMsgDAL.cs" />
+    <Compile Include="AntSdkDAL\T_SessionDAL.cs" />
+    <Compile Include="AntSdkDataConverter.cs" />
+    <Compile Include="AntSdkEnum.cs" />
+    <Compile Include="AntSdkErrorCodes.cs" />
+    <Compile Include="AntSdkPublicationReceivedHandler.cs" />
+    <Compile Include="AntSdkService.cs" />
+    <Compile Include="AntSdkSqliteHelper.cs" />
+    <Compile Include="AntSdkXmlHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sdk.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

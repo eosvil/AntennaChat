@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="AntennaChat.Views.Activity.ActivityDetailsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AntennaChat.Views.Activity"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d">
+    <Grid Background="#f0f0f0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="活动详情" FontSize="18" Margin="20,16,0,0" Foreground="#1f1f1f"/>
+        <Border  BorderThickness="1" BorderBrush="#e0e0e0" CornerRadius="1" Background="White" Margin="40,36,40,40" Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"  Grid.Row="0">
+                    <Grid Margin="20,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.6*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Rectangle x:Name="RecHead"  Stroke="{x:Null}" Margin="0,20,0,0" RadiusX="2" RadiusY="2" Cursor="Hand"
+                           RenderOptions.BitmapScalingMode="HighQuality">
+                            <Rectangle.Fill>
+                                <ImageBrush x:Name="HeadImage" ImageSource="{Binding ActivityThemePic}"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock Text="活动图片加载中..." x:Name="txtBlock" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Grid.Row="0" Grid.Column="1" Margin="20,17,0,0">
+                            <TextBox Text="{Binding ActivityTitle}" Foreground="#333333" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap" ToolTip="{Binding ActivityTitle}" Margin="0,0,10,0" FontSize="16"/>
+                            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                                <TextBlock Text="时间：" FontSize="14"/>
+                                <TextBlock Text="{Binding ActivityDateTime}" FontSize="14"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <TextBlock Text="地点：" FontSize="14"/>
+                                <Image Width="12" Height="14" Cursor="Hand" Source="/AntennaChat;component/Images/location.png">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="MouseLeftButtonDown">
+                                            <i:InvokeCommandAction Command="{Binding GetGeographicLocationCommand}"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </Image>
+                                <TextBox BorderThickness="0" IsReadOnly="True" Text="{Binding ActivityAddress}" TextWrapping="Wrap" FontSize="14" VerticalAlignment="Center" Margin="2,0,0,0"/>
+                            </StackPanel>
+                            <!--{Binding ActivityStateContent}-->
+                            <Button Content="{Binding ActivityStateContent}" Margin="0,17,0,0" HorizontalAlignment="Left" Style="{DynamicResource BlueButton_Style}" IsEnabled="{Binding IsParticipatedActivity}" Width="80" Height="28" Command="{Binding ParticipateActivitiesCommand}" FontSize="14"/>
+                        </StackPanel>
+                        <TextBlock Text="活动介绍" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" FontSize="16" Margin="0,40,0,0" />
+                        <TextBox Text="{Binding ActivityIntroduce}" BorderThickness="0" IsReadOnly="True" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0" FontSize="14" Foreground="#999999" TextWrapping="Wrap" Margin="0,0,20,0"/>
+                        <Grid Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0"  Visibility="{Binding IsActivityParticipators,Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock FontSize="16" Grid.Row="0" Margin="0,10,0,10">
+                                <Run Text="参与人员"/><Run Text="（"/>
+                                <Run Text="{Binding ParticipatorsCount}"/>
+                                <Run Text="人）"/>
+                            </TextBlock>
+                            <Border BorderThickness="0,1,0,0"  BorderBrush="#cccccc" Margin="0,10,20,0" VerticalAlignment="Bottom"/>
+                            <ItemsControl ItemsSource="{Binding ActivityParticipators}" Margin="0,0,0,0" Grid.Row="1">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Width="140" Orientation="Horizontal" Margin="0,10,0,0">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="MouseLeftButtonDown">
+                                                    <i:InvokeCommandAction Command="{Binding DataContext.ParticipatorInfoCommand,RelativeSource={RelativeSource AncestorType={x:Type local:ActivityDetailsView}}}" CommandParameter="{Binding ParticipatorId}"/>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                            <Rectangle x:Name="RecHead" Height="36" Width="36" Stroke="{x:Null}" RadiusX="2" RadiusY="2" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Left"
+                           RenderOptions.BitmapScalingMode="HighQuality" Margin="15,0,0,0">
+                                                <Rectangle.Fill>
+                                                    <ImageBrush x:Name="HeadImage" ImageSource="{Binding ParticipatorHeadPic}"/>
+                                                </Rectangle.Fill>
+                                            </Rectangle>
+                                            <TextBlock Text="{Binding ParticipatorName }" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel/>
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                            </ItemsControl>
+                        </Grid>
+                    </Grid>
+                </ScrollViewer>
+
+                <Button Content="返回" Grid.Row="1" Command="{Binding CommandBackTalkMsg}" Style="{DynamicResource WhiteButton_Style}" FontSize="14" Width="72" Height="28" HorizontalAlignment="Right" Margin="0,20,20,20" VerticalAlignment="Bottom"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

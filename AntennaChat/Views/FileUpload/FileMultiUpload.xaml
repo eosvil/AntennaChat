@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="AntennaChat.Views.FileUpload.FileMultiUpload"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AntennaChat.Views.FileUpload"
+             xmlns:Interaction="http://schemas.microsoft.com/expression/2010/interactions"
+             xmlns:Interactivity="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="92" d:DesignWidth="536">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/AntennaChat;component/Resource/talkWindowStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="126"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <ScrollViewer x:Name="SV" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                <WrapPanel x:Name="wPanel" Orientation="Horizontal" Margin="15">
+                </WrapPanel>
+            </ScrollViewer>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <StackPanel Orientation="Vertical">
+                <Button x:Name="btnOkUploadFile" Style="{StaticResource btnOkUploadFileStyle}" Content="发送" Command="{Binding btnSendUploadFile}"></Button>
+                <Button x:Name="btnCanelUploadFile" Style="{StaticResource btnCanelUploadFileStyle}" Command="{Binding btnCanelUpLoadFile}" Content="取消"></Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

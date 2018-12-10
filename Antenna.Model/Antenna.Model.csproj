@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D5913F7-1120-471B-ADF3-229295480A88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Antenna.Model</RootNamespace>
+    <AssemblyName>Antenna.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CefSharp.Wpf">
+      <HintPath>..\ShareDLL\CefSharp.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SDK.AntSdk, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ShareDLL\SDK.AntSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddAttachmentDto.cs" />
+    <Compile Include="AddImgUrlDto.cs" />
+    <Compile Include="AtContentDto.cs" />
+    <Compile Include="AttrDto.cs" />
+    <Compile Include="BaseBoolDto.cs" />
+    <Compile Include="BaseDto.cs" />
+    <Compile Include="BaseInput.cs" />
+    <Compile Include="BaseOutput.cs" />
+    <Compile Include="BurnAfterReadReceipt.cs" />
+    <Compile Include="BurnContent.cs" />
+    <Compile Include="ChangeGroupAdmin.cs" />
+    <Compile Include="ChangePassword.cs" />
+    <Compile Include="ChatInfo.cs" />
+    <Compile Include="ContactUserImage.cs" />
+    <Compile Include="DivIdGather.cs" />
+    <Compile Include="FailOrSucessMessageDto.cs" />
+    <Compile Include="MassMsg.cs" />
+    <Compile Include="MessageStateArg.cs" />
+    <Compile Include="ModelEnum.cs" />
+    <Compile Include="mp3Dto.cs" />
+    <Compile Include="MsgReceipt.cs" />
+    <Compile Include="ConfigInfo.cs" />
+    <Compile Include="CreateGroup.cs" />
+    <Compile Include="ExitGroup.cs" />
+    <Compile Include="FileDto.cs" />
+    <Compile Include="GetGroupMembers.cs" />
+    <Compile Include="GetGroups.cs" />
+    <Compile Include="Heartbeat.cs" />
+    <Compile Include="ListContacts.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="LoginModel.cs" />
+    <Compile Include="ChatMsgReceive.cs" />
+    <Compile Include="Logout.cs" />
+    <Compile Include="MultiUpload\BaseMultiDto.cs" />
+    <Compile Include="NoticeAddDto.cs" />
+    <Compile Include="NoticeModel.cs" />
+    <Compile Include="OfflineMsgReceive.cs" />
+    <Compile Include="OnceSendMessage\OnceSendFile.cs" />
+    <Compile Include="OnceSendMessage\OnceSendImage.cs" />
+    <Compile Include="PhoneReadReceive.cs" />
+    <Compile Include="PictureAndTextMix\CurrentChatDto.cs" />
+    <Compile Include="PictureAndTextMix\MixMessageDto.cs" />
+    <Compile Include="PictureAndTextMix\MixMessageTagDto.cs" />
+    <Compile Include="PictureAndTextMix\PictureAndTextMixBaseDto.cs" />
+    <Compile Include="PictureAndTextMix\PictureAndTextMixContentDto.cs" />
+    <Compile Include="PictureAndTextMix\PictureAndTextMixDto.cs" />
+    <Compile Include="PictureAndTextMix\PictureAndTextMixTypeBaseDto.cs" />
+    <Compile Include="ProfileModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryMsg.cs" />
+    <Compile Include="ReceiveOrUploadFileDto.cs" />
+    <Compile Include="ReturnCutImageDto.cs" />
+    <Compile Include="returnMd5Dto.cs" />
+    <Compile Include="ReturnNoticeAddDto.cs" />
+    <Compile Include="SendBurnDto.cs" />
+    <Compile Include="SendCutImageDto.cs" />
+    <Compile Include="SendImageDto.cs" />
+    <Compile Include="SendMessageDto.cs" />
+    <Compile Include="SendUserOnline.cs" />
+    <Compile Include="SessionInfoModel.cs" />
+    <Compile Include="SwitchDataDto.cs" />
+    <Compile Include="SystemSetting.cs" />
+    <Compile Include="UpdateGroup.cs" />
+    <Compile Include="UpdateUser.cs" />
+    <Compile Include="SysUserMsgReceive.cs" />
+    <Compile Include="Upgrade.cs" />
+    <Compile Include="UpLoadFilesDto.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="UserOnlineState.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

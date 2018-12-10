@@ -1,0 +1,37 @@
+menu.cm {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 999;
+    list-style: none;
+    /*outline: 1px #bababa solid;*/
+    display: none;
+    cursor: default;
+    background: #ffffff;
+    /*width: 108px;
+    height: 32px;*/
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px 0.5px #cccccc;
+}
+
+    menu.cm li {
+        border-radius: 2px;
+        padding: 6px 30px 10px 28px;
+        color: #000;
+    }
+
+        menu.cm li:hover {
+            color: #fff;
+            background: #4281f4;
+        }
+
+        menu.cm li.delimiter {
+            padding: 0;
+            margin: 6px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+            menu.cm li.delimiter:hover {
+                background: #fff;
+            }

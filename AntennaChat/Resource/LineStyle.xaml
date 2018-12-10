@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:AntennaChat.Resource">
+    <!--水平直线样式-->
+    <Style x:Key="HorizontalBeeLine" TargetType="{x:Type Path}">
+        <Setter Property="Data" Value="M150,142 C236,142 236,142 236,142"></Setter>
+    </Style>
+    <!--竖直直线样式-->
+    <Style x:Key="VerticalBeeLine" TargetType="{x:Type Path}">
+        <Setter Property="Data" Value="M169.33333,71 C169.33333,109.66667 169.33333,109.83333 169.33333,109.83333"></Setter>
+    </Style>
+</ResourceDictionary>

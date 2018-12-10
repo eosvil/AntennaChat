@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="AntennaChat.Views.Notice.NoticeListWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AntennaChat.Views.Notice"
+             xmlns:NotictAddWindowModel="clr-namespace:AntennaChat.Views.Notice"
+              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+              xmlns:NotictAddViewModel="clr-namespace:AntennaChat.ViewModel.Notice"
+              mc:Ignorable="d"  d:DesignHeight="600" d:DesignWidth="700" x:Name="noticeWindowLoad" Background="White">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/AntennaChat;component/Resource/NoticeAddStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <DataTemplate DataType="{x:Type NotictAddViewModel:NoticeAddWindowViewModel}">
+                <NotictAddWindowModel:NoticeAddWindow/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type NotictAddViewModel:NoticeDetailsWindowViewModel}">
+                <NotictAddWindowModel:NoticeDetailsWindow/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type NotictAddViewModel:NoticeNoWindowViewModel}">
+                <NotictAddWindowModel:NoticeNoWindow/>
+            </DataTemplate>
+        </ResourceDictionary>
+
+    </UserControl.Resources>
+    <Border BorderThickness="1,0,0,0" BorderBrush="#e0e0e0">
+        <Grid>
+            <Grid Width="300">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="52"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Column="0" Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="群公告" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0" Padding="0" Foreground="#242424" FontSize="16" FontWeight="Bold"/>
+                    <Button x:Name="btnBackTalkMsg" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,20,0" Command="{Binding btnCommandBackTalkMsg}" CommandParameter="{Binding ElementName=noticeWindowLoad}" Style="{StaticResource ClearBtnStyle}" Width="24" Height="24"  ToolTip="关闭"/>
+                </Grid>
+
+                <ListBox x:Name="listBox" Grid.Row="1" Margin="20,0,0,0" Background="Transparent" BorderThickness="0" BorderBrush="Transparent"  
+                     SelectedItem="{Binding CurrentSelectedNoticeAddDto,Mode=TwoWay}" 
+                     ItemContainerStyle="{StaticResource ListBoxItemHorizontalStyle}" 
+                     ItemsSource="{Binding NoticeList}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.CanContentScroll="False">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction Command="{Binding GoNoticeDetailCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid  Width="230">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.ColumnSpan="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{StaticResource BitmapAdjunctIcon}" VerticalAlignment="Top" Margin="0,3,2,0" Visibility="{Binding IsAdjunctNotice,Converter={StaticResource BooleanToVisibilityConverter}}" Stretch="None"/>
+                                    <TextBlock  Grid.Column="1" Text="{Binding NoticeTitle}" FontSize="16" MaxHeight="50" TextTrimming="WordEllipsis" TextWrapping="Wrap" LineHeight="8" Foreground="#333333"/>
+                                </Grid>
+                                <TextBlock Text="{Binding Explain}" Grid.Row="1" Foreground="#999999" Margin="0,5,0,0" VerticalAlignment="Center"/>
+                                <Button x:Name="btnOperate" Grid.Row="1" Grid.Column="1" ToolTip="删除"  HorizontalAlignment="Right" Margin="0,10,0,0"
+                                    Visibility="{Binding IsbtnDeleteVisibility,Converter={StaticResource BooleanToVisibilityConverter}}"
+                                    Command="{Binding DataContext.btnOperate,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=ListBox}}"
+                                    CommandParameter="{Binding NotificationId}" Style="{StaticResource btnNoticedelete}" VerticalContentAlignment="Center" Content="操作"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Vertical"></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Visibility="{Binding NoticeNoWindowViewModelVisibility}">
+                    <Image Source="pack://application:,,,/AntennaChat;Component/Images/没有通知.png" Width="104" Height="75"></Image>
+                    <Label Content="还没有公告哦~" FontSize="12" Foreground="#999999" VerticalAlignment="Center" Margin="10" HorizontalAlignment="Center"></Label>
+                </StackPanel>
+                <Button Content="创建群公告" Visibility="{Binding isShowBtnAddAttachment}" Grid.Row="2" Style="{StaticResource NoticeBtnStyle}" Margin="0,10" Height="28" Width="92" Command="{Binding btnCommandAddNotice}"/>
+            </Grid>
+
+            <!--<ContentControl Content="{Binding Path=NoticeNoWindowViewModel}" Visibility="{Binding NoticeNoWindowViewModelVisibility}" />
+        <ContentControl Content="{Binding Path=NoticeAddWindowViewModel}"  Visibility="{Binding NoticeAddWindowViewModelVisibility}"/>
+        <ContentControl Content="{Binding Path=NoticeDetailsWindowViewModel}" Visibility="{Binding NoticeDetailsWindowViewModelVisibility}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"></ContentControl>-->
+        </Grid>
+    </Border>
+</UserControl>

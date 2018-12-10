@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="AntennaChat.Views.Control.CompanyDetailView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AntennaChat.Views.Control"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="#999999"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Margin="136,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="0,72,0,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Rectangle RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Stretch" RadiusX="2" RadiusY="2" Height="64" Width="64">
+                <Rectangle.Fill>
+                    <ImageBrush  ImageSource="{Binding LogoBitmapImage}"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock Text="{Binding InfoName}" Margin="0,24,0,0" FontWeight="Bold" Grid.Row="1" Foreground="#333333" FontSize="16"  HorizontalAlignment="Left"/>
+            <TextBlock Text="{Binding Introduce}" Margin="0,10,0,0" Grid.Row="2"/>
+        </Grid>
+        <Border BorderThickness="0" Height="1" Background="#e0e0e0" BorderBrush="#e0e0e0" VerticalAlignment="Bottom" Margin="0,0,136,0"/>
+        <Grid Grid.Row="1" Margin="0,30">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,14">
+                <TextBlock Text="CEO" Foreground="#999999"/>
+                <TextBlock Margin="20,0,0,0" Text="{Binding ManagerName}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center" Margin="0,0,0,14">
+                <TextBlock Text="公司成员" VerticalAlignment="Center"/>
+                <Button Content="查看成员" Style="{StaticResource NoticeBtnStyle}" Cursor="Hand" Margin="20,0,0,0" FontSize="14" Foreground="#333333" Background="Transparent" VerticalAlignment="Center" BorderThickness="0" Command="{Binding CheckMembersCommand}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Center">
+                <TextBlock Text="公司归属" Margin="0,0,20,0"/>
+                <TextBlock Margin="20,0,0,0" Text="{Binding Attribution}" Foreground="#333333"/>
+            </StackPanel>
+        </Grid>
+        <Border BorderThickness="0" Height="1" Grid.Row="1" Background="#e0e0e0" BorderBrush="#e0e0e0" VerticalAlignment="Bottom" Margin="0,0,136,0"/>
+    </Grid>
+</UserControl>

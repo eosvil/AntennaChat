@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="AntennaChat.Views.Notice.NoticeDetailsWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AntennaChat.Views.Notice"
+                xmlns:Interactivity="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" 
+  d:DesignHeight="600" d:DesignWidth="800" x:Name="noticeWindowLoad" Background="White">
+    <Interactivity:Interaction.Triggers>
+        <Interactivity:EventTrigger EventName="Loaded">
+            <Interactivity:InvokeCommandAction Command="{Binding IsLoaded}" CommandParameter="{Binding ElementName=rowAttachment}"/>
+        </Interactivity:EventTrigger>
+    </Interactivity:Interaction.Triggers>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/AntennaChat;component/Resource/NoticeAddStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52"></RowDefinition>
+            <RowDefinition Height="66"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition x:Name="rowAttachment" Height="{Binding gridHeight}"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="0" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Border BorderThickness="0,0,0,1" BorderBrush="#EAEFF3"  Grid.Row="0" Grid.Column="1"></Border>
+            <Border BorderThickness="0,0,0,1" BorderBrush="#EAEFF3"  Grid.Row="0" Grid.Column="0"></Border>
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+                <Rectangle x:Name="Rec_head" Margin="20,0,10,0" Height="36" Width="36" HorizontalAlignment="Left" VerticalAlignment="Center" RadiusX="55" RadiusY="55">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="pack://application:,,,/AntennaChat;Component/Images/通知详情-头像.png">
+                        </ImageBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Label Content="通知详情" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="0" Foreground="#242424" FontSize="14px"></Label>
+            </StackPanel>
+            <Border BorderThickness="0,0,0,1" BorderBrush="#EAEFF3"  Grid.Row="0" Grid.Column="1"></Border>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="1">
+                <Button Grid.Row="0" Grid.Column="1" x:Name="btnBackTalkMsg" Command="{Binding btnCommandBackTalkMsg}" Style="{StaticResource ResourceKey=btnBackTalkMsgStyle}" ToolTip="返回"></Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="1">
+            <TextBox x:Name="textTitle" Margin="20,0,20,0" VerticalAlignment="Bottom" Text="{Binding noticeTitle}" BorderThickness="0,0,0,1" IsReadOnly="True" Padding="0,10,0,15" FontSize="16">
+                <!--<TextBox.Resources>
+                    <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.3" Stretch="None" AlignmentX="Left">
+                        <VisualBrush.Visual>
+                            <TextBlock Text="标题（必填）" Foreground="#999999" FontSize="16"/>
+                        </VisualBrush.Visual>
+                    </VisualBrush>
+                </TextBox.Resources>
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Style.Triggers>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                                <Setter Property="FontSize" Value="16"></Setter>
+                            </Trigger>
+                            <Trigger Property="Text" Value="">
+                                <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                                <Setter Property="FontSize" Value="16"></Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>-->
+            </TextBox>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="2">
+            <StackPanel Orientation="Vertical">
+                <TextBox x:Name="textContent" Margin="20,20,20,0" BorderThickness="0,0,0,0" IsReadOnly="True"  FontSize="16" Text="{Binding noticeContent}" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+                <TextBlock x:Name="tips"   Margin="20,20,20,0" Foreground="#999999" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Right" Text="{Binding explain}"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="3">
+            <ListBox x:Name="listBox" Background="Transparent" BorderThickness="0,1,0,0" BorderBrush="#EAEFF3" ItemsSource="{Binding listAttachment}" ItemContainerStyle="{StaticResource ListBoxItemNoticeDetailsStyle}"   ScrollViewer.CanContentScroll="False">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"></StackPanel>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+        </Grid>
+    </Grid>
+</UserControl>

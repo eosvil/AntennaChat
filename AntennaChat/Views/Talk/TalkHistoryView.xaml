@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="AntennaChat.Views.Talk.TalkHistoryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AntennaChat.Views.Talk"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"             
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="625">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="28"/>
+        </Grid.RowDefinitions>
+        <GridSplitter/>
+        <StackPanel Margin="20,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
+            <Label VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#333333" FontSize="14" Content="与"/>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#FE3000" FontSize="14" Content="{Binding UserName}"/>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#333333" FontSize="14" Content="的聊天记录"/>
+        </StackPanel>
+        <!--显示聊天信息区域-->
+        <GridSplitter Height="1" Background="#E0E0E0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="lab_tips" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource Label_Style}" TextWrapping="Wrap" MaxWidth="200" Text="页面正在加载，请稍后..." Opacity="0.9" Visibility="{Binding TipVisibility}"/>
+        <ContentControl Grid.Row="1" Content="{Binding  chromiumWebBrowser}"/>
+        <DatePicker x:Name="datePicker" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,20,0" Grid.Row="0" HorizontalContentAlignment="Right" Visibility="Collapsed">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectedDateChanged">
+                    <ei:CallMethodAction TargetObject="{Binding}" MethodName="DatePickerSelectedDateChanged"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </DatePicker>
+        <Grid Grid.Row="2" Background="#eaeff3">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button x:Name="btn_home" HorizontalAlignment="Center" VerticalAlignment="Center" Width="28" Height="20" Style="{StaticResource homePage}" Margin="0,0,10,0" IsEnabled="{Binding HomeIsEnabled}" Command="{Binding HomeCommand}"/>
+                <Button x:Name="btn_pre" HorizontalAlignment="Center" VerticalAlignment="Center" Width="28" Height="20" Style="{StaticResource prePage}" Margin="0,0,20,0" IsEnabled="{Binding PreviousIsEnabled}" Command="{Binding PreviousCommand}"/>
+                <Button x:Name="btn_next" HorizontalAlignment="Center" VerticalAlignment="Center" Width="28" Height="20" Style="{StaticResource nextPage}" Margin="0,0,10,0" IsEnabled="{Binding NextIsEnabled}" Command="{Binding NextCommand}"/>
+                <Button x:Name="btn_last" HorizontalAlignment="Center" VerticalAlignment="Center" Width="28" Height="20" Style="{StaticResource lastPage}" IsEnabled="{Binding LastIsEnabled}" Command="{Binding LastCommand}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="AntennaChat.Views.Notice.AttachControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AntennaChat.Views.Notice"
+             mc:Ignorable="d" 
+             Height="35" Width="540">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle  Name="imageRect" Width="18" Height="18" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,10,0">
+            <Rectangle.Fill>
+                <ImageBrush x:Name="brush" ImageSource="{Binding FileTypeImage}" Stretch="None ">
+                </ImageBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <!--<Image x:Name="img" Source="{Binding FileTypeImage}" HorizontalAlignment="Right" VerticalAlignment="Center" Stretch="None"/>-->
+        <TextBlock Text="{Binding FileName}" Name="fileName" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14"   ToolTip="{Binding Path=Text ,Mode=TwoWay,ElementName=fileName}" Margin="2,0,0,0"/>
+        <TextBlock Text="{Binding FileSize}" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"  Foreground="#A9A9A9"/>
+        <Button Content="{Binding DownLoadButtonContent}" Style="{StaticResource TransparentButton_Style}" Command="{Binding btnCommandDownOperate}" Grid.Column="3" Margin="20,0,10,0" Foreground="#22AEFF"  Height="18"/>
+        <TextBlock Text="{Binding DownloadProgress}" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center"   Margin="20,0,10,0" FontSize="12"  Foreground="#A9A9A9"/>
+
+    </Grid>
+</UserControl>

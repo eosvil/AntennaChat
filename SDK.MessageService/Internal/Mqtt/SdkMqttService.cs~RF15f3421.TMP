@@ -1,0 +1,854 @@
+﻿using Newtonsoft.Json;
+using SDK.Service.Models;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using SDK.Service.Mqtt;
+using SDK.Service.Properties;
+using static SDK.Service.SdkEnumCollection;
+
+namespace SDK.Service
+{
+    /// <summary>
+    /// MQTT服务类
+    /// </summary>
+    /// 创建者：赵雪峰 20170112
+    internal class SdkMqttService
+    {
+        /// <summary>
+        /// 用户ID
+        /// </summary>
+        private string _userId;
+
+        /// <summary>
+        /// 聊天的消息接收
+        /// </summary>
+        public event SdkPublicationReceivedHandler MsChatsReceived;
+
+        /// <summary>
+        /// 聊天室消息接收
+        /// </summary>
+        public event SdkPublicationReceivedHandler MsRoomsReceived;
+
+        /// <summary>
+        /// 群组型消息接收
+        /// </summary>
+        public event SdkPublicationReceivedHandler MsGroupReceived;
+
+        /// <summary>
+        /// 个人的消息接收
+        /// </summary>
+        public event SdkPublicationReceivedHandler MsUsersReceived;
+
+        /// <summary>
+        /// 其他的消息接收
+        /// </summary>
+        public event SdkPublicationReceivedHandler MsOtherReceived;
+
+        /// <summary>
+        /// 离线消息
+        /// </summary>
+        public event SdkPublicationReceivedHandler MsOfflineReceived;
+
+        /// <summary>
+        /// 回调注册有选择性接收消息
+        /// </summary>
+        public event SdkPublicationReceivedHandler MsCallbackReceived;
+
+        /// <summary>
+        /// 断开事件
+        /// </summary>
+        public event EventHandler DisconnectedMqtt;
+
+        /// <summary>
+        /// 断开重连事件
+        /// </summary>
+        public event EventHandler ReconnectedMqtt;
+
+        /// <summary>
+        /// 60秒在线
+        /// </summary>
+        public short KeepAlive = 60;
+
+        /// <summary>
+        /// Mqtt客户端
+        /// </summary>
+        private MQTTClient _client;
+
+        /// <summary>
+        /// 心跳消息时间定时器
+        /// </summary>
+        private System.Timers.Timer _heartbeattimer;
+
+        /// <summary>
+        /// 心跳计时数用来重置
+        /// </summary>
+        private int _heartbeatnumber = 0;
+
+        #region   //MQTT连接服务处理
+        /// <summary>
+        /// MQTT连接状态
+        /// </summary>
+        public MsConnectionState ConnectionState => _client.ConnectionState;
+
+        /// <summary>
+        /// MQTT是否连接
+        /// </summary>
+        public bool IsConnected => _client.IsConnected;
+
+        /// <summary>
+        /// 方法说明：连接MQTT服务
+        /// 完成时间：2016-04-20
+        /// </summary>
+        /// <param name="userId">对应MQTT的客户端用户ID</param>
+        /// <param name="mqttConfig">登录时获取到的MQTT连接配置</param>
+        /// <param name="errorMsg">MQTT连接错误提示</param>
+        /// <returns>是否连接成功</returns>
+        public bool Connect(string userId, GetConnectConfigOutput mqttConfig, ref string errorMsg)
+        {
+            this._userId = userId;
+            try
+            {
+                _client = new MQTTClient(mqttConfig.host, int.Parse(mqttConfig.port));
+                if (_client.Connect(mqttConfig.clientId, mqttConfig.userName, mqttConfig.password))
+                {
+                    _client.MessageReceived += OnMessageReceived;
+                    _client.ReconnectedMqtt += OnReconnectedMqtt;
+                    _client.Disconnected += OnDisconnectedMqtt;
+                    LogHelper.WriteDebug($"{Resources.SdkMqttConnectSuccess}:{mqttConfig.host}:{mqttConfig.port}");
+                    //连接成功就开始跑定时器
+                    _heartbeattimer = new System.Timers.Timer(1000);
+                    _heartbeattimer.Elapsed += _heartbeattimer_Elapsed;
+                    _heartbeattimer.Start();
+                    return true;
+                }
+                else
+                {
+                    LogHelper.WriteError(
+                        $"{Resources.SdkMqttConnectFail}:[{mqttConfig.host}:{mqttConfig.port}] {errorMsg}");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                errorMsg = ex.Message;
+                LogHelper.WriteError(
+                    $"{Resources.SdkMqttConnectFail}:[{mqttConfig.host}:{mqttConfig.port}] {ex.Message}");
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 方法说明：组织发送心跳消息计时
+        /// </summary>
+        /// <param name="sender">计时器</param>
+        /// <param name="e">时间间隔</param>
+        private void _heartbeattimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            _heartbeatnumber++;
+            //60秒发送一次心跳
+            if (_heartbeatnumber == 60)
+            {
+                var heartbeat = Task.Factory.StartNew(() =>
+                {
+                    if (IsConnected)
+                    {
+                        var sendhb = new SdkMsHeartBeat
+                        {
+                            userId = this._userId,
+                            attr = $"{SdkEnumCollection.OSType.PC.ToString()} Send HeatBeat Message"
+                        };
+                        var temperrorMsg = string.Empty;
+                        SdkPublishTerminalMsg(sendhb, ref temperrorMsg);
+                    }
+                });
+                //重置心跳计数
+                _heartbeatnumber = 0;
+            }
+        }
+
+        #endregion
+
+        #region   //MQTT接收消息方法
+
+        /// <summary>
+        /// 方法说明：MQTT消息接收
+        /// 完成时间：20106-04-20
+        /// </summary>
+        /// <param name="topic">消息主题信息</param>
+        /// <param name="payload">消息接收内容信息</param>
+        private void OnMessageReceived(string topic, byte[] payload)
+        {
+            var finalJson = System.Text.Encoding.UTF8.GetString(payload);
+            try
+            {
+                if (MsRoomsReceived != null || MsGroupReceived != null || MsUsersReceived != null ||
+                    MsOtherReceived != null)
+                {
+                    HandleReceivedMessage(topic, finalJson);
+                }
+                else if (MsCallbackReceived != null)
+                {
+                    CallbackReceivedMessage(topic, finalJson);
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.WriteDebug(
+                    $"{Resources.SdkReceivedMqttMessage}[CallbackEventType]：topic={topic},content={finalJson},{ex.Message},{ex.StackTrace}");
+            }
+            finally
+            {
+                LogHelper.WriteDebug($"{Resources.SdkReceivedMqttMessage}[CallbackEventType]：topic={topic},content={finalJson}");
+            }
+        }
+
+        /// <summary>
+        /// 方法说明：注册事件方式收到MQTT消息
+        /// </summary>
+        /// <param name="topic"></param>
+        /// <param name="jsonContent"></param>
+        private void HandleReceivedMessage(string topic, string jsonContent)
+        {
+            //判断Json串的格式类型，目前消息仅处理数组和二维数组
+            var jsonType = JsonCoder.GetJsonType(jsonContent);
+            if (jsonType == SdkJsonType.JstOneArray)
+            {
+                //数组都先按照离线消息解析
+                var offlineArray = new string[] { };
+                var temperrorMsg = string.Empty;
+                if (CheckOfflineMessage(jsonContent, ref offlineArray, ref temperrorMsg))
+                {
+                    HandleOfflineReceived(MsOfflineReceived, offlineArray);
+                }
+                else
+                {
+                    LogHelper.WriteError(
+                        $"[HandleReceivedMessage(GetJsonType:{jsonType.ToString()})]：topic={topic},content={jsonContent},Deserialize Json string[] error:{temperrorMsg}");
+                }
+            }
+            else if (jsonType == SdkJsonType.JstTwoArray)
+            {
+                var mqArray = JsonConvert.DeserializeObject<string[][]>(jsonContent);
+                var errMsg = string.Empty;
+                var messageType = int.Parse(mqArray[0][0]);
+                //聊天信息接收：Text、Picture、Audio、File、MapLocation、MixImageText、At、MultiAudioVideo
+                if (Enum.GetValues(typeof (SdkEnumCollection.ChatMsgType)).Cast<int>().ToList().Contains(messageType))
+                {
+                    HandleChatMsReceived(MsChatsReceived, messageType, mqArray, ref errMsg);
+                    return;
+                }
+                //用户信息接收：OffLine、OnLine、Leave、Busy、KickOut、Disable、ModifyInfo
+                if (Enum.GetValues(typeof (SdkEnumCollection.UserStateNotify))
+                    .Cast<int>()
+                    .ToList()
+                    .Contains(messageType))
+                {
+                    HandleUserMsReceived(MsUsersReceived, messageType, mqArray, ref errMsg);
+                    return;
+                }
+                //聊天室信息接收：Create、Dismiss、AddMember、DeleteMember、QuitMember、ModifyMemberInfo、Modify
+                if (Enum.GetValues(typeof (SdkEnumCollection.ChatRoomNotify)).Cast<int>().ToList().Contains(messageType))
+                {
+                    HandleRoomMsReceived(MsRoomsReceived, messageType, mqArray, ref errMsg);
+                    return;
+                }
+                //讨论组（群）信息接收：Create、Dismiss、AddMember、DeleteMember、QuitMember、ModifyMemberInfo、Modify、BurnMode、NormalMode、BurnModeDelete
+                if (Enum.GetValues(typeof (SdkEnumCollection.DiscussGroupInfoNotify))
+                    .Cast<int>()
+                    .ToList()
+                    .Contains(messageType))
+                {
+                    HandleGroupMsReceived(MsGroupReceived, messageType, mqArray, ref errMsg);
+                    return;
+                }
+                //其他信息接收：[其他的信息]MsgReceipt、MultiTerminalSynch、PointFileAccepted、PointBurnReaded、VersionHardUpdate、OrganizationModify、UnvarnishedMsg
+                //              [讨论组信息]UnReadNotifications、AddNotification、DeleteNotification、ModifyNotificationState
+                if (
+                    Enum.GetValues(typeof (SdkEnumCollection.OtherMsgType)).Cast<int>().ToList().Contains(messageType) ||
+                    Enum.GetValues(typeof (SdkEnumCollection.NotificationMsgType))
+                        .Cast<int>()
+                        .ToList()
+                        .Contains(messageType))
+                {
+                    HandleOtherMsReceived(MsOtherReceived, messageType, mqArray, ref errMsg);
+                    return;
+                }
+                //后续确认合并处理
+                if (messageType >= 4000 && messageType <= 9999)
+                {
+                    //自定义消息或透传消息
+                    HandleOtherMsReceived(MsOtherReceived, messageType, mqArray, ref errMsg);
+                }
+            }
+            else
+            {
+                LogHelper.WriteDebug(
+                        $"[HandleReceivedMessage(GetJsonType:{jsonType.ToString()})]：topic={topic},content={jsonContent},Dealwith Message Error Json Type");
+            }
+        }
+
+        /// <summary>
+        /// 回调注册方式收到MQTT消息
+        /// </summary>
+        /// <param name="topic"></param>
+        /// <param name="jsonContent"></param>
+        private void CallbackReceivedMessage(string topic, string jsonContent)
+        {
+            var mqArray = JsonConvert.DeserializeObject<string[][]>(jsonContent);
+            var errorMsg = string.Empty;
+            var messageType = int.Parse(mqArray[0][0]);
+            //聊天信息接收：Text、Picture、Audio、File、MapLocation、MixImageText、At、MultiAudioVideo
+            if (Enum.GetValues(typeof(SdkEnumCollection.ChatMsgType)).Cast<int>().ToList().Contains(messageType))
+            {
+                HandleChatMsReceived(MsCallbackReceived, messageType, mqArray, ref errorMsg);
+                return;
+            }
+            //用户信息接收：OffLine、OnLine、Leave、Busy、KickOut、Disable、ModifyInfo
+            if (Enum.GetValues(typeof(SdkEnumCollection.UserStateNotify)).Cast<int>().ToList().Contains(messageType))
+            {
+                HandleUserMsReceived(MsCallbackReceived, messageType, mqArray, ref errorMsg);
+                return;
+            }
+            //聊天室信息接收：Create、Dismiss、AddMember、DeleteMember、QuitMember、ModifyMemberInfo、Modify
+            if (Enum.GetValues(typeof(SdkEnumCollection.ChatRoomNotify)).Cast<int>().ToList().Contains(messageType))
+            {
+                HandleRoomMsReceived(MsCallbackReceived, messageType, mqArray, ref errorMsg);
+                return;
+            }
+            //讨论组（群）信息接收：Create、Dismiss、AddMember、DeleteMember、QuitMember、ModifyMemberInfo、Modify、BurnMode、NormalMode、BurnModeDelete
+            if (Enum.GetValues(typeof(SdkEnumCollection.DiscussGroupInfoNotify))
+                .Cast<int>()
+                .ToList()
+                .Contains(messageType))
+            {
+                HandleGroupMsReceived(MsCallbackReceived, messageType, mqArray, ref errorMsg);
+                return;
+            }
+            //其他信息接收：[其他的信息]MsgReceipt、MultiTerminalSynch、PointFileAccepted、PointBurnReaded、VersionHardUpdate、OrganizationModify、UnvarnishedMsg
+            //              [讨论组信息]UnReadNotifications、AddNotification、DeleteNotification、ModifyNotificationState
+            if (Enum.GetValues(typeof(SdkEnumCollection.OtherMsgType)).Cast<int>().ToList().Contains(messageType) ||
+                Enum.GetValues(typeof(SdkEnumCollection.NotificationMsgType))
+                    .Cast<int>()
+                    .ToList()
+                    .Contains(messageType))
+            {
+                HandleOtherMsReceived(MsCallbackReceived, messageType, mqArray, ref errorMsg);
+                return;
+            }
+            //后续确认合并处理
+            if (messageType >= 4000 && messageType <= 9999)
+            {
+                //自定义消息或透传消息
+                HandleOtherMsReceived(MsCallbackReceived, messageType, mqArray, ref errorMsg);
+            }
+        }
+
+        /// <summary>
+        /// 方法说明：判断是数组则按照离线消息解析
+        /// </summary>
+        /// <param name="jsonContent">接收消息内容</param>
+        /// <param name="mqArray">获取离线消息内容</param>
+        /// <param name="errorMsg">错误提示</param>
+        /// <returns>是否离线消息</returns>
+        private static bool CheckOfflineMessage(string jsonContent, ref string[] mqArray, ref string errorMsg)
+        {
+            try
+            {
+                mqArray = JsonConvert.DeserializeObject<string[]>(jsonContent);
+                //判断离线消息完成
+                return true;
+            }
+            catch(Exception ex)
+            {
+                errorMsg += $"{ex.Message}{ex.StackTrace}";
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 方法说明：注册方法接收离线消息
+        /// </summary>
+        /// <param name="mqofflineArray"></param>
+        /// <returns></returns>
+        private static void HandleOfflineReceived(SdkPublicationReceivedHandler msReceived, IReadOnlyCollection<string> mqofflineArray)
+        {
+            if(mqofflineArray == null || mqofflineArray.Count == 0) { return; }
+            var contentobjList = new List<SdkMsBase>();
+            foreach (var jsonContent in mqofflineArray)
+            {
+                var mqArray = JsonConvert.DeserializeObject<string[][]>(jsonContent);
+                var errorMsg = string.Empty;
+                var messageType = int.Parse(mqArray[0][0]);
+                var eventType = SdkMsgType.UnDefineMsg;
+                //聊天信息接收：Text、Picture、Audio、File、MapLocation、MixImageText、At、MultiAudioVideo
+                if (Enum.GetValues(typeof(SdkEnumCollection.ChatMsgType)).Cast<int>().ToList().Contains(messageType))
+                {
+                    var chatMsg = MsgConverter.ReceiveChatMsgEntity(messageType, mqArray, ref eventType, ref errorMsg);
+                    if (chatMsg == null) continue;
+                    chatMsg.MsgType = eventType;
+                    contentobjList.Add(chatMsg);
+                }
+                //用户信息接收：OffLine、OnLine、Leave、Busy、KickOut、Disable、ModifyInfo
+                if (Enum.GetValues(typeof(SdkEnumCollection.UserStateNotify)).Cast<int>().ToList().Contains(messageType))
+                {
+                    var userMsg = MsgConverter.ReceiveUserMsgEntity(messageType, mqArray, ref eventType, ref errorMsg);
+                    if (userMsg == null) continue;
+                    userMsg.MsgType = eventType;
+                    contentobjList.Add(userMsg);
+                }
+                //聊天室信息接收：Create、Dismiss、AddMember、DeleteMember、QuitMember、ModifyMemberInfo、Modify
+                if (Enum.GetValues(typeof(SdkEnumCollection.ChatRoomNotify)).Cast<int>().ToList().Contains(messageType))
+                {
+                    var roomMsg = MsgConverter.ReceiveRoomMsgEntity(messageType, mqArray, ref eventType, ref errorMsg);
+                    if (roomMsg == null) continue;
+                    roomMsg.MsgType = eventType;
+                    contentobjList.Add(roomMsg);
+                }
+                //讨论组（群）信息接收：Create、Dismiss、AddMember、DeleteMember、QuitMember、ModifyMemberInfo、Modify、BurnMode、NormalMode、BurnModeDelete
+                if (Enum.GetValues(typeof(SdkEnumCollection.DiscussGroupInfoNotify))
+                    .Cast<int>()
+                    .ToList()
+                    .Contains(messageType))
+                {
+                    var groupMsg = MsgConverter.ReceiveGroupMsgEntity(messageType, mqArray, ref eventType, ref errorMsg);
+                    if (groupMsg == null) continue;
+                    groupMsg.MsgType = eventType;
+                    contentobjList.Add(groupMsg);
+                }
+                //其他信息接收：[其他的信息]MsgReceipt、MultiTerminalSynch、PointFileAccepted、PointBurnReaded、VersionHardUpdate、OrganizationModify、UnvarnishedMsg
+                //              [讨论组信息]UnReadNotifications、AddNotification、DeleteNotification、ModifyNotificationState
+                if (Enum.GetValues(typeof(SdkEnumCollection.OtherMsgType)).Cast<int>().ToList().Contains(messageType) ||
+                    Enum.GetValues(typeof(SdkEnumCollection.NotificationMsgType))
+                        .Cast<int>()
+                        .ToList()
+                        .Contains(messageType))
+                {
+                    var otherMsg = MsgConverter.ReceiveOtherMsgEntity(messageType, mqArray, ref eventType, ref errorMsg);
+                    if (otherMsg == null) continue;
+                    otherMsg.MsgType = eventType;
+                    contentobjList.Add(otherMsg);
+                }
+                //后续确认合并处理
+                if (messageType >= 4000 && messageType <= 9999)
+                {
+                    //自定义消息或透传消息
+                    var otherMsg = MsgConverter.ReceiveOtherMsgEntity(messageType, mqArray, ref eventType, ref errorMsg);
+                    if (otherMsg == null) continue;
+                    otherMsg.MsgType = eventType;
+                    contentobjList.Add(otherMsg);
+                }
+            }
+            if(contentobjList.Count == 0) { return; }
+            msReceived?.Invoke(SdkMsgType.OffLineMessage, contentobjList);
+        }
+
+        /// <summary>
+        /// 方法说明：接收聊天信息方法
+        /// 完成时间：2017-05-10
+        /// </summary>
+        /// <param name="msReceived">接收消息注册</param>
+        /// <param name="msType">聊天消息类型</param>
+        /// <param name="mqArray">聊天消息内容</param>
+        /// <param name="errorMsg">错误提示</param>
+        private static void HandleChatMsReceived(SdkPublicationReceivedHandler msReceived, int msType, string[][] mqArray, ref string errorMsg)
+        {
+            var eventType = SdkMsgType.UnDefineMsg;
+            var chatMsg = MsgConverter.ReceiveChatMsgEntity(msType, mqArray, ref eventType, ref errorMsg);
+            if (chatMsg == null) return;
+            chatMsg.MsgType = eventType;
+            msReceived?.Invoke(eventType, chatMsg);
+        }
+
+        /// <summary>
+        /// 方法说明：接收用户状态变化信息方法
+        /// 完成时间：2017-05-10
+        /// </summary>
+        /// <param name="msReceived">接收消息注册</param>
+        /// <param name="msType">聊天消息类型</param>
+        /// <param name="mqArray">聊天消息内容</param>
+        /// <param name="errorMsg">错误提示</param>
+        private static void HandleUserMsReceived(SdkPublicationReceivedHandler msReceived, int msType, string[][] mqArray, ref string errorMsg)
+        {
+            var eventType = SdkMsgType.UnDefineMsg;
+            var userMsg = MsgConverter.ReceiveUserMsgEntity(msType, mqArray, ref eventType, ref errorMsg);
+            if (userMsg == null) return;
+            userMsg.MsgType = eventType;
+            msReceived?.Invoke(eventType, userMsg);
+        }
+
+        /// <summary>
+        /// 方法说明：接收聊天室信息方法
+        /// 完成时间：2017-05-10
+        /// </summary>
+        /// <param name="msReceived">接收消息注册</param>
+        /// <param name="msType">聊天室消息类型</param>
+        /// <param name="mqArray">聊天室消息内容</param>
+        /// <param name="errorMsg">错误提示</param>
+        private static void HandleRoomMsReceived(SdkPublicationReceivedHandler msReceived, int msType, string[][] mqArray, ref string errorMsg)
+        {
+            var eventType = SdkMsgType.UnDefineMsg;
+            var roomMsg = MsgConverter.ReceiveRoomMsgEntity(msType, mqArray, ref eventType, ref errorMsg);
+            if (roomMsg == null) return;
+            roomMsg.MsgType = eventType;
+            msReceived?.Invoke(eventType, roomMsg);
+        }
+
+        /// <summary>
+        /// 方法说明：接收群组信息方法
+        /// 完成时间：2017-05-10
+        /// </summary>
+        /// <param name="msReceived">接收消息注册</param>
+        /// <param name="msType">群组消息类型</param>
+        /// <param name="mqArray">群组消息内容</param>
+        /// <param name="errorMsg">错误提示</param>
+        private static void HandleGroupMsReceived(SdkPublicationReceivedHandler msReceived, int msType, string[][] mqArray, ref string errorMsg)
+        {
+            var eventType = SdkMsgType.UnDefineMsg;
+            var groupMsg = MsgConverter.ReceiveGroupMsgEntity(msType, mqArray, ref eventType, ref errorMsg);
+            if (groupMsg == null) return;
+            groupMsg.MsgType = eventType;
+            msReceived?.Invoke(eventType, groupMsg);
+        }
+
+        /// <summary>
+        /// 方法说明：接收其他信息方法
+        /// 完成时间：2017-05-10
+        /// </summary>
+        /// <param name="msReceived">接收消息注册</param>
+        /// <param name="msType">群组消息类型</param>
+        /// <param name="mqArray">群组消息内容</param>
+        /// <param name="errorMsg">错误提示</param>
+        private static void HandleOtherMsReceived(SdkPublicationReceivedHandler msReceived, int msType, string[][] mqArray, ref string errorMsg)
+        {
+            var eventType = SdkMsgType.UnDefineMsg;
+            var otherMsg = MsgConverter.ReceiveOtherMsgEntity(msType, mqArray, ref eventType, ref errorMsg);
+            if (otherMsg == null) return;
+            otherMsg.MsgType = eventType;
+            msReceived?.Invoke(eventType, otherMsg);
+        }
+
+        #endregion
+
+        #region   //MQTT处理断开重连
+        /// <summary>
+        /// 方法说明：MQTT断开事件
+        /// 完成时间：2016-04-20
+        /// </summary>
+        /// <param name="sender">MQTT断开触发</param>
+        /// <param name="e">MQTT断开事件信息</param>
+        private void OnDisconnectedMqtt(object sender, EventArgs e)
+        {
+            DisconnectedMqtt?.Invoke(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// 方法说明：MQTT断开重连事件
+        /// 完成时间：2016-04-20
+        /// </summary>
+        /// <param name="sender">MQTT断开重连触发</param>
+        /// <param name="e">MQTT断开重连事件信息</param>
+        private void OnReconnectedMqtt(object sender, EventArgs e)
+        {
+            ReconnectedMqtt?.Invoke(null, null);
+        }
+
+        /// <summary>
+        /// 方法说明：MQTT断开连接
+        /// 完成时间：2016-04-20
+        /// </summary>
+        public void DisConnect()
+        {
+            try
+            {
+                if (_client == null) return;
+                //先取消主题的订阅
+                var topics = new List<string>();
+                if (_client.Subscriptions.Count > 0)
+                {
+                    topics.AddRange(_client.Subscriptions.Select(subscription => subscription.TopicName));
+                    var errMsg = string.Empty;
+                    UnSubscribe(topics, ref errMsg);
+                }
+                //再取消事件订阅
+                _client.MessageReceived -= OnMessageReceived;
+                _client.ReconnectedMqtt -= OnReconnectedMqtt;
+                //最后断开断开连接
+                _client.Disconnect();
+                //断开连接后，心跳计数需要释放
+                _heartbeattimer.Close();
+                _heartbeatnumber = 0;
+                _client.Dispose();
+                LogHelper.WriteDebug(Resources.SdkMqttDisconnectSuccess);
+            }
+            catch (Exception e)
+            {
+                LogHelper.WriteError($"{Resources.SdkMqttDisconnectFail}:{e.Message}");
+            }
+        }
+
+        #endregion
+
+        #region   //MQTT订阅主题操作
+
+        /// <summary>
+        /// 订阅主题
+        /// </summary>
+        /// <param name="topics"></param>
+        /// <param name="errMsg"></param>
+        /// <returns></returns>
+        public bool Subscribe(List<string> topics, ref string errMsg)
+        {
+            if (!_client.IsConnected)
+            {
+                errMsg = Resources.SdkMqServiceException;
+                return false;
+            }
+            try
+            {
+                var subscriptions = topics.ToDictionary(topic => topic, topic => QoS.AcknowledgeDelivery);
+                _client.Subscriptions.Add(subscriptions);
+                LogHelper.WriteDebug(
+                    $"{Resources.SdkSubscribeTopicSuccess}：topics ={string.Join(",", topics.ToArray())}");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                errMsg = ex.Message;
+                LogHelper.WriteDebug($"{Resources.SdkSubscribeTopicError}：{errMsg}");
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 取消订阅
+        /// </summary>
+        /// <param name="topics"></param>
+        /// <param name="errMsg"></param>
+        /// <returns></returns>
+        public bool UnSubscribe(List<string> topics, ref string errMsg)
+        {
+            if (!_client.IsConnected)
+            {
+                errMsg = Resources.SdkMqServiceException;
+                return false;
+            }
+            try
+            {
+                _client.Subscriptions.Remove(topics);
+                LogHelper.WriteDebug(
+                    $"{Resources.SdkUnSubscribeTopicSuccess}：topics= {string.Join(",", topics.ToArray())}");
+            }
+            catch (Exception ex)
+            {
+                errMsg = ex.Message;
+                LogHelper.WriteDebug($"{Resources.SdkUnSubscribeTopicError}：{errMsg}");
+                return false;
+            }
+            return true;
+        }
+
+        #endregion
+
+        #region   //MQTT发送消息处理
+
+        /// <summary>
+        /// 方法说明：SDK发送终端消息接口：心跳消息、请求离线消息
+        /// 完成时间：2017-05-16
+        /// </summary>
+        /// <param name="entity">发送消息实体</param>
+        /// <param name="errorMsg">提示信息</param>
+        /// <returns>是否成功发送消息</returns>
+        public bool SdkPublishTerminalMsg<T>(T entity, ref string errorMsg) where T : SdkMsTerminalBase
+        {
+            var isheartBeat = false;
+            var jsonStr = MsgConverter.GetJsonByTerminalMsg<T>(entity, ref isheartBeat, ref errorMsg);
+            return !string.IsNullOrEmpty(jsonStr) &&
+                   Publish(TopicSend.sdk_user.ToString(), jsonStr, isheartBeat, ref errorMsg);
+        }
+
+        /// <summary>
+        /// 方法说明：SDK发送聊天消息接口：文本、图片、音频、视频、文件、地理位置、图文混合、@消息、多人音频视频
+        /// 完成时间：2017-05-16
+        /// </summary>
+        /// <param name="entity">发送消息实体</param>
+        /// <param name="sendType">发送类型：正常聊天，重发聊天，机器人聊天</param>
+        /// <param name="errorMsg">提示信息</param>
+        /// <returns>是否成功发送消息</returns>
+        public bool SdkPublishChatMsg<T>(T entity, ChatMsgSendType sendType, ref string errorMsg)
+            where T : MsSdkMessageChat
+        {
+            var jsonStr = MsgConverter.GetJsonByChatMsg<T>(entity, ref errorMsg);
+            string topic;
+            switch (sendType)
+            {
+                case ChatMsgSendType.Nomal:
+                {
+                    topic = TopicSend.sdk_send.ToString();
+                }
+                    break;
+                case ChatMsgSendType.Repeat:
+                {
+                    topic = TopicSend.sdk_resend.ToString();
+                }
+                    break;
+                case ChatMsgSendType.Robot:
+                {
+                    topic = TopicSend.robot_send.ToString();
+                }
+                    break;
+                case ChatMsgSendType.Rerobot:
+                    {
+                        topic = TopicSend.robot_resend.ToString();
+                    }
+                    break;
+                default:
+                {
+                    topic = TopicSend.sdk_send.ToString();
+                }
+                    break;
+            }
+            //发送消息
+            return !string.IsNullOrEmpty(jsonStr) && Publish(topic, jsonStr, false, ref errorMsg);
+        }
+
+        /// <summary>
+        /// 方法说明：通过SDK发送自定义消息接口：[支持4000-9999的自定义消息，仅仅是传输][完成自定义消息（MsCustomEntity）中的content内容]
+        /// 完成时间：2017-05-16
+        /// </summary>
+        /// <param name="entity">发送消息实体</param>
+        /// <param name="custommsgType">自定义消息类型[4000-9999]</param>
+        /// <param name="customTopic">自定义主题</param>
+        /// <param name="errorMsg">提示信息</param>
+        /// <returns>是否成功发送消息</returns>
+        public bool SdkPublishCustomMsg(MsSdkCustomEntity entity, int custommsgType, string customTopic,
+            ref string errorMsg)
+        {
+            var jsonStr = MsgConverter.GetJsonByCustomMsg(entity, custommsgType.ToString(), ref errorMsg);
+            return !string.IsNullOrEmpty(jsonStr) && Publish(customTopic, jsonStr, false, ref errorMsg);
+        }
+
+        /// <summary>
+        /// 方法说明：SDK普通消息 已读/收回执
+        /// 完成时间：2017-05-16
+        /// </summary>
+        /// <typeparam name="T">接收到的聊天消息类型</typeparam>
+        /// <param name="sendReceipt">已读/收回执实体</param>
+        /// <param name="receiptType">已读/收类型</param>
+        /// <param name="errorMsg">错误提示</param>
+        /// <returns>是否成功发送回执</returns>
+        public bool SdkPublishReceiptMsg(SdkMsSendMsgReceipt sendReceipt,
+            SdkReceiptType receiptType, ref string errorMsg)
+        {
+            var jsonStr = MsgConverter.GetJsonByMsgReceipt(sendReceipt, ref errorMsg);
+            var topic = receiptType == SdkReceiptType.ReadReceipt
+                ? TopicSend.sdk_read.ToString()
+                : TopicSend.sdk_receive.ToString();
+            return !string.IsNullOrEmpty(jsonStr) && Publish(topic, jsonStr, false, ref errorMsg);
+        }
+
+        /// <summary>
+        /// 方法说明：通过SDK发送自定义消息接口：[支持4000-9999的自定义消息已读/收回执，仅仅是传输][完成自定义消息（MsCustomEntity）中的content内容]
+        /// 完成时间：2017-05-16
+        /// </summary>
+        /// <param name="sendReceipt">已读/收回执实体</param>
+        /// <param name="receiptType">已读/收类型</param>
+        /// <param name="customTopic">自定义消息主题</param>
+        /// <param name="errorMsg">提示信息</param>
+        /// <returns>是否成功发送消息</returns>
+        public bool SdkPublishCustomReceiptMsg(SdkMsSendMsgReceipt sendReceipt,
+            SdkReceiptType receiptType, string customTopic, ref string errorMsg)
+        {
+            var jsonStr = MsgConverter.GetJsonByMsgReceipt(sendReceipt, ref errorMsg);
+            var topic = receiptType == SdkReceiptType.ReadReceipt
+                ? TopicSend.sdk_read.ToString()
+                : TopicSend.sdk_receive.ToString();
+            return !string.IsNullOrEmpty(jsonStr) && Publish(topic, jsonStr, false, ref errorMsg);
+        }
+
+        /// <summary>
+        /// 方法说明：SDK发送点对点阅后即焚消息已读回执
+        /// 完成时间：2015-05-16
+        /// </summary>
+        /// <param name="receiptedchatmsgEntity">点对点聊天收到的阅后即焚消息实体</param>
+        /// <param name="errorMsg">错误提示</param>
+        /// <returns>是否成功发送点对点阅后即焚已读回执</returns>
+        public bool SdkPublishPointBurnReadReceiptMsg(MsPointBurnReaded receiptedchatmsgEntity,  ref string errorMsg)
+        {
+            var jsonStr = MsgConverter.GetJsonByPointReadedReceipt(receiptedchatmsgEntity, ref errorMsg);
+            return !string.IsNullOrEmpty(jsonStr) && Publish(TopicSend.sdk_send.ToString(), jsonStr, false, ref errorMsg);
+        }
+
+        /// <summary>
+        /// 方法说明：SDK发送群阅后即焚消息[群主改变阅后即焚状态]
+        /// 完成时间：2015-05-16
+        /// </summary>
+        /// <param name="changeMode">要切换的阅后即焚状态</param>
+        /// <param name="sendmodeEntity">发送实体信息</param>
+        /// <param name="errorMsg">错误提示</param>
+        /// <returns>是否成功发送群阅后即焚消息</returns>
+        public bool SdkPublishGpOwnerChangeMode(GroupChangeMode changeMode, MsSdkMessageChat sendmodeEntity,
+            ref string errorMsg)
+        {
+            var jsonStr = MsgConverter.GetJsonByGroupChangeMode(sendmodeEntity, changeMode, ref errorMsg);
+            return !string.IsNullOrEmpty(jsonStr) && Publish(TopicSend.sdk_send.ToString(), jsonStr, false, ref errorMsg);
+        }
+
+        /// <summary>
+        /// 方法说明：SDK发送其他消息（结构是聊天消息的标准结构）
+        /// 完成时间：2015-05-16
+        /// </summary>
+        /// <param name="otherMsg">发送的其他消息实体</param>
+        /// <param name="errorMsg">错误提示</param>
+        /// <returns>是否成功发其他标准消息</returns>
+        public bool SdkPublishOtherMsg(MsSdkOther.SdkOtherBase otherMsg, ref string errorMsg)
+        {
+            var jsonStr = MsgConverter.GetJsonByOtherMsg(otherMsg, ref errorMsg);
+            return !string.IsNullOrEmpty(jsonStr) && Publish(TopicSend.sdk_send.ToString(), jsonStr, false, ref errorMsg);
+        }
+
+        /// <summary>
+        /// 发布消息(JSON字符串作为参数)
+        /// </summary>
+        /// <param name="topic">主题</param>
+        /// <param name="jsonContent">JSON字符串</param>
+        /// <param name="isheartBeat">是否心跳消息</param>
+        /// <param name="errMsg">错误提示</param>
+        /// <returns>发布是否成功</returns>
+        private bool Publish(string topic, string jsonContent, bool isheartBeat, ref string errMsg)
+        {
+            if (!_client.IsConnected)
+            {
+                errMsg = Resources.SdkMqServiceException;
+                return false;
+            }
+            try
+            {
+                var stopWatch = new Stopwatch();
+                stopWatch.Start();
+                var payload = System.Text.Encoding.UTF8.GetBytes(jsonContent);
+                _client.Publish(topic, payload, QoS.AcknowledgeDelivery, false);
+                stopWatch.Stop();
+                if (!isheartBeat || SdkService.HeartBeatLog) //屏蔽掉发心跳的日志
+                {
+                    LogHelper.WriteDebug(
+                        $"{Resources.SdkMsPublishSuccess}({stopWatch.Elapsed.TotalMilliseconds} millisecond)：topic={topic},content={jsonContent}");
+                }
+                //发送消息，需要重置心跳计数器[心跳消息，主要是判断上行消息的情况]
+                _heartbeatnumber = 0;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                errMsg = ex.Message;
+                LogHelper.WriteError($"{Resources.SdkMsPublishFail}：{errMsg},{ex.StackTrace}");
+                return false;
+            }
+        }
+
+        #endregion
+    }
+}

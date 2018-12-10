@@ -1,0 +1,81 @@
+﻿<Window x:Class="Antenna.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Antenna.UI"
+   
+        mc:Ignorable="d"
+        Title="AntennaChat_MainWindow" Height="620" Width="960" MinHeight="620" MinWidth="960" WindowStyle="None"
+        WindowStartupLocation="CenterScreen" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <!--<shell:WindowChrome.WindowChrome>
+        <shell:WindowChrome GlassFrameThickness="-1" ResizeBorderThickness="4"
+                        CaptionHeight="4" CornerRadius="0" />
+    </shell:WindowChrome.WindowChrome>-->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Antenna.UserControls;component/ResourceDictionary/defaultStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--标题栏-->
+        <Grid Grid.Row="0" Background="#22ADFE">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--最小化、最大化、关闭按钮-->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,20,0" Grid.Row="0" Grid.Column="2">
+                <Button Width="24" Height="34" Name="btn_small" Style="{StaticResource SmallButton}" Click="btn_small_Click" ToolTip="最小化"/>
+                <Button Width="24" Height="34" Name="btn_max" Style="{StaticResource MaxButtonForNormal}" Click="btn_max_Click" ToolTip="最大化" Margin="10,0,0,0"/>
+                <Button Width="24" Height="34" Name="btn_close" Style="{StaticResource CloseButton}" Click="btn_close_Click"  ToolTip="关闭" Margin="10,0,0,0"/>
+            </StackPanel>
+            <!--头像-->
+            <Ellipse x:Name="elli_head" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Height="55" Width="55" Stroke="Black" StrokeThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand" MouseLeftButtonDown="elli_head_MouseLeftButtonDown">
+                <Ellipse.Fill>
+                    <ImageBrush x:Name="head_image" ImageSource="pack://application:,,,/Antenna.UserControls;Component/Images/触角-logo.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <TextBlock x:Name="txtName" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="欧阳三丰" TextTrimming="WordEllipsis" Foreground="White" FontSize="16" ToolTip="{Binding Path=Text,ElementName=txtName}"/>
+        </Grid>
+        <!--内容-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="255"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--第一栏-->
+            <Grid Grid.Column="0" Background="#EAEFF3">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0">
+                    <RadioButton Width="40" Height="30" Cursor="Hand" Name="Btn_Message" VerticalAlignment="Top" Style="{DynamicResource MessageRadioButton}" SnapsToDevicePixels="True" ToolTip="消息" IsChecked="True"/>
+                    <RadioButton Width="40" Height="30" Cursor="Hand" Name="Btn_Group" VerticalAlignment="Top" Style="{DynamicResource GroupRadioButton}" SnapsToDevicePixels="True" Margin="0,25,0,0" ToolTip="讨论组"/>
+                    <RadioButton Width="40" Height="30" Cursor="Hand" Name="Btn_Linkman" VerticalAlignment="Top" Style="{DynamicResource LinkManRadioButton}" SnapsToDevicePixels="True" Margin="0,25,0,0" ToolTip="联系人"/>
+                </StackPanel>
+                <Button x:Name="btn_setting" Height="30" Width="40" Style="{StaticResource SystemSettingButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Cursor="Hand" Margin="0,0,0,25" Click="btn_setting_Click" ToolTip="设置"/>
+                <Popup x:Name="pop_setting"  PopupAnimation="Fade" Width="80" Height="110" PlacementTarget="{Binding ElementName=btn_setting}" Placement="Top" HorizontalOffset="-20"  StaysOpen="False" IsOpen="False" AllowsTransparency="True">
+                    <Border>
+                        <Border.Background>
+                            <ImageBrush ImageSource="pack://application:,,,/Antenna.UserControls;Component/Images/设置弹框.png" Stretch="Fill"/>
+                        </Border.Background>
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Vertical" Margin="0,6,0,0">
+                            <Button x:Name="btn_sys" Style="{StaticResource TransparentButton_Style}" Width="68" Height="30" Content="系统设置" Click="btn_sys_Click"/>
+                            <Button x:Name="btn_sugg" Style="{StaticResource TransparentButton_Style}" Width="68" Height="30" Content="意见反馈" Click="btn_sugg_Click"/>
+                            <Button x:Name="btn_logout" Style="{StaticResource TransparentButton_Style}" Width="68" Height="30" Content="注销登录" Click="btn_logout_Click"/>
+                        </StackPanel>
+                    </Border>
+                </Popup></Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,529 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>hello world</title>
+    <link rel="stylesheet" type="text/css" href="css/mainApp.css" />
+    <link rel="stylesheet" href="css/contextmenu.css" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery.contextmenu.js"></script>
+    <script src="js/common.js"></script>
+     <script>
+         function removeDivs(event) {
+             var id = event.currentTarget.id;
+             var pid = document.getElementById(id).parentNode.parentNode.id;
+             document.getElementById(pid).remove();
+             callbackValue.sendMsgagen("sendMixPic", pid, "", "");
+         }
+    </script>
+    <script>
+        function myFunctions(event) {
+            var id = event.currentTarget.id;
+            var src = document.getElementById(id).src;
+            callbackObj.showMessage(id, src, "", "0", id, "");
+        }
+    </script>
+    <script type="text/javascript">
+        function clickImgCallUserId(e) {
+            var target = e.target;
+            var id = target.id;
+            if (!id) {
+                id = "";
+            }
+            callbackUserId.showUserId(id);
+        }
+    </script>
+    <script type="text/javascript">
+        function clickImgCall(e) {
+            var target = e.target;
+            var id = target.id;
+            var src = target.src;
+            var title = target.title;
+            var value = target.values;
+            var sid = $("#" + id).attr("sid");
+            var mid = $("#" + id).attr("mid");
+            if (!id) {
+                id = "";
+            }
+            if (!src) {
+                src = "";
+            }
+            if (!title) {
+                title = "";
+            }
+            if (!value) {
+                value = "0";
+            }
+            callbackObj.showMessage(id, src, title, value, sid, mid);
+            callbackObj.imageMenuMethod("", "");
+            callbackObj.copydivContent("");
+        }
+
+        function clickfailshow(e) {
+            var target = e.target;
+            var id = target.id;
+            var messageId = $("#" + id).attr("failId");
+            var path = $("#" + id).attr("filepaths");
+            var method = $("#" + id).attr("methods");
+            var preValue = $("#" + id).attr("preValue");
+            callbackValue.sendMsgagen(method, messageId, path, preValue);
+        }
+    </script>
+    <script type="text/javascript">
+        function clickBtnCall(e) {
+            var target = e.target;
+            var values = target.value;
+            var btnText = target.innerHTML;
+
+            var id = target.id;
+            if (!values) {
+                values = "";
+            }
+            if (!btnText) {
+                btnText = "";
+            }
+            callbackUrl.downUrl(values, btnText, id);
+        }
+    </script>
+    <script type="text/javascript">
+        function clickSendBtnCall(e) {
+            var target = e.target;
+
+            var values = target.value;
+
+            if (!values) {
+                values = "";
+            }
+            callbackValue.getValueById(values);
+        }
+    </script>
+    <script type="text/javascript">
+        function clickDivVoiceCall(e) {
+            var target = e.target;
+            var id = target.imgMessageId;
+            var values = target.value;
+
+            if (!values) {
+                values = "";
+            }
+            callbackValue.getVoiceById(values);
+        }
+    </script>
+    <script type="text/javascript">
+        function clickSendOpenBtnCall(e) {
+            var target = e.target;
+
+            var values = target.value;
+            if (!values) {
+                values = "";
+            }
+            callbackOpenDirectory.openDirecrory(values);
+        }
+    </script>
+    <script type="text/javascript">
+        function clickFilePathCall(e) {
+            var target = e.target;
+            var values = target.value;
+            var btnText = target.innerHTML;
+
+            var id = target.id;
+            if (!values) {
+                values = "";
+            }
+            if (!btnText) {
+                btnText = "";
+            }
+            callbackFilePath.getFilePath(values, btnText, id);
+        }
+    </script>
+    <script type="text/javascript">
+        function setProcess(elId, process) {
+            var element = document.getElementById(elId);
+            element.style.width = process;
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        function setscross() {
+            var first = window.scrollTo(0, document.body.scrollHeight);
+        }
+        /*滚动加载设置滚动条位置*/
+        function setScrollPosition() {
+            window.scrollTo(0, 200);
+        }
+        function setScrollToPosition(tId) {
+            var element = document.getElementById(tId);
+            if (element == null) {
+                window.scrollTo(0, 200);
+            }
+            else {
+                var offset = element.offsetTop;
+                window.scrollTo(0, offset + 20);
+            }
+        }
+    </script>
+    <script type="text/javascript">
+
+        function setFileText(tId, showText) {
+            var element = document.getElementById(tId);
+            element.innerHTML = showText;
+        }
+    </script>
+    <script type="text/javascript">
+
+        function setFileImg(imgId, imgPath) {
+            var element = document.getElementById(imgId);
+            element.src = imgPath;;
+        }
+    </script>
+    <script type="text/javascript">
+
+        function setFilePath(fileId, filePath) {
+            var element = document.getElementById(fileId);
+
+            element.value = filePath;;
+        }
+        /*展示下次倒计时时间*/
+        var myArry = new Array();
+        function clickshows(id, messageid) {
+            try {
+                //没加修饰的guid
+                var guid = id;
+                var messageid = messageid;
+                /*内容隐藏ID*/
+                var hideContentId = "hideContent" + guid;
+
+                if (!Array.prototype.contains(myArry, hideContentId)) {
+                    myArry.push(hideContentId);
+
+                    var element = document.getElementById(hideContentId).style.visibility = "visible";
+
+                    //阅后即焚图片id
+                    var imageId = "image" + guid;
+                    //时间显示id
+                    var timeId = "span" + guid;
+                    //最外层div id
+                    var outDivId = "outdiv" + guid;
+                    //获取倒计时秒数
+                    var times = document.getElementById(timeId).innerHTML;
+
+                    new MessageTime(imageId, timeId, outDivId, times, messageid);
+                    //callbackOnmousewheel.updateReadTime(hideContentId);
+                }
+            }
+            catch (exe) {
+
+            }
+        }
+        /*正常倒计时方法*/
+        function clickshow(e) {
+            try {
+                var target = e.target;
+                //没加修饰的guid
+                var guid = target.id;
+                /*内容隐藏ID*/
+                var hideContentId = "hideContent" + guid;
+                var messageId = $(target).attr("hideMessageId");
+                if (!Array.prototype.contains(myArry, hideContentId)) {
+                    myArry.push(hideContentId);
+
+                    var element = document.getElementById(hideContentId).style.visibility = "visible";
+
+                    //阅后即焚图片id
+                    var imageId = "image" + guid;
+                    //时间显示id
+                    var timeId = "span" + guid;
+                    //最外层div id
+                    var outDivId = "outdiv" + guid;
+                    //获取倒计时秒数
+                    var times = document.getElementById(timeId).innerHTML;
+
+                    new MessageTime(imageId, timeId, outDivId, times, messageId);
+                    callbackOnmousewheel.updateReadTime(hideContentId, messageId);
+                }
+            }
+            catch (exe) {
+
+            }
+        }
+        /*语音倒计时方法*/
+        function voiceCountDown(guid, messageId) {
+            try {
+                //没加修饰的guid
+                var guid = guid;
+                if (!Array.prototype.contains(myArry, messageId)) {
+                    myArry.push(messageId);
+                    //阅后即焚图片id
+                    var imageId = "image" + guid;
+                    //时间显示id
+                    var timeId = "span" + guid;
+                    //最外层div id
+                    var outDivId = "outdiv" + guid;
+                    //获取倒计时秒数
+                    var times = document.getElementById(timeId).innerHTML;
+
+                    new MessageTime(imageId, timeId, outDivId, times, messageId);
+                    callbackOnmousewheel.updateReadTime(hideContentId, messageId);
+                }
+            }
+            catch (exe) {
+
+            }
+        }
+        /*文件下载完成之后执行倒计时*/
+        function fileClickshow(id, msgid) {
+            try {
+                var messageId = msgid;
+                //没加修饰的guid
+                var guid = id;
+                /*内容隐藏ID*/
+                var hideContentId = "hideContent" + guid;
+                if (!Array.prototype.contains(myArry, hideContentId)) {
+                    myArry.push(hideContentId);
+
+                    //var element = document.getElementById(hideContentId).style.visibility = "visible";
+
+                    //阅后即焚图片id
+                    var imageId = "image" + guid;
+                    //时间显示id
+                    var timeId = "span" + guid;
+                    //最外层div id
+                    var outDivId = "outdiv" + guid;
+                    //获取倒计时秒数
+                    var times = document.getElementById(timeId).innerHTML;
+
+                    new MessageTime(imageId, timeId, outDivId, times, messageId);
+                }
+            }
+            catch (ee) {
+            }
+        }
+
+
+        Array.prototype.indexOf = function (myArry) {
+            for (var i = 0; i < this.length; i++) {
+                if (this[i] == myArry) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                var isToEnd = getScroolPosition();
+                if (isToEnd == true)
+                {
+                    callbackOnmousewheel.isToEndWheel(true);
+                }
+            });
+        }
+        )
+    </script>
+    <!--滚轮事件-->
+    <script type="text/javascript">
+        var scrollCount = 0;
+        var value = 0;
+        function scrollFunc(e) {
+            e = e || window.event
+
+            var isToEnd = getScroolPosition();
+            if (e.wheelDelta < 0)
+            {
+                if (isToEnd == true)
+                {
+                    callbackOnmousewheel.isToEndWheel(true);
+                }
+            }
+            if (e.wheelDelta) {//IE/Opera/Chrome
+                value = e.wheelDelta;
+            }
+            else if (e.detail) {//Firefox
+                value = e.detail;
+            }
+            var top = document.body.scrollTop;
+            scrollCount++;
+            if (scrollCount > 4) {
+                scrollCount = 0;
+                isSucess = callbackOnmousewheel.getValueWheel(value + "," + top);
+            }
+        }
+
+        /*注册事件*/
+        if (document.addEventListener) {
+            document.addEventListener('DOMMouseScroll', scrollFunc, false);
+        }//W3C
+        window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome
+    </script>
+
+    <script type="text/javascript">
+        var MessageTime = function (showid, timeid, hiddediv, time, messageid) {
+
+            this.showid = showid;
+            this.timeid = timeid;
+            this.hiddediv = hiddediv;
+            this.time = time;
+            this.messageid = messageid;
+            this.timeFlag = 0;
+            this.start();
+        }
+        MessageTime.prototype.start = function () {
+            var self = this;
+            this.timeFlag = setInterval(function () {
+                self.timerEnd();
+            }, 1000);
+        }
+        MessageTime.prototype.timerEnd = function () {
+            this.time--;
+            if (this.time <= 0) {
+                clearInterval(this.timeFlag);
+                var hiddenindex = this.hiddediv.substring(38, this.hiddediv.length);
+                callbackOnmousewheel.deleteMessageByChatIndex(hiddenindex, this.messageid);
+                if (this.messageid != "") {
+                    document.getElementById(this.messageid).hidden = "hidden";
+                }
+                return;
+            }
+            document.getElementById(this.timeid).innerHTML = this.time;
+            document.getElementById(this.showid).hidden = "hidden";
+            document.getElementById(this.timeid).hidden = "";
+        }
+    </script>
+    <script type="text/javascript">
+        Array.prototype.contains = function (arr, values) {
+            for (var i = 0; i < arr.length; i++) {//this指向真正调用这个方法的对象
+                if (arr[i] == values) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    </script>
+</head>
+<body style="margin-top: 20px;">
+    <div id="history" class="speechCenterHistory" style="margin-top: -20px"><img src="../images/查看历史消息.png" />&nbsp;&nbsp;滚动鼠标滑轮查看历史消息</div>
+    <div id="bodydiv"></div>
+    <script>
+        function imageRightMenuMethod(event) {
+            var target = event.target || event.srcElement;
+            var id = $(target).attr("imageId");
+            $("#" + id).contextMenu(id, "nav", [
+                {
+                    text: "复制",
+                    method: 1
+                },
+                {
+                    text: "另存为",
+                    method: 2
+                },
+                {
+                    text: "撤回",
+                    method: 3
+                }
+            ]);
+        }
+        function imageLeftMenuMethod(event) {
+            var target = event.target || event.srcElement;
+            var id = $(target).attr("imageId");
+            $("#" + id).contextMenu(id, "nav", [
+                {
+                    text: "复制",
+                    method: 1
+                },
+                {
+                    text: "另存为",
+                    method: 2
+                }
+            ]);
+        }
+        function VoiceRightMenuMethod(event) {
+            var leftOrRightButton = event.button;
+            var id = event.currentTarget.id;
+            try {
+                if (leftOrRightButton == 0) {
+
+                    var divGuid = document.getElementById(id).getAttribute("divGuid");
+                    voiceCountDown(divGuid, id.substring(1, id.length));
+                    var isLeftOrRight = document.getElementById(id).getAttribute("isLeftOrRight") == "1" ? "1" : "0";
+                    var isShowReadImgId = document.getElementById(id).getAttribute("isShowImg");
+                    var isShowGifId = document.getElementById(id).getAttribute("isShowGif");
+                    if (isLeftOrRight == "1") {
+                        $("#" + isShowGifId).attr("src", "../Images/htmlImages/语音-右.gif");
+                        var isRead = $("#" + isShowReadImgId).is(":hidden");
+                        //$("#" + id).contextMenu(id, "nav", [
+                        //    {
+                        //        text: "撤回",
+                        //        method: 4
+                        //    }
+                        //]);
+                    }
+                    else {
+                        $("#" + isShowGifId).attr("src", "../Images/htmlImages/语音-左.gif");
+                        var isRead = $("#" + isShowReadImgId).is(":hidden");
+                    }
+                    var audioUrl = document.getElementById(id).getAttribute("audioUrl");
+                    var chatindex = document.getElementById(id).getAttribute("divChatIndex");
+                    var isBurn = document.getElementById(id).getAttribute("isBurn");
+                    callbackValue.getVoiceParameter(isRead, audioUrl, isShowGifId, id.substring(1, id.length), isLeftOrRight, chatindex, isBurn);
+                    document.getElementById(isShowReadImgId).hidden = "hidden";
+                }
+                else {
+                    var isLeftOrRight = document.getElementById(id).getAttribute("isLeftOrRight") == "1" ? "1" : "0";
+                    var isRecallMenu = document.getElementById(id).getAttribute("isRecallMenu");
+                    if (isRecallMenu == "1") {
+                        return;
+                    }
+                    //if (isLeftOrRight == "1") {
+                    //    $("#" + id).contextMenu(id, "nav", [
+                    //        {
+                    //            text: "撤回",
+                    //            method: 4
+                    //        }
+                    //    ]);
+                    //}
+                }
+            }
+            catch (ex) {
+
+            }
+        }
+        function fileRightMenuMethod(event) {
+            var target = event.target || event.srcElement;
+            var id = event.id;
+            $("#" + id).contextMenu(id, "nav", [
+                {
+                    text: "撤回",
+                    method: 3
+                }
+            ]);
+        }
+        function copyContent(event) {
+            var target = event.target || event.srcElement;
+            var id = $(target).attr("copyid");
+            var leftOrRight = $(target).attr("leftstyle");
+            if (leftOrRight + "" != 0) {
+                $("#" + id).contextMenu(id, "nav", [
+                    {
+                        text: "复制",
+                        method: 1
+                    },
+                    {
+                        text: "撤回",
+                        method: 2
+                    }
+                ])
+            }
+            else {
+                $("#" + id).contextMenu(id, "nav", [
+                    {
+                        text: "复制",
+                        method: 1
+                    }
+                ])
+            };
+        }
+    </script>
+</body>
+</html>

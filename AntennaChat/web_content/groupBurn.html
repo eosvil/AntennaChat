@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>hello world</title>
+    <link rel="stylesheet" type="text/css" href="css/groupBurn.css" />
+    <link rel="stylesheet" href="css/contextmenu.css" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery.contextmenu.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript">
+        function clickImgCallUserId(e) {
+            var target = e.target;
+            var id = target.id;
+            if (!id) {
+                id = "";
+            }
+            callbackUserId.showUserId(id);
+        }
+    </script>
+    <script type="text/javascript">
+        function clickImgCall(e) {
+            var target = e.target;
+            var id = target.id;
+            var src = target.src;
+            var title = target.title;
+            var sid = $("#" + id).attr("sid");
+            var mid = $("#" + id).attr("mid");
+            if (!id) {
+                id = "";
+            }
+            if (!src) {
+                src = "";
+            }
+            if (!title) {
+                title = "";
+            }
+            if (!value) {
+                value = "0";
+            }
+            callbackObj.showMessage(id, src, title, "1", sid, mid);
+        }
+        function clickfailshow(e) {
+            var target = e.target;
+            var id = target.id;
+            var messageId = $("#" + id).attr("failId");
+            var path = $("#" + id).attr("filepaths");
+            var method = $("#" + id).attr("methods");
+            var preValue = $("#" + id).attr("preValue");
+            var atpreValus = $("#" + id).attr("atPreValues");
+            callbackValue.sendMsgagen(method, messageId, path, preValue, atpreValus);
+        }
+    </script>
+    <script type="text/javascript">
+        function clickBtnCall(e) {
+            var target = e.target;
+            var values = target.value;
+
+            var btnText = target.innerHTML;
+
+            if (!values) {
+                values = "";
+            }
+            if (!btnText) {
+                btnText = "";
+            }
+            callbackUrl.downUrl(values, btnText);
+        }
+    </script>
+    <script type="text/javascript">
+        function clickSendBtnCall(e) {
+            var target = e.target;
+
+            var values = target.value;
+
+            if (!values) {
+                values = "";
+            }
+            callbackValue.getValueById(values);
+        }
+    </script>
+    <script type="text/javascript">
+        function clickSendOpenBtnCall(e) {
+            var target = e.target;
+
+            var values = target.value;
+            if (!values) {
+                values = "";
+            }
+            callbackOpenDirectory.openDirecrory(values);
+        }
+    </script>
+    <script type="text/javascript">
+        function clickFilePathCall(e) {
+            var target = e.target;
+            var values = target.value;
+            var btnText = target.innerHTML;
+            if (!values) {
+                values = "";
+            }
+            if (!btnText) {
+                btnText = "";
+            }
+            callbackFilePath.getFilePath(values, btnText);
+        }
+    </script>
+    <script type="text/javascript">
+        function setProcess(elId, process) {
+            var element = document.getElementById(elId);
+            element.style.width = process;
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        function setscross() {
+            var first = window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        /*滚动加载设置滚动条位置*/
+        function setScrollPosition() {
+            window.scrollTo(0, 200);
+        }
+        function setScrollToPosition(tId) {
+            var element = document.getElementById(tId);
+            if (element == null) {
+                window.scrollTo(0, 200);
+            }
+            else {
+                var offset = element.offsetTop;
+                window.scrollTo(0, offset + 20);
+            }
+        }
+    </script>
+    <script type="text/javascript">
+
+        function setFileText(tId, showText) {
+            var element = document.getElementById(tId);
+            element.innerHTML = showText;
+        }
+    </script>
+    <script type="text/javascript">
+
+        function setFileImg(imgId, imgPath) {
+            var element = document.getElementById(imgId);
+            element.src = imgPath;;
+        }
+    </script>
+    <script type="text/javascript">
+
+        function setFilePath(fileId, filePath) {
+            var element = document.getElementById(fileId);
+
+            element.value = filePath;;
+        }
+    </script>
+    <script type="text/javascript">
+         $(function () {
+             $(window).scroll(function () {
+                 var isToEnd = getScroolPosition();
+                 if (isToEnd == true) {
+                     callbackOnmousewheelburn.isToEndWheel(true);
+                 }
+             });
+         }
+         )
+    </script>
+    <!--滚轮事件-->
+    <script type="text/javascript">
+         var scrollCount = 0;
+        var value = 0;
+
+        function scrollFunc(e) {
+            e = e || window.event
+            var isToEnd = getScroolPosition();
+            if (e.wheelDelta < 0) {
+                if (isToEnd == true) {
+                    callbackOnmousewheelburn.isToEndWheel(true);
+                }
+            }
+            if (e.wheelDelta) { //IE/Opera/Chrome
+                value = e.wheelDelta;
+
+            } else if (e.detail) { //Firefox
+                value = e.detail;
+
+            }
+            var top = document.body.scrollTop;
+            scrollCount++;
+            if (scrollCount > 4) {
+                scrollCount = 0;
+                callbackOnmousewheelburn.getValueWheel(value + "," + top);
+            }
+        }
+
+        /*注册事件*/
+        if (document.addEventListener) {
+            document.addEventListener('DOMMouseScroll', scrollFunc, false);
+        } //W3C
+        window.onmousewheel = document.onmousewheel = scrollFunc; //IE/Opera/Chrome
+    </script>
+</head>
+
+<body style="margin-top: 10px; -webkit-user-select: none;overflow:scroll;overflow-x:hidden">
+    <div id="history" class="speechCenterHistory"><img src="../images/查看历史消息.png" />&nbsp;&nbsp;滚动鼠标滑轮查看历史消息</div>
+    <div class="speechShowTipsBurn">
+        <div style="font-size: 14px; color: #ffffff; padding: 15px;">无痕模式</div>
+        <ul style="margin-top: -11px; line-height: 18px; text-align: left;">
+            <li style="font-size: 12px; color: #ffffff">和普通群聊独立分割</li>
+            <li style="font-size: 12px; color: #ffffff">管理员一键删除记录</li>
+            <li style="font-size: 12px; color: #ffffff">头像姓名当前不可见</li>
+        </ul>
+    </div>
+    <div id="bodydiv"></div>
+    <script>
+        function VoiceRightMenuMethod(event) {
+            var leftOrRightButton = event.button
+            var id = event.currentTarget.id;
+            try {
+                if (leftOrRightButton == "0") {
+                    var isLeftOrRight = document.getElementById(id).getAttribute("isLeftOrRight") == "1" ? "1" : "0";
+                    var isShowReadImgId = document.getElementById(id).getAttribute("isShowImg");
+                    var isShowGifId = document.getElementById(id).getAttribute("isShowGif");
+                    if (isLeftOrRight == "1") {
+                        $("#" + isShowGifId).attr("src", "../Images/htmlImages/语音-右.gif");
+                        var isRead = $("#" + isShowReadImgId).is(":hidden");
+                    }
+                    else {
+                        $("#" + isShowGifId).attr("src", "../Images/htmlImages/语音-左.gif");
+                        var isRead = $("#" + isShowReadImgId).is(":hidden");
+                    }
+                    var audioUrl = document.getElementById(id).getAttribute("audioUrl");
+                    var messageid = id.substring(1, id.length);
+                    //true为正常模式 false 为阅后即焚模式
+                    var isBurn = false;
+                    callbackValue.getVoiceParameter(isRead, audioUrl, isShowGifId, messageid, isBurn, isLeftOrRight);
+                    document.getElementById(isShowReadImgId).hidden = "hidden";
+                }
+            }
+            catch (ex) {
+
+            }
+        }
+    </script>
+</body>
+</html>

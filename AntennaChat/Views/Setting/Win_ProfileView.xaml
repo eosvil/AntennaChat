@@ -1,0 +1,67 @@
+﻿<Window x:Class="AntennaChat.Views.Setting.Win_ProfileView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AntennaChat.Views.Setting"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:viewModel="clr-namespace:AntennaChat.ViewModel.Setting"
+        mc:Ignorable="d"
+        Height="420" Width="580" WindowStartupLocation="CenterScreen" Style="{DynamicResource noresize_window}" Name="win_Profile" Icon="/AntennaChat;component/七讯.ico">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}" CommandParameter="{Binding ElementName=win_Profile}"/>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="MouseLeftButtonDown">
+            <i:InvokeCommandAction Command="{Binding MoveWindow}" CommandParameter="{Binding ElementName=win_Profile}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModel:ProfileViewModel}">
+            <local:ProfileView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:HeadImageViewModel}">
+            <local:HeadImageView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:ChangePasswordViewModel}">
+            <local:ChangePasswordView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:ChangeKeyViewModel}">
+            <local:ChangeKey/>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="470"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--标题栏-->
+        <Grid Grid.Row="0" Background="#ffffff" Grid.ColumnSpan="2">
+            <TextBlock Text="个人资料" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Foreground="#333333" Margin="15,0,0,0"/>
+            <Button Width="12" Height="12" Name="btn_close" Style="{StaticResource NormalCloseBtnStyle}" Command="{Binding CloseWindow}" CommandParameter="{Binding ElementName=win_Profile}" ToolTip="关闭" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/>
+        </Grid>
+        <Border  Background="#eaeff3" Height="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0"
+                 VerticalAlignment="Bottom"/>
+        <TabControl x:Name="Tb" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" IsSynchronizedWithCurrentItem="True"  Background="Transparent" TabStripPlacement="Left" Style="{StaticResource TabControlStyleLeft}">
+            <TabItem Header="基本资料" Height="36" Width="100" FontSize="14" Background="White" Foreground="#333333" Cursor="Hand">
+                <Grid>
+                    <ContentControl Content="{Binding ViewModel}"></ContentControl>
+                </Grid>
+            </TabItem>
+            <TabItem Header="密码管理" Background="White" Height="36" FontSize="14" Width="100" Foreground="#333333" Cursor="Hand">
+                <Grid>
+                    <ContentControl Content="{Binding ChangePasswordView}"></ContentControl>
+                </Grid>
+            </TabItem>
+            <TabItem Header="热键设置" Background="White" Height="36" FontSize="14" Width="100" Foreground="#333333" Cursor="Hand">
+                <Grid>
+                    <ContentControl Content="{Binding SysSettingContent}"></ContentControl>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

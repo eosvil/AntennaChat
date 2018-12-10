@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AntSdkAddIdeaFeedBackError" xml:space="preserve">
+    <value>触角SDK添加意见反馈错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkAppVersionNotNull" xml:space="preserve">
+    <value>触角SDK配置信息的App版本信息不能为空</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkChangePasswordError" xml:space="preserve">
+    <value>触角SDK修改用户密码错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkChangeUserStateError" xml:space="preserve">
+    <value>触角SDK切换用户状态错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkCheckUpdateError" xml:space="preserve">
+    <value>触角SDK检查更新错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkCustomerLoginError" xml:space="preserve">
+    <value>触角SDK登录客户系统错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkCustomsHttpPrifxNotNull" xml:space="preserve">
+    <value>触角SDK配置信息的客户系统HTTP地址不能为空</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10000" xml:space="preserve">
+    <value>数据库错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10001" xml:space="preserve">
+    <value>未知错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10002" xml:space="preserve">
+    <value>参数错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10003" xml:space="preserve">
+    <value>无效的版本号</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10004" xml:space="preserve">
+    <value>无效的token</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10005" xml:space="preserve">
+    <value>json解析异常</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10006" xml:space="preserve">
+    <value>终端类型错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_1001" xml:space="preserve">
+    <value>系统操作失败</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10010" xml:space="preserve">
+    <value>登录名不能为空（用户名，手机，邮箱不能都为空）</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10011" xml:space="preserve">
+    <value>手机号格式不合法</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10012" xml:space="preserve">
+    <value>邮箱格式不合法</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10013" xml:space="preserve">
+    <value>密码格式不合法</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10014" xml:space="preserve">
+    <value>用户名密码不匹配</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10015" xml:space="preserve">
+    <value>该账号已被禁用</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10016" xml:space="preserve">
+    <value>该用户名已存在</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10017" xml:space="preserve">
+    <value>该手机号已存在</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10018" xml:space="preserve">
+    <value>该邮箱已存在</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10019" xml:space="preserve">
+    <value>新密码不能与旧密码一致</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_1002" xml:space="preserve">
+    <value>参数错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10020" xml:space="preserve">
+    <value>该用户不存在</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_10021" xml:space="preserve">
+    <value>旧密码有误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_20001" xml:space="preserve">
+    <value>用户不存在</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_20002" xml:space="preserve">
+    <value>用户名重复</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_20003" xml:space="preserve">
+    <value>用户名密码不匹配</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_20004" xml:space="preserve">
+    <value>讨论组不存在</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_20005" xml:space="preserve">
+    <value>消息游标不存在</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_20006" xml:space="preserve">
+    <value>会话不存在</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_20007" xml:space="preserve">
+    <value>公司不存在</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_20008" xml:space="preserve">
+    <value>新旧密码不一致</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_20009" xml:space="preserve">
+    <value>无效的用户</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_20010" xml:space="preserve">
+    <value>创建讨论组的人必须在讨论组中</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_20011" xml:space="preserve">
+    <value>退出讨论组错误，用户已经不在这个讨论组中</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_20012" xml:space="preserve">
+    <value>终端联系人信息版本号与服务器一致，不需要更新联系人信息</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_20013" xml:space="preserve">
+    <value>用户账号被停用</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_2003" xml:space="preserve">
+    <value>用户名或密码错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_2008" xml:space="preserve">
+    <value>新密码不能与旧密码一致</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_2013" xml:space="preserve">
+    <value>该用户不存在</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_30001" xml:space="preserve">
+    <value>没有版本需要更新</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_40001" xml:space="preserve">
+    <value>删除讨论组错误，不是管理员不能删除讨论组</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_91101" xml:space="preserve">
+    <value>连接redis服务器异常</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_91102" xml:space="preserve">
+    <value>操作redis服务器异常</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_91103" xml:space="preserve">
+    <value>参数异常</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkE_91104" xml:space="preserve">
+    <value>操作redis错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkGetAddContactsError" xml:space="preserve">
+    <value>触角SDK获取增量联系人信息错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkGetContactInfoError" xml:space="preserve">
+    <value>触角SDK获取联系人信息错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkGetDepartUserStateError" xml:space="preserve">
+    <value>触角SDK获取部门下说有用户的状态错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkGetUserIdeaTypeError" xml:space="preserve">
+    <value>触角SDK获取意见反馈类型错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkGetUserInfoError" xml:space="preserve">
+    <value>触角SDK获取用户信息错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkGetUserReturnSettingError" xml:space="preserve">
+    <value>触角SDK获取用户回复用语设置错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkHttpCommonBaseSchemaError" xml:space="preserve">
+    <value>触角SDK转换Http请求返回的基础结构信息出错</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkHttpCommonBaseSchemaNull" xml:space="preserve">
+    <value>触角SDK转换Http请求返回的基础结构内容信息为空</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkHttpCommonOutSchemaError" xml:space="preserve">
+    <value>触角SDK转换Http请求返回的基础结构内容错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkHttpRequestFail" xml:space="preserve">
+    <value>请求失败，请联系系统管理员</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="SdkHttpRequestTimeOut" xml:space="preserve">
+    <value>请求超时</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkHttpResponseNull" xml:space="preserve">
+    <value>触角SDK的Http请求没有返回任何信息</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkLoginOutError" xml:space="preserve">
+    <value>触角SDK退出登录错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkNotStart" xml:space="preserve">
+    <value>触角SDK未启动</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkSendCtomMsgTypeError" xml:space="preserve">
+    <value>触角SDK发送自定义消息，消息类型错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkServiceHttpPrifxNotNull" xml:space="preserve">
+    <value>触角SDK配置信息的触角服务HTTP地址不能为空</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkServiceLoginReturnError" xml:space="preserve">
+    <value>触角SDK 登录触角服务时返回的用户ID为空</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkStartAppKeyNotNull" xml:space="preserve">
+    <value>触角SDK启动产品ID不能为空</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkStartAppSecretNotNull" xml:space="preserve">
+    <value>触角SDK启动产品密钥不能为空</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkStartCompanyCodeNotNull" xml:space="preserve">
+    <value>触角SDK启动公司代码不能为空</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkStartFileUploadNotNull" xml:space="preserve">
+    <value>触角SDK启动文件上传地址不能为空</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkStartHttpPrefStuffNotNull" xml:space="preserve">
+    <value>触角SDK启动企业级服务HTTP地址不能为空</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkSubscribeCreateGroupTopicsError" xml:space="preserve">
+    <value>触角SDK创建讨论组进行订阅讨论组主题时错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkSubscribeDissolveGroupTopicsError" xml:space="preserve">
+    <value>触角SDK解散讨论组进行取消订阅讨论组主题时错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkSubscribePersonalAcceptTopicsError" xml:space="preserve">
+    <value>触角SDK个性化设置接收消息订阅讨论组主题时错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkSubscribePersonalBlockTopicsError" xml:space="preserve">
+    <value>触角SDK个性化设置屏蔽消息取消订阅讨论组主题时错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkSubscribeDeleteGroupMemberTopicsError" xml:space="preserve">
+    <value>触角SDK删除组成员包含自己进行取消订阅讨论组主题时错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkSubscribeExitGroupTopicsError" xml:space="preserve">
+    <value>触角SDK退出讨论组进行取消订阅讨论组主题时错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+  <data name="AntSdkSubscribeGroupTopicsError" xml:space="preserve">
+    <value>触角SDK获取用户讨论组进行订阅讨论组主题时错误</value>
+    <comment>AntSdkService</comment>
+  </data>
+</root>

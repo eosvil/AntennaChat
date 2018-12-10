@@ -1,0 +1,122 @@
+﻿<UserControl x:Class="AntennaChat.Views.Talk.MassMsgListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:re ="clr-namespace:AntennaChat.Resource"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800" Background="White">
+    <!--<UserControl.Resources>
+        <DataTemplate DataType="{x:Type viewModel:MassMsgViewModel}">
+            <local:MassMsgView/>
+        </DataTemplate>
+    </UserControl.Resources>-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!--标题栏-->
+        <Grid Grid.Row="0" >
+            <Border BorderBrush="#eaeff3" BorderThickness="0,0,0,1" />
+            <Image x:Name="imageGroupSendMsg"   Grid.Column="0"  HorizontalAlignment="Left"   VerticalAlignment="Center"  Margin="20,0,0,0" Width="36" Height="36"   Source="pack://application:,,,/AntennaChat;Component/Images/群发小头像.png"/>
+            <TextBlock Text="群发消息" FontSize="14" Foreground="#333333" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="66,0,0,0"  />
+            <!--<Button Width="24" Height="34" Margin="0,0,25,10" HorizontalAlignment="Right" Name="btn_close" Style="{StaticResource CloseButton}"  ToolTip="关闭" Command="{Binding CancelCommand}" CommandParameter="{Binding ElementName=massMsgSentView}"/>-->
+            <Button x:Name="btnMassMsgSend" Margin="0,0,20,0" Height="28" Width="28" HorizontalAlignment="Right" ToolTip="发送新消息" Click="btnMassMsgSend_Click"  >
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle x:Name="rectClose" Margin="1" Width="28" Height="28" Fill="Transparent"></Rectangle>
+                            <Canvas HorizontalAlignment="Center"  VerticalAlignment="Center" Width="8" Height="8" Margin="0,0,8,8">
+                                <Line StrokeThickness="0.7" x:Name="line1"  Stroke="#242424" X1="8" Y1="0" X2="8" Y2="16"   />
+                                <Line StrokeThickness="0.7" x:Name="line2"  Stroke="#242424" X1="0" Y1="8" X2="16" Y2="8"/>
+                            </Canvas>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Button.IsMouseOver"  Value="True">
+                                <!--<Setter Property="Background" Value="Red" />-->
+                                <!--<Setter TargetName="border" Property="BorderBrush" Value="#2279E2"></Setter>-->
+                                <Setter TargetName="line1" Property="Stroke" Value="#31A4FD"></Setter>
+                                <Setter TargetName="line2" Property="Stroke" Value="#31A4FD"></Setter>
+                                <Setter TargetName="rectClose" Property="Fill" Value="#FFFFFF"></Setter>
+                            </Trigger>
+                            <Trigger Property="Button.IsMouseOver"  Value="False">
+                                <!--<Setter Property="Background" Value="Yellow" />-->
+                                <!--<Setter TargetName="border" Property="BorderBrush" Value="#2279E2"></Setter>-->
+                                <Setter TargetName="line1" Property="Stroke" Value="#242424"></Setter>
+                                <Setter TargetName="line2" Property="Stroke" Value="#242424"></Setter>
+                                <Setter TargetName="rectClose" Property="Fill" Value="#FFFFFF"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <TreeView x:Name="listBox"  Background="Transparent" BorderThickness="0"  ItemsSource="{Binding MassMsgControlList}"  VirtualizingPanel.IsVirtualizing="False">
+                <TreeView.ItemContainerStyle >
+                    <Style TargetType="{x:Type TreeViewItem}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate >
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="56"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <TextBlock   Text="{Binding SendTime}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#999999" Background="#E9F0F3" />
+                                        <Grid Grid.Row="1" Width="623">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="44"/>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition Width="44"/>
+                                            </Grid.ColumnDefinitions>
+                                            <re:ModernProgressRing x:Name="progressRingControl" Visibility="{Binding SendingAnimationVisible}" IsActive="True" Width="18" Height="18" Style="{ DynamicResource  CircleProgressRingStyle}" Foreground="#999999"  />
+                                            <Image HorizontalAlignment="Center" VerticalAlignment="Center" Height="18" Width="18" Source="/AntennaChat;Component/Images/发送失败.png" ToolTip="重新发送"  Visibility="{Binding SendFailureImageVisibility}" >
+                                                <i:Interaction.Triggers>
+                                                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                                                        <i:InvokeCommandAction Command="{Binding SendFailureImage_MouseLeftButtonDown}" />
+                                                    </i:EventTrigger>
+                                                </i:Interaction.Triggers>
+                                            </Image>
+                                            <StackPanel Grid.Column="1">
+                                                <Border  BorderThickness="0,1,0,0" BorderBrush="#e0e0e0"/>
+                                                <TextBox Text="{Binding MsgContent}" TextWrapping="Wrap" Background="#f4f8fb"    BorderThickness="1,0,1,1" BorderBrush="#e0e0e0" FontSize="14" Padding="18" Foreground="#242424"   IsReadOnly="True" >
+                                                    <TextBox.ContextMenu  >
+                                                        <ContextMenu>
+                                                            <MenuItem Header="复制" Command="ApplicationCommands.Copy"/>
+                                                        </ContextMenu>
+                                                    </TextBox.ContextMenu  >
+                                                </TextBox>
+                                                <TextBox  Text="{Binding TargetUsers}" x:Name="txtTargetUsers" MaxLines="3" TextWrapping="Wrap" Foreground="#999999"  Background="#f4f8fb" BorderThickness="1,0,1,1" BorderBrush="#e0e0e0" FontSize="14" Padding="18,18,18,30" VerticalScrollBarVisibility="Disabled"  IsReadOnly="True">
+                                                    <TextBox.ContextMenu  >
+                                                        <ContextMenu>
+                                                            <MenuItem Header="复制" Command="ApplicationCommands.Copy"/>
+                                                        </ContextMenu>
+                                                    </TextBox.ContextMenu  >
+                                                </TextBox>
+                                            </StackPanel>
+                                            <Label x:Name="btnOperate" Grid.Column="1" Foreground="#22aeff" FontSize="14" Content="{Binding  OperateMode}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#f4f8fb" Margin="0,0,21,4" >
+                                                <i:Interaction.Triggers>
+                                                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                                                        <i:InvokeCommandAction Command="{Binding btnOperate_MouseLeftButtonDown}" CommandParameter="{Binding ElementName=txtTargetUsers}"/>
+                                                    </i:EventTrigger>
+                                                    <i:EventTrigger EventName="Loaded">
+                                                        <i:InvokeCommandAction Command="{Binding LoadedCommand}" CommandParameter="{Binding ElementName=txtTargetUsers}" />
+                                                    </i:EventTrigger>
+                                                </i:Interaction.Triggers>
+                                            </Label>
+                                        </Grid>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="IsSelected" Value="{Binding IsSelected}"/>
+                        <EventSetter  Event="Selected" Handler="EventSetter_OnHandler"/>
+                    </Style>
+                </TreeView.ItemContainerStyle>
+            </TreeView>
+        </Grid>
+    </Grid>
+</UserControl>

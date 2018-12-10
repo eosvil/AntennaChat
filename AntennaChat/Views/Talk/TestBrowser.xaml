@@ -1,0 +1,19 @@
+﻿<Window x:Class="AntennaChat.Views.Talk.TestBrowser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AntennaChat.Views.Talk"
+        mc:Ignorable="d"
+         xmlns:cef="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        Title="TestBrowser" Height="500" Width="500" Loaded="TestBrowser_OnLoaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <cef:ChromiumWebBrowser Grid.Row="0" x:Name="Browser"></cef:ChromiumWebBrowser>
+        <Button Grid.Row="2" x:Name="btnTest" Click="btnTest_Click"></Button>
+    </Grid>
+</Window>

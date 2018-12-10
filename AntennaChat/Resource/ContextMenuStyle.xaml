@@ -1,0 +1,158 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:AntennaChat.Resource">
+    <Style x:Key="ContextMenuStyle" TargetType="{x:Type ContextMenu}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ContextMenu}">
+                    <Grid Margin="5">
+                        <Rectangle Fill="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"  
+                               RadiusX="2" RadiusY="2">
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="8" ShadowDepth="0" Color="#E5E5E5"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Border x:Name="Border" CornerRadius="2" BorderThickness="1" BorderBrush="#cccccc" Background="#ffffff">
+                            <ItemsPresenter/>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type MenuItem}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="#333333"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type MenuItem}">
+                    <Border CornerRadius="0">
+                        <Border.Background>
+                            <SolidColorBrush x:Name="MenuItemAnimatedBrushBackground"  />
+                        </Border.Background>
+                        <Grid Height="32">
+                            <!-- The Grid is used to hold together columns for an Icon, Content, Glyph checkmark and Arrow to show the next level
+                             Size sharing is used in Grid so that the Icon, Content, Arrow for each MenuItem align together -->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20" SharedSizeGroup="MenuItemIconColumnGroup"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="MenuItemIGTColumnGroup"/>
+                                <ColumnDefinition Width="14"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Name="txtIcon" Grid.Column="0" Text=" ">
+                                <TextBlock.Background>
+                                    <SolidColorBrush x:Name="IconAnimatedBrushBackground"   />
+                                </TextBlock.Background>
+                            </TextBlock>
+                            <!-- ContentPresenter to show an Icon if needed -->
+                            <ContentPresenter Margin="4,0,6,0" x:Name="Icon" VerticalAlignment="Center" ContentSource="Icon" HorizontalAlignment="Center"/>
+                            <!-- Glyph is a checkmark if needed for a checkable menu -->
+                            <Grid Visibility="Hidden" Margin="8,0,2,0" x:Name="GlyphPanel" VerticalAlignment="Center">
+                                <Path x:Name="GlyphPanelpath" VerticalAlignment="Center" Fill="{TemplateBinding Foreground}" Data="M0,2 L0,4.8 L2.5,7.4 L7.1,2.8 L7.1,0 L2.5,4.6 z" FlowDirection="LeftToRight"/>
+                            </Grid>
+                            <!-- Content for the menu text etc -->
+                            <ContentPresenter Grid.Column="1" Margin="0,0,20,0" ContentSource="Header" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <!-- Arrow drawn path which points to the next level of the menu -->
+                            <Grid Grid.Column="3" Margin="4,0,6,0" x:Name="ArrowPanel" VerticalAlignment="Center">
+                                <Path x:Name="ArrowPanelPath" VerticalAlignment="Center" Fill="{TemplateBinding Foreground}" Data="M0,0 L0,8 L4,4 z"/>
+                            </Grid>
+                            <!-- The Popup is the body of the menu which expands down or across depending on the level of the item -->
+                            <Popup IsOpen="{Binding Path=IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" Placement="Right" x:Name="SubMenuPopup" Focusable="false" AllowsTransparency="true" 
+                                   PopupAnimation="{DynamicResource {x:Static SystemParameters.MenuPopupAnimationKey}}" VerticalOffset="-3" HorizontalOffset="2">
+                                <Grid Margin="5" Name="SubMenu">
+                                    <Rectangle Fill="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" RadiusX="2" RadiusY="2">
+                                        <Rectangle.Effect>
+                                            <DropShadowEffect BlurRadius="8" ShadowDepth="0" Color="#E5E5E5"/>
+                                        </Rectangle.Effect>
+                                    </Rectangle>
+                                    <Border x:Name="SubMenuBorder" CornerRadius="2" BorderThickness="1" BorderBrush="#cccccc" Background="#ffffff">
+                                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Cycle"/>
+                                    </Border>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                    </Border>
+                    <!-- These triggers re-configure the four arrangements of MenuItem to show different levels of menu via Role -->
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="MenuItemAnimatedBrushBackground" Storyboard.TargetProperty="Color">
+                                            <LinearColorKeyFrame Value="Transparent" KeyTime="00:00:00.0020000" />
+                                            <LinearColorKeyFrame Value="#F0F0F0" KeyTime="00:00:00.0320000" />
+                                        </ColorAnimationUsingKeyFrames>
+                                        <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="IconAnimatedBrushBackground" Storyboard.TargetProperty="Color">
+                                            <LinearColorKeyFrame Value="Transparent" KeyTime="00:00:00.0020000" />
+                                            <LinearColorKeyFrame Value="#F0F0F0"  KeyTime="00:00:00.0320000" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiTrigger.EnterActions>
+                            <MultiTrigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="MenuItemAnimatedBrushBackground" Storyboard.TargetProperty="Color">
+                                            <LinearColorKeyFrame Value="#F0F0F0" KeyTime="00:00:00.0020000" />
+                                            <LinearColorKeyFrame Value="Transparent" KeyTime="00:00:00.0320000" />
+                                        </ColorAnimationUsingKeyFrames>
+                                        <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="IconAnimatedBrushBackground" Storyboard.TargetProperty="Color">
+                                            <LinearColorKeyFrame Value="#F0F0F0" KeyTime="00:00:00.0020000" />
+                                            <LinearColorKeyFrame Value="Transparent" KeyTime="00:00:00.0320000" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiTrigger.ExitActions>
+                        </MultiTrigger>
+                        <!-- Role = TopLevelHeader : this is the root menu item in a menu; the Popup expands down -->
+                        <Trigger Property="Role" Value="TopLevelHeader">
+                            <Setter Property="Margin" Value="0,1,0,1"/>
+                            <Setter Property="Padding" Value="6,3,6,3"/>
+                            <Setter Property="Grid.IsSharedSizeScope" Value="true"/>
+                            <Setter Property="Placement" Value="Bottom" TargetName="SubMenuPopup"/>
+                            <Setter Property="Visibility" Value="Collapsed" TargetName="ArrowPanel"/>
+                        </Trigger>
+                        <!-- Role = TopLevelItem :  this is a child menu item from the top level without any child items-->
+                        <Trigger Property="Role" Value="TopLevelItem">
+                            <Setter Property="Margin" Value="0,1,0,1"/>
+                            <Setter Property="Padding" Value="6,3,6,3"/>
+                            <Setter Property="Visibility" Value="Collapsed" TargetName="ArrowPanel"/>
+                        </Trigger>
+                        <!-- Role = SubMenuHeader : this is a child menu item which does not have children -->
+                        <Trigger Property="Role" Value="SubmenuHeader">
+                            <Setter Property="DockPanel.Dock" Value="Top"/>
+                            <Setter Property="Padding" Value="0,2,0,2"/>
+                            <Setter Property="Grid.IsSharedSizeScope" Value="true"/>
+                        </Trigger>
+                        <!-- Role = SubMenuItem : this is a child menu item which has children-->
+                        <Trigger Property="Role" Value="SubmenuItem">
+                            <Setter Property="DockPanel.Dock" Value="Top"/>
+                            <Setter Property="Padding" Value="0,2,0,2"/>
+                            <Setter Property="Visibility" Value="Collapsed" TargetName="ArrowPanel"/>
+                        </Trigger>
+                        <Trigger Property="IsSuspendingPopupAnimation" Value="true">
+                            <Setter Property="PopupAnimation" Value="None" TargetName="SubMenuPopup"/>
+                        </Trigger>
+                        <!-- If no Icon is present the we collapse the Icon Content -->
+                        <Trigger Property="Icon" Value="{x:Null}">
+                            <Setter Property="Visibility" Value="Collapsed" TargetName="Icon"/>
+                        </Trigger>
+                        <!-- The GlyphPanel contains the CheckMark -->
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter Property="Visibility" Value="Visible" TargetName="GlyphPanel"/>
+                            <Setter Property="Visibility" Value="Collapsed" TargetName="Icon"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- This BitmapEffect is used by the Simple MenuItem -->
+    <DropShadowBitmapEffect x:Key="PopupDropShadow" ShadowDepth="1.5" Softness="0.15"/>
+</ResourceDictionary>

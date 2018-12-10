@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="Antenna.UserControls.SettingAndMessageBox.ProfileControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Antenna.UserControls.SettingAndMessageBox"
+             xmlns:Controls="clr-namespace:Antenna.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="360" d:DesignWidth="470">
+    <Control.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Antenna.UserControls;component/ResourceDictionary/defaultStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Control.Resources>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="230"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="180"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="5"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--头像-->
+            <Border Grid.Row="1" Grid.Column="1" Grid.RowSpan="6" BorderThickness="1" BorderBrush="#E1E1E1" CornerRadius="2" Margin="0,3,0,2">
+                <Image x:Name="headImage"  Source="pack://application:,,,/Antenna.UserControls;Component/Images/背景-2.png" Stretch="Fill" MouseLeftButtonDown="Image_MouseLeftButtonDown" Cursor="Hand"/>
+            </Border>
+            <TextBlock Grid.Row="1" Grid.Column="2" Style="{StaticResource NormalTextBox}" Text="姓名"/>
+            <TextBlock Grid.Row="2" Grid.Column="2" Style="{StaticResource NormalTextBox}" Text="性别"/>
+            <TextBlock Grid.Row="3" Grid.Column="2" Style="{StaticResource NormalTextBox}" Text="职位"/>
+            <TextBlock Grid.Row="4" Grid.Column="2" Style="{StaticResource NormalTextBox}" Text="部门"/>
+            <TextBlock Grid.Row="5" Grid.Column="2" Style="{StaticResource NormalTextBox}" Text="手机"/>
+            <TextBlock Grid.Row="6" Grid.Column="2" Style="{StaticResource NormalTextBox}" Text="邮箱"/>
+            <TextBox Name="txt_Name" Grid.Row="1" Grid.Column="3" Style="{StaticResource CornerTextBox}" Height="30" Width="180" Text="欧阳三丰"/>
+            <ComboBox Name="cmb_Sex" Grid.Row="2" Grid.Column="3" Style="{StaticResource SimpleComboBox}" Height="30" Width="180" IsEditable="False" SelectedIndex="0">
+                <ComboBoxItem>男</ComboBoxItem>
+                <ComboBoxItem>女</ComboBoxItem>
+            </ComboBox>
+            <TextBox Name="txt_Job" Grid.Row="3" Grid.Column="3" Style="{StaticResource CornerTextBox}" Height="30" Width="180" Text="前端工程师"/>
+            <TextBox Name="txt_Department" Grid.Row="4" Grid.Column="3" Style="{StaticResource CornerTextBox}" Height="30" Width="180" Text="研发部"/>
+            <TextBox Name="txt_Tel" Grid.Row="5" Grid.Column="3" Style="{StaticResource CornerTextBox}" Height="30" Width="180" Text="18262277163"/>
+            <TextBox Name="txt_Email" Grid.Row="6" Grid.Column="3" Style="{StaticResource CornerTextBox}" Height="30" Width="180" Text="epcaster@qq.com"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="15"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="55"/>
+                </Grid.RowDefinitions>
+                <Controls:SJTextBox x:Name="txt_Signature" Grid.Row="0" Width="440" Height="55" Style="{StaticResource WaterMarkTextBox}" BorderBrush="#E1E1E1" BorderCornerRadius="2" WaterRemark="赶紧编辑您的个性签名吧！" 
+                                        IsPasswordBox="False" VerticalAlignment="Center" VerticalContentAlignment="Top" Padding="10,5" FontSize="14" TextWrapping="Wrap" MaxLength="32" Background="#EAEFF3"/>
+                <Button Name="btn_Save" Grid.Row="1" Style="{StaticResource BlueButton_Style}" Height="32" Width="88" HorizontalAlignment="Right"  VerticalAlignment="Top" Content="保存" FontSize="14"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

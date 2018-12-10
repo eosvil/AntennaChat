@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1255AE05-D24A-432C-998C-0BE44AF15D93}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SDK.Service</RootNamespace>
+    <AssemblyName>SDK.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\ShareDLL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\ShareDLL\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\ShareDLL\</OutputPath>
+    <DocumentationFile>..\ShareDLL\SDK.Service.XML</DocumentationFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\ShareDLL\</OutputPath>
+    <DocumentationFile>..\ShareDLL\SDK.Service.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\02Development\05Pc\AntennaChat_SDK\ShareDLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ShareDLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF.Extensions, Version=1.0.12234.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\02Development\05Pc\AntennaChat_SDK\ShareDLL\OpenNETCF.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GetComputeInfo.cs" />
+    <Compile Include="HttpCertificate.cs" />
+    <Compile Include="Internal\DataConverter.cs" />
+    <Compile Include="Internal\Http\HttpUploadCommon.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Constants\ConnectResult.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Constants\MessageType.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Constants\QoS.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\Connect.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\ConnectAck.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\Disconnect.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\FixedHeader.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\Message.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\PingRequest.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\PingResponse.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\Publish.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\PublishAck.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\Subscribe.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\Unsubscribe.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\VariableHeaders\ConnectHeaderData.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\VariableHeaders\HeaderData.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\VariableHeaders\MessageIDHeaderData.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\VariableHeaders\PublishHeaderData.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Messages\VariableHeaders\VariableHeader.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\MQTTClient.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\MQTTString.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\Subscription.cs" />
+    <Compile Include="Internal\Mqtt\MqttClient\SubscriptionCollection.cs" />
+    <Compile Include="Internal\SdkErrorCodes.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\GroupActivityInput.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\CreateGroupVoteInput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\GetGroupAbstentionVoteInfoOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\GetGroupVotesOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\GetVoteInfoOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\GroupActivityOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\QuerySystemDateOuput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\SdkBaseBoolDto.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\SdkFailOrSucessMessageDto.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\SdkFileUpLoadOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\SdkSendCutImageDto.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\UserPunchClockInput.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\MsNotificationId.cs" />
+    <Compile Include="Models\InternModels\HttpModels\FindBlacklists.cs" />
+    <Compile Include="Models\InternModels\HttpModels\GetNotifications.cs" />
+    <Compile Include="Internal\Http\HttpCommon.cs" />
+    <Compile Include="Interface\IInputPrefPath.cs" />
+    <Compile Include="Interface\IInputQuery.cs" />
+    <Compile Include="Interface\IInputSuffPath.cs" />
+    <Compile Include="Models\InternModels\HttpModels\AddBlacklist.cs" />
+    <Compile Include="Models\InternModels\HttpModels\CreateGroup.cs" />
+    <Compile Include="Models\InternModels\HttpModels\DelBlacklist.cs" />
+    <Compile Include="Models\InternModels\HttpModels\DeleteNotificationsById.cs" />
+    <Compile Include="Models\InternModels\HttpModels\DissolveGroup.cs" />
+    <Compile Include="Models\InternModels\HttpModels\FindIndividRooms.cs" />
+    <Compile Include="Models\InternModels\HttpModels\GetGroupMembers.cs" />
+    <Compile Include="JsonCoder.cs" />
+    <Compile Include="Models\InternModels\HttpModels\ChangeAppRunStatus.cs" />
+    <Compile Include="Models\InternModels\HttpModels\GetGroupList.cs" />
+    <Compile Include="Models\InternModels\HttpModels\GetGroupNotifications.cs" />
+    <Compile Include="Models\InternModels\HttpModels\GetNotificationsById.cs" />
+    <Compile Include="Models\InternModels\HttpModels\GroupExitor.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\AddNotificationsInput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\AddNotificationsOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\CreateGroupInput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\CreateGroupOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\GetGroupNotificationsOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\GetNotificationsByIdOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\GroupOwnerChangeInput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\BaseOut.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\FindIndividRoomsOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\GetGroupListOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\GetGroupMembersOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\HandleInviteInput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\InviteJoinRoomInput.cs" />
+    <Compile Include="Internal\LogHelper.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\AddChatRoomMembersInput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\CreateChatRoomInput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\DeleteChatRoomMembersInput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\FindRoomMembersOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\FindRoomsOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\GetChatRoomInfoOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\GetRoomMemberInfoOutput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\RoamMessageInput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\RoamMessageOutput.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\MsSdkMessageBase.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\MsChatMsg.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\MsSdkOther.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Publish\GroupBurnMessage.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsAttendanceRecord.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsCreateChatRoom.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\DeleteChatRoom.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\DeleteChatRoomMembers.cs" />
+    <Compile Include="Models\InternModels\HttpModels\ExitChatRoom.cs" />
+    <Compile Include="Models\InternModels\HttpModels\FindRoomMembers.cs" />
+    <Compile Include="Models\InternModels\HttpModels\FindRooms.cs" />
+    <Compile Include="Models\InternModels\HttpModels\GetChatRoomInfo.cs" />
+    <Compile Include="Models\InternModels\HttpModels\GetConnectConfig.cs" />
+    <Compile Include="Models\InternModels\HttpModels\GetCurrUserList.cs" />
+    <Compile Include="Models\InternModels\HttpModels\GetRoomMemberInfo.cs" />
+    <Compile Include="Models\InternModels\HttpModels\GetToken.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\InviteJoinSession.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsAddChatRoomMembers.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsAddGroupMembers.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsCreateGroup.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\MsCustomEntity.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsDeleteGroup.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsDeleteGroupMembers.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsGroupOwnerChanged.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsGroupOwnerNormal.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsGroupOwnerBurnMode.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsGroupOwnerBurnDelete.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsIndividuationSet.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsModifyGroup.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsModifyGroupMember.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsAddNotifications.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsGroupAdminSet.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsOrganizationModify.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsQuitChatRoomMember.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsModifyChatRoomMember.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsModifyChatRoom.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsQuitGroupMember.cs" />
+    <Compile Include="Models\InternModels\HttpModels\QueryOfflineMsg.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\MsSdkMessage.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\MsSdkBaseEntity.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Publish\SdkMsTerminal.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\ReceiveMsgReceipt.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsPointBurnReaded.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsMultiTerminalSynch.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsPointFileAccepted.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsSdkUserBase.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsUserInfoModify.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\MsUserStateChange.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Publish\SdkMsSendMsgReceipt.cs" />
+    <Compile Include="Models\PublicModels\SdkSysParam.cs" />
+    <Compile Include="Models\InternModels\HttpModels\SetRoomReceiveType.cs" />
+    <Compile Include="Models\InternModels\HttpModels\SetUserReceiveType.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\UnvarnishedMsg.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\UpdateChatRoomInput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\UpdateChatRoomMemberInput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\UpdateGroupInput.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\UpdateGroupConfigInput.cs" />
+    <Compile Include="Models\InternModels\HttpModels\UpdateNotificationsState.cs" />
+    <Compile Include="Models\PublicModels\HttpModels\UpdateUserInfoInput.cs" />
+    <Compile Include="Models\PublicModels\MqttModels\Receive\VersionHardUpdate.cs" />
+    <Compile Include="Internal\Mqtt\MsgConverter.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PublicationReceivedHandler.cs" />
+    <Compile Include="Resouces\SetResources.cs" />
+    <Compile Include="SdkEnum.cs" />
+    <Compile Include="Internal\SdkEnumCollection.cs" />
+    <Compile Include="Internal\SdkService.cs" />
+    <Compile Include="Internal\Http\SdkHttpService.cs" />
+    <Compile Include="Internal\Mqtt\SdkMqttService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\InternModels\MqttModels\Publish\" />
+    <Folder Include="Models\InternModels\MqttModels\Receive\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sdk.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

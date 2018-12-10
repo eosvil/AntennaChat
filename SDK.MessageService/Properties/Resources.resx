@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="E_00000" xml:space="preserve">
+    <value>服务器异常</value>
+    <comment>全局错误</comment>
+  </data>
+  <data name="E_00007" xml:space="preserve">
+    <value>用户认证失败</value>
+    <comment>全局错误</comment>
+  </data>
+  <data name="E_1002" xml:space="preserve">
+    <value>参数错误</value>
+    <comment>参数错误</comment>
+  </data>
+  <data name="E_1004" xml:space="preserve">
+    <value>无效的token</value>
+    <comment>无效的token</comment>
+  </data>
+  <data name="E_1008" xml:space="preserve">
+    <value>数据操作失败</value>
+    <comment>数据操作失败</comment>
+  </data>
+  <data name="E_2004" xml:space="preserve">
+    <value>讨论组ID不存在</value>
+    <comment>讨论组ID不存在</comment>
+  </data>
+  <data name="E_2010" xml:space="preserve">
+    <value>创建讨论组的人必须在讨论组中</value>
+    <comment>创建讨论组的人必须在讨论组中</comment>
+  </data>
+  <data name="E_2011" xml:space="preserve">
+    <value>用户已经不在这个讨论组中</value>
+    <comment>用户已经不在这个讨论组中</comment>
+  </data>
+  <data name="E_2014" xml:space="preserve">
+    <value>用户不是讨论组的管理员</value>
+    <comment>用户不是讨论组的管理员</comment>
+  </data>
+  <data name="E_2015" xml:space="preserve">
+    <value>讨论组公告id不存在</value>
+    <comment>讨论组公告id不存在</comment>
+  </data>
+  <data name="E_5001" xml:space="preserve">
+    <value>找不到成员信息</value>
+    <comment>找不到成员信息</comment>
+  </data>
+  <data name="E_5002" xml:space="preserve">
+    <value>找不到聊天室信息</value>
+    <comment>找不到聊天室信息</comment>
+  </data>
+  <data name="E_5003" xml:space="preserve">
+    <value>当次操作沒有成员</value>
+    <comment>当次操作沒有成员</comment>
+  </data>
+  <data name="E_5004" xml:space="preserve">
+    <value>当次操作成员数过多</value>
+    <comment>当次操作成员数过多</comment>
+  </data>
+  <data name="E_5005" xml:space="preserve">
+    <value>创建聊天室失败</value>
+    <comment>创建聊天室失败</comment>
+  </data>
+  <data name="E_5006" xml:space="preserve">
+    <value>删除聊天室失败</value>
+    <comment>删除聊天室失败</comment>
+  </data>
+  <data name="E_5007" xml:space="preserve">
+    <value>添加聊天室成员失败</value>
+    <comment>添加聊天室成员失败</comment>
+  </data>
+  <data name="E_5008" xml:space="preserve">
+    <value>删除聊天室成员失败</value>
+    <comment>删除聊天室成员失败</comment>
+  </data>
+  <data name="E_5009" xml:space="preserve">
+    <value>改变成员属性失败</value>
+    <comment>改变成员属性失败</comment>
+  </data>
+  <data name="E_5010" xml:space="preserve">
+    <value>修改聊天室信息失败</value>
+    <comment>修改聊天室信息失败</comment>
+  </data>
+  <data name="E_5011" xml:space="preserve">
+    <value>退出聊天室失败</value>
+    <comment>退出聊天室失败</comment>
+  </data>
+  <data name="E_5012" xml:space="preserve">
+    <value>该成员已在聊天室，邀请失败</value>
+    <comment>该成员已在聊天室，邀请失败</comment>
+  </data>
+  <data name="E_5013" xml:space="preserve">
+    <value>邀请重复，等候处理</value>
+    <comment>邀请重复，等候处理</comment>
+  </data>
+  <data name="E_5101" xml:space="preserve">
+    <value>注册公司失败</value>
+    <comment>注册公司失败</comment>
+  </data>
+  <data name="E_5102" xml:space="preserve">
+    <value>该公司不存在</value>
+    <comment>该公司不存在</comment>
+  </data>
+  <data name="E_5103" xml:space="preserve">
+    <value>注册应用失败</value>
+    <comment>注册应用失败</comment>
+  </data>
+  <data name="E_5104" xml:space="preserve">
+    <value>该应用不存在</value>
+    <comment>该应用不存在</comment>
+  </data>
+  <data name="E_90000" xml:space="preserve">
+    <value>系统错误，找不到缓存中的对象</value>
+    <comment>查询会话列表,查询会话内容,加载会话内容异常</comment>
+  </data>
+  <data name="E_90103" xml:space="preserve">
+    <value>用户退出异常</value>
+    <comment>退出</comment>
+  </data>
+  <data name="E_90104" xml:space="preserve">
+    <value>修改密码异常</value>
+    <comment>修改密码</comment>
+  </data>
+  <data name="E_90105" xml:space="preserve">
+    <value>切换状态异常</value>
+    <comment>修改在线状态</comment>
+  </data>
+  <data name="E_90118" xml:space="preserve">
+    <value>查询公司客服异常</value>
+    <comment>查询公司主题异常</comment>
+  </data>
+  <data name="E_90119" xml:space="preserve">
+    <value>用户登录异常</value>
+    <comment>登录</comment>
+  </data>
+  <data name="E_90125" xml:space="preserve">
+    <value>用户被禁用</value>
+    <comment>登录</comment>
+  </data>
+  <data name="E_90205" xml:space="preserve">
+    <value>优先受理会话异常</value>
+    <comment>优先受理会话</comment>
+  </data>
+  <data name="E_90206" xml:space="preserve">
+    <value>查询访客历史异常</value>
+    <comment>查询访客浏览历史</comment>
+  </data>
+  <data name="E_90207" xml:space="preserve">
+    <value>直接会话异常</value>
+    <comment>直接会话</comment>
+  </data>
+  <data name="E_90208" xml:space="preserve">
+    <value>邀请会话异常</value>
+    <comment>邀请会话</comment>
+  </data>
+  <data name="E_90210" xml:space="preserve">
+    <value>查询公司标签异常</value>
+    <comment>查询公司客服异常</comment>
+  </data>
+  <data name="E_90310" xml:space="preserve">
+    <value>结束会话异常</value>
+    <comment>结束会话异常</comment>
+  </data>
+  <data name="E_90311" xml:space="preserve">
+    <value>加载会话内容异常</value>
+    <comment>查询会话详情</comment>
+  </data>
+  <data name="E_90312" xml:space="preserve">
+    <value>加载会话历史异常</value>
+    <comment>查询会话历史列表</comment>
+  </data>
+  <data name="E_90323" xml:space="preserve">
+    <value>访客已经结束咨询</value>
+    <comment>发起转接请求</comment>
+  </data>
+  <data name="E_90325" xml:space="preserve">
+    <value>访客已经结束咨询</value>
+    <comment>发送转接确认结果</comment>
+  </data>
+  <data name="E_90332" xml:space="preserve">
+    <value>发起转接请求异常</value>
+    <comment>发起转接请求</comment>
+  </data>
+  <data name="E_90333" xml:space="preserve">
+    <value>发送确认转接异常</value>
+    <comment>发送确认转接异常</comment>
+  </data>
+  <data name="E_90403" xml:space="preserve">
+    <value>查询公共常用语异常</value>
+    <comment>查询公共常用语</comment>
+  </data>
+  <data name="E_90405" xml:space="preserve">
+    <value>查询个人常用语异常</value>
+    <comment>查询个人常用语</comment>
+  </data>
+  <data name="E_90406" xml:space="preserve">
+    <value>查询个人常用语目录异常</value>
+    <comment>查询个人常用语目录</comment>
+  </data>
+  <data name="E_90407" xml:space="preserve">
+    <value>添加个人常用语异常</value>
+    <comment>添加个人常用语/目录</comment>
+  </data>
+  <data name="E_90408" xml:space="preserve">
+    <value>删除个人常用语异常</value>
+    <comment>删除个人常用语/目录</comment>
+  </data>
+  <data name="E_90409" xml:space="preserve">
+    <value>修改个人常用语异常</value>
+    <comment>修改个人常用语/目录</comment>
+  </data>
+  <data name="E_90606" xml:space="preserve">
+    <value>公司代码不存在</value>
+    <comment>登录</comment>
+  </data>
+  <data name="E_90607" xml:space="preserve">
+    <value>公司已禁用</value>
+    <comment>登录</comment>
+  </data>
+  <data name="E_90608" xml:space="preserve">
+    <value>服务已过期</value>
+    <comment>登录</comment>
+  </data>
+  <data name="E_90609" xml:space="preserve">
+    <value>用户名或密码错误</value>
+    <comment>登录</comment>
+  </data>
+  <data name="E_90610" xml:space="preserve">
+    <value>客服坐席已满</value>
+    <comment>登录</comment>
+  </data>
+  <data name="E_90701" xml:space="preserve">
+    <value>获取未评估会话异常</value>
+    <comment>查询未评估会话列表</comment>
+  </data>
+  <data name="E_90702" xml:space="preserve">
+    <value>评估会话异常</value>
+    <comment>评估会话</comment>
+  </data>
+  <data name="E_90801" xml:space="preserve">
+    <value>查询公司主题异常</value>
+    <comment>查询公司主题</comment>
+  </data>
+  <data name="E_91201" xml:space="preserve">
+    <value>添加知识库问题异常</value>
+    <comment>添加知识库问题</comment>
+  </data>
+  <data name="E_91202" xml:space="preserve">
+    <value>查询知识库答案异常</value>
+    <comment>查询知识库答案</comment>
+  </data>
+  <data name="E_91203" xml:space="preserve">
+    <value>知识库问题已存在</value>
+    <comment>添加知识库问题</comment>
+  </data>
+  <data name="E_91501" xml:space="preserve">
+    <value>查询常用链接异常</value>
+    <comment>查询常用链接</comment>
+  </data>
+  <data name="E_91502" xml:space="preserve">
+    <value>查询常用文件异常</value>
+    <comment>查询常用文件</comment>
+  </data>
+  <data name="SdkAddChartRommMemberError" xml:space="preserve">
+    <value>SDK添加聊天室成员失败</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkUpdateUserInfoError" xml:space="preserve">
+    <value>SDK更新用户信息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkAddBlacklistError" xml:space="preserve">
+    <value>SDK添加用户黑名单错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkFindBlacklistsError" xml:space="preserve">
+    <value>SDK查询黑名单ID列表错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkDelBlacklistError" xml:space="preserve">
+    <value>SDK移除用户黑名单错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkLoginServiceFail" xml:space="preserve">
+    <value>SDK登录服务器失败</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkGetMqttConfigFail" xml:space="preserve">
+    <value>SDK获取消息服务器配置失败</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkConectServiceFail" xml:space="preserve">
+    <value>SDK连接消息服务失败</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkCreateChatRoomError" xml:space="preserve">
+    <value>SDK创建聊天室错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkDeleteChatRoomError" xml:space="preserve">
+    <value>SDK删除聊天室错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkAddChatRoomMembersError" xml:space="preserve">
+    <value>SD添加聊天室成员错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkDelChartRommMemberError" xml:space="preserve">
+    <value>SDK删除聊天室成员错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkExtChartRommFail" xml:space="preserve">
+    <value>SDK成员退出聊天室失败</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkHttpCommonBaseSchemaError" xml:space="preserve">
+    <value>SDK转换Http请求返回的基础结构信息出错</value>
+    <comment>SdkService</comment>
+  </data>
+   <data name="SdkHttpUploadFileNoExist" xml:space="preserve">
+    <value>上传的文件不存在，请重新选择正确的文件上传</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkHttpCommonBaseSchemaNull" xml:space="preserve">
+    <value>SDK转换Http请求返回的基础结构内容信息为空</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkHttpCommonOutSchemaError" xml:space="preserve">
+    <value>SDK转换Http请求返回的基础结构内容错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkHttpResponseNull" xml:space="preserve">
+    <value>SDK的Http请求没有返回任何信息</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkMqServiceException" xml:space="preserve">
+    <value>SDK消息服务器连接异常</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkMqttConnectFail" xml:space="preserve">
+    <value>MQTT连接失败</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkMqttConnectSuccess" xml:space="preserve">
+    <value>MQTT连接成功</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkMqttDisconnectFail" xml:space="preserve">
+    <value>MQTT断开连接失败</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkMqttDisconnectSuccess" xml:space="preserve">
+    <value>MQTT断开连接</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkMsPublishFail" xml:space="preserve">
+    <value>SDK发布MQTT消息失败</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkMsPublishSuccess" xml:space="preserve">
+    <value>SDK发布MQTT消息成功</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkQryInChartRommError" xml:space="preserve">
+    <value>SDK查询用户所在聊天室错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkQrySingleRommError" xml:space="preserve">
+    <value>SDK查询单个聊天室详细信息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkQryRommMembersInfoError" xml:space="preserve">
+    <value>SDK查询聊天室所有成员基本信息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkQryRommSingleMembersInfoError" xml:space="preserve">
+    <value>SDK查询聊天室单个成员详细信息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkQryAllRommInfoError" xml:space="preserve">
+    <value>SDK查询app下的所有聊天室错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkInviteJoinRommError" xml:space="preserve">
+    <value>SDK邀请加入聊天室错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkHandleInviteRommError" xml:space="preserve">
+    <value>SDK处理邀请错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkQryInAllRommError" xml:space="preserve">
+    <value>SDK查询用户所在聊天室错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkSetRommMsgTypeError" xml:space="preserve">
+    <value>SDK设置聊天室的接收消息类型错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkSetUserMsgTypeError" xml:space="preserve">
+    <value>SDK设置用户的接收消息类型错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkQryOffLineInfoError" xml:space="preserve">
+    <value>SDK查询离线消息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkChangeAppStatusError" xml:space="preserve">
+    <value>SDK手机端切换运行状态错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkUpdatePushDeviceTokenError" xml:space="preserve">
+    <value>更新小米、华为、魅族、信鸽的信息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkGetUserGroupError" xml:space="preserve">
+    <value>SDK获取用户的讨论组错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkGroupUserInfoError" xml:space="preserve">
+    <value>SDK获取讨论组成员信息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkGroupExitError" xml:space="preserve">
+    <value>SDK退出讨论组错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkGroupOwnerChangeError" xml:space="preserve">
+    <value>SDK群主转让错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkCreateGroupError" xml:space="preserve">
+    <value>SDK创建讨论组错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkUpdateGroupError" xml:space="preserve">
+    <value>SDK更新讨论组信息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkDissolveGroupError" xml:space="preserve">
+    <value>SDK解散讨论组错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkGetGroupNotificationsError" xml:space="preserve">
+    <value>SDK获取群的所有公告错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkGetNotificationsByIdError" xml:space="preserve">
+    <value>SDK通过ID获取群公告错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkAddNotificationsError" xml:space="preserve">
+    <value>SDK添加群公告错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkUpdateNotificationsStateError" xml:space="preserve">
+    <value>SDK用户修改公告状态为已读错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkDeleteNotificationsByIdError" xml:space="preserve">
+    <value>SDK删除群公告错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkRoamMessageError" xml:space="preserve">
+    <value>SDK消息漫游错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkUpdateUserGroupConfigError" xml:space="preserve">
+    <value>SDK解散讨论组错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkReceiveChatMsgAtError" xml:space="preserve">
+    <value>SDK解析聊天@消息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkReceiveChatMsgAudioError" xml:space="preserve">
+    <value>SDK解析聊天音频消息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkReceiveChatMsgError" xml:space="preserve">
+    <value>SDK解析聊天消息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkReceiveChatMsgFileError" xml:space="preserve">
+    <value>SDK解析聊天文件消息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkReceiveChatMsgMapLocationError" xml:space="preserve">
+    <value>SDK解析聊天地理位置消息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkReceiveChatMsgMixImageTextError" xml:space="preserve">
+    <value>SDK解析聊天图文混合消息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkReceiveChatMsgMultiAudioVideoError" xml:space="preserve">
+    <value>SDK解析聊天多人视频消息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkReceiveChatMsgPictureError" xml:space="preserve">
+    <value>SDK解析聊天图片消息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkReceiveChatMsgVideoError" xml:space="preserve">
+    <value>SDK解析聊天视频消息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkReceivedMqttMessage" xml:space="preserve">
+    <value>SDK收到MQTT消息</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkSedGetHeartbeatJsonstrError" xml:space="preserve">
+    <value>SDK获取发送心跳信息的数据的Json数据错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkSendChatMsgTypeError" xml:space="preserve">
+    <value>发送的聊天消息不符合SDK聊天消息数据结构</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkSendChatMsgRevocationMsIdError" xml:space="preserve">
+    <value>撤销消息时消息ID不能空</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkSendTerminalMsgTypeError" xml:space="preserve">
+    <value>发送的终端消息不符合SDK终端消息数据结构</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkSubscribeDefaultTopicsError" xml:space="preserve">
+    <value>SDK订阅默认主题错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkSubscribeTopicError" xml:space="preserve">
+    <value>MQTT订阅主题错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkSubscribeTopicSuccess" xml:space="preserve">
+    <value>MQTT订阅主题成功</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkUnSubscribeTopicError" xml:space="preserve">
+    <value>MQTT取消订阅主题错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkUnSubscribeTopicSuccess" xml:space="preserve">
+    <value>MQTT取消订阅主题成功</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkUpdChartRommError" xml:space="preserve">
+    <value>SDK更新聊天室信息错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkUpdChartRommMemberError" xml:space="preserve">
+    <value>SDK更新聊天室成员属性错误</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkStartAppKeyNotNull" xml:space="preserve">
+    <value>SDK启动产品ID不能为空</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkStartAppSecretNotNull" xml:space="preserve">
+    <value>SDK启动产品密钥不能为空</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkStartCompanyCodeNotNull" xml:space="preserve">
+    <value>SDK启动公司代码不能为空</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkStartHttpPrefStuffNotNull" xml:space="preserve">
+    <value>SDK启动企业级服务HTTP地址不能为空</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkStartFileUploadNotNull" xml:space="preserve">
+    <value>SDK启动文件上传地址不能为空</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkNotStart" xml:space="preserve">
+    <value>SDK未启动</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkHttpRequestFail" xml:space="preserve">
+    <value>请求失败，请联系系统管理员</value>
+    <comment>SdkService</comment>
+  </data>
+  <data name="SdkHttpRequestTimeOut" xml:space="preserve">
+    <value>请求超时</value>
+    <comment>SdkService</comment>
+  </data>
+</root>

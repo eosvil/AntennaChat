@@ -1,0 +1,250 @@
+﻿<UserControl x:Class="AntennaChat.Views.Vote.CreateVoteView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AntennaChat.Views.Vote"
+             xmlns:resource="clr-namespace:AntennaChat.Resource"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+             mc:Ignorable="d" 
+             x:Name="VoteControl"
+             Background="White">
+    <UserControl.Resources>
+        <collections:ArrayList x:Key="HourItems">
+            <sys:String>00</sys:String>
+            <sys:String>01</sys:String>
+            <sys:String>02</sys:String>
+            <sys:String>03</sys:String>
+            <sys:String>04</sys:String>
+            <sys:String>05</sys:String>
+            <sys:String>06</sys:String>
+            <sys:String>07</sys:String>
+            <sys:String>08</sys:String>
+            <sys:String>09</sys:String>
+            <sys:String>10</sys:String>
+            <sys:String>11</sys:String>
+            <sys:String>12</sys:String>
+            <sys:String>13</sys:String>
+            <sys:String>14</sys:String>
+            <sys:String>15</sys:String>
+            <sys:String>16</sys:String>
+            <sys:String>17</sys:String>
+            <sys:String>18</sys:String>
+            <sys:String>19</sys:String>
+            <sys:String>20</sys:String>
+            <sys:String>21</sys:String>
+            <sys:String>22</sys:String>
+            <sys:String>23</sys:String>
+        </collections:ArrayList>
+        <collections:ArrayList x:Key="MinuteItems">
+            <sys:String>00</sys:String>
+            <sys:String>01</sys:String>
+            <sys:String>02</sys:String>
+            <sys:String>03</sys:String>
+            <sys:String>04</sys:String>
+            <sys:String>05</sys:String>
+            <sys:String>06</sys:String>
+            <sys:String>07</sys:String>
+            <sys:String>08</sys:String>
+            <sys:String>09</sys:String>
+            <sys:String>10</sys:String>
+            <sys:String>11</sys:String>
+            <sys:String>12</sys:String>
+            <sys:String>13</sys:String>
+            <sys:String>14</sys:String>
+            <sys:String>15</sys:String>
+            <sys:String>16</sys:String>
+            <sys:String>17</sys:String>
+            <sys:String>18</sys:String>
+            <sys:String>19</sys:String>
+            <sys:String>20</sys:String>
+            <sys:String>21</sys:String>
+            <sys:String>22</sys:String>
+            <sys:String>23</sys:String>
+            <sys:String>24</sys:String>
+            <sys:String>25</sys:String>
+            <sys:String>26</sys:String>
+            <sys:String>27</sys:String>
+            <sys:String>28</sys:String>
+            <sys:String>29</sys:String>
+            <sys:String>30</sys:String>
+            <sys:String>31</sys:String>
+            <sys:String>32</sys:String>
+            <sys:String>33</sys:String>
+            <sys:String>34</sys:String>
+            <sys:String>35</sys:String>
+            <sys:String>36</sys:String>
+            <sys:String>37</sys:String>
+            <sys:String>38</sys:String>
+            <sys:String>39</sys:String>
+            <sys:String>40</sys:String>
+            <sys:String>41</sys:String>
+            <sys:String>42</sys:String>
+            <sys:String>43</sys:String>
+            <sys:String>44</sys:String>
+            <sys:String>45</sys:String>
+            <sys:String>46</sys:String>
+            <sys:String>47</sys:String>
+            <sys:String>48</sys:String>
+            <sys:String>49</sys:String>
+            <sys:String>50</sys:String>
+            <sys:String>51</sys:String>
+            <sys:String>52</sys:String>
+            <sys:String>53</sys:String>
+            <sys:String>54</sys:String>
+            <sys:String>55</sys:String>
+            <sys:String>56</sys:String>
+            <sys:String>57</sys:String>
+            <sys:String >58</sys:String>
+            <sys:String >59</sys:String>
+        </collections:ArrayList>
+    </UserControl.Resources>
+
+    <Grid Background="#f0f0f0" x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="发布投票" FontSize="18" Margin="20,16,0,0" Foreground="#1f1f1f"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" x:Name="scrollViewer" Grid.Row="1" Margin="40,36,40,40">
+            <Border  BorderThickness="1" BorderBrush="#e0e0e0" CornerRadius="1" Background="White">
+                <Grid Margin="20,0,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="txtBoxVote"  MaxLength="30" FontSize="16"   BorderThickness="0,0,0,0" Margin="0,24,55,20" Text="{Binding VoteSubject,Mode=TwoWay}" TextWrapping="Wrap" PreviewKeyDown="TextTitle_OnPreviewKeyDown">
+                        <TextBox.Resources>
+                            <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Left">
+                                <VisualBrush.Visual>
+                                    <TextBlock Text="请输入投票主题" Foreground="#999999" FontSize="16" FontWeight="Bold"/>
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </TextBox.Resources>
+                        <TextBox.Style>
+                            <Style TargetType="TextBox">
+                                <Style.Triggers>
+                                    <Trigger Property="Text" Value="{x:Null}">
+                                        <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                                        <Setter Property="FontSize" Value="16"></Setter>
+                                    </Trigger>
+                                    <Trigger Property="Text" Value="">
+                                        <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                                        <Setter Property="FontSize" Value="16"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBox.Style>
+                    </TextBox>
+                    <TextBlock Text="{Binding Path=Text.Length, ElementName=txtBoxVote}" Margin="0,28,40,0" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="#999999"/>
+                    <TextBlock HorizontalAlignment="Right" Margin="0,28,20,0" Text="/30" VerticalAlignment="Top" Foreground="#999999"/>
+                    <Border Height="1" Background="#f0f0f0" Grid.Row="1" VerticalAlignment="Top" Margin="0,0,20,0"/>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,20,0,0">
+                        <TextBlock Text="结束时间：" VerticalAlignment="Center"/>
+                        <DatePicker    SelectedDate="{Binding VoteEndDate,Mode=TwoWay}" HorizontalContentAlignment="Center"  DisplayDateEnd="{Binding DisplayDateEnd}" BorderThickness="1"  BorderBrush="#E1E1E1"/>
+                        <ComboBox ItemsSource="{StaticResource HourItems}"  Style="{StaticResource HourVoteComboBoxStyle}"  Margin="10,0,0,0" SelectedValue="{Binding HourSelected,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="52" Height="28"/>
+                        <TextBlock Text=":" VerticalAlignment="Center" Margin="5,0" Foreground="#999999"/>
+                        <ComboBox ItemsSource="{StaticResource MinuteItems}" Style="{StaticResource MinuteVoteComboBoxStyle}" SelectedItem="{Binding MinuteSelected,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="52" Height="28"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Orientation="Horizontal"  Margin="0,20,0,0">
+                        <TextBlock Text="匿名投票：" VerticalAlignment="Center"/>
+                        <CheckBox IsChecked="{Binding IsAnonymousVote,Mode=TwoWay}" Background="Transparent" VerticalAlignment="Center" Style="{DynamicResource VoteCheckBoxStyle}" Content="开启"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="3" Orientation="Horizontal"  Margin="0,20,0,0">
+                        <TextBlock Text="投票类型：" VerticalAlignment="Center"/>
+                        <RadioButton IsChecked="{Binding IsSingle,Mode=TwoWay}" Content="单选" VerticalAlignment="Center" Style="{DynamicResource VoteRadioButtonStyle}"/>
+                        <RadioButton IsChecked="{Binding IsMultiple,Mode=TwoWay}" Content="多选" VerticalAlignment="Center" Style="{DynamicResource VoteRadioButtonStyle}"/>
+                    </StackPanel>
+                    <Grid Grid.Row="4"  Margin="0,20,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="投票选项："/>
+                        <ItemsControl ItemsSource="{Binding OptionContentList}" Margin="0,0,0,16"  Grid.Column="1" x:Name="itemsControl">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid  Margin="0,0,0,10" Height="28" MinWidth="270">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="40"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBox Text="{Binding OptionName}" MaxLength="30" VerticalContentAlignment="Center">
+                                            <TextBox.Resources>
+                                                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.8" Stretch="None" AlignmentX="Left">
+                                                    <VisualBrush.Visual>
+                                                        <TextBlock Foreground="#999999" FontSize="14">
+                                                    <Run Text="选项"/>
+                                                    <Run Text="{Binding OptionId}"/>
+                                                        </TextBlock>
+                                                    </VisualBrush.Visual>
+                                                    <VisualBrush.Transform>
+                                                        <TransformGroup>
+                                                            <TranslateTransform X="5"/>
+                                                        </TransformGroup>
+                                                    </VisualBrush.Transform>
+                                                </VisualBrush>
+                                            </TextBox.Resources>
+                                            <TextBox.Style>
+                                                <Style TargetType="TextBox" BasedOn="{StaticResource SimpleTextBox}">
+                                                    <Setter Property="BorderBrush" Value="#e0e0e0" />
+                                                    <Setter Property="BorderThickness" Value="1"/>
+                                                    <Style.Triggers>
+                                                        <Trigger Property="Text" Value="{x:Null}">
+                                                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                                                            <Setter Property="FontSize" Value="16"></Setter>
+                                                        </Trigger>
+                                                        <Trigger Property="Text" Value="">
+                                                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                                                            <Setter Property="FontSize" Value="16"></Setter>
+                                                        </Trigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBox.Style>
+                                        </TextBox>
+                                        <Button Foreground="#999999" Style="{DynamicResource ClearBtnStyle}" Grid.Column="1" 
+                                                HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Visibility="{Binding IsOptionDelete,Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                Command="{Binding DataContext.DeleteOptionCommmand,RelativeSource={RelativeSource AncestorType={x:Type local:CreateVoteView}}}"
+                                                CommandParameter="{Binding OptionId}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                        <Button Content="+添加选项" IsEnabled="{Binding AddOptionIsEnabled}"  Command="{Binding AddOptionCommand}" Grid.Column="1" VerticalAlignment="Bottom" Margin="0,4,0,0" HorizontalAlignment="Left" FontSize="14" Click="ButtonBase_OnClick">
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}" BasedOn="{StaticResource TransparentButton_Style}">
+                                    <Setter Property="Foreground" Value="#1991ed"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsEnabled" Value="False">
+                                            <Setter Property="Foreground" Value="#cccccc"/>
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Foreground" Value="#1991ed"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                            </Button>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Grid.Row="5" HorizontalAlignment="Right" Margin="0,20,20,20">
+                        <Button Content="确定" Style="{DynamicResource BlueButton_Style}" Width="72" Height="28" Command="{Binding InitiateVoteCommand}"/>
+                        <Button Content="取消" Style="{DynamicResource WhiteButton_Style}" Width="72" Height="28" Margin="20,0,0,0" Command="{Binding CancelCommand}"/>
+                    </StackPanel>
+                    <Popup x:Name="pop_showTips"  PopupAnimation="Fade" Grid.RowSpan="5" PlacementTarget="{Binding ElementName=grid}" Placement="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25"  StaysOpen="False" IsOpen="{Binding IsShowPrompt}" AllowsTransparency="True">
+                        <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="2,2,2,2" Background="#333333" Height="25" Opacity="0.8"  VerticalAlignment="Top">
+                            <TextBlock FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,5"    Text="{Binding PromptInfo}" Foreground="White"></TextBlock>
+                        </Border>
+                    </Popup>
+                </Grid>
+              
+            </Border>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

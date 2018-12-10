@@ -1,0 +1,10 @@
+﻿<Window x:Class="AntennaChat.Views.Activity.WebBrowserOverlay"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:wfi ="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+    xmlns:wf ="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+    WindowStyle="None" ShowInTaskbar="False" ResizeMode="NoResize">
+    <wfi:WindowsFormsHost x:Name="_wfh">
+        <wf:WebBrowser x:Name="_wb"/>
+    </wfi:WindowsFormsHost>
+</Window>

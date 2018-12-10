@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="AntennaChat.Views.CheckInListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AntennaChat.Views"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" x:Name="attendance">
+    <Grid Background="#f5f5f5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="20,18,0,0" >
+            <TextBlock Text="考勤助手" FontSize="18" Foreground="#333333"/>
+            <TextBlock Text="（七讯打卡与考勤打卡为两种打卡方式，互不影响）" Margin="15,0,0,0" Foreground="#666666"  VerticalAlignment="Center"/>
+        </StackPanel>
+        <!--SelectedItem="{Binding CurrentSelectedActivity,Mode=TwoWay}"-->
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" x:Name="attendanceRecordsScroll" VerticalScrollBarVisibility="Auto" Grid.Row="1">
+            <ItemsControl  ItemsSource="{Binding AttendanceRecords}" Margin="20,18,20,0">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="1" Margin="0,0,0,20" CornerRadius="2" Background="White"  BorderBrush="#cccccc">
+                            <Grid Margin="20">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding PuncherTime}" FontSize="14"/>
+                                    <TextBlock Text="打卡" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="30,0,0,0">
+                                    <TextBlock Text="{Binding VerifyDescribe}" VerticalAlignment="Center" FontSize="14">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding VerifyState}" Value="0">
+                                                        <Setter Property="Foreground" Value="#fe3000"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding VerifyState}" Value="2">
+                                                        <Setter Property="Foreground" Value="#0ecf20"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding VerifyState}" Value="1">
+                                                        <Setter Property="Foreground" Value="#f6a800"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding ChcekInTimer}" VerticalAlignment="Center" Foreground="#fe3000" Visibility="{Binding IsbtnVerify,Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                    <Button Content="立即验证>>>" Margin="30,0,0,0" Style="{DynamicResource VeriftybtnStyle}" FontSize="14"  Visibility="{Binding IsbtnVerify,Converter={StaticResource BooleanToVisibilityConverter}}"
+                                    Command="{Binding DataContext.VerifyCommand,RelativeSource={RelativeSource AncestorType={x:Type local:CheckInListView}}}"
+                                    CommandParameter="{Binding AttendId}"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding PuncherAddress}" Grid.Row="1" Grid.ColumnSpan="3" Margin="0,20,0,0" Foreground="#666666" />
+                                <TextBlock Text="{Binding PuncherDate}" Grid.Column="2" HorizontalAlignment="Right" Foreground="#999999"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
