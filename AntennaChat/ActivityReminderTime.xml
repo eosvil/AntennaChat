@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<activityremindertime>
+  <timeitem>
+    <value>提前10分钟</value>
+  </timeitem>
+  <timeitem>
+    <value>提前20分钟</value>
+  </timeitem>
+  <timeitem>
+    <value>提前30分钟</value>
+  </timeitem>
+  <timeitem>
+    <value>提前1个小时</value>
+  </timeitem>
+</activityremindertime>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<updateAntenna>
+  <!--阅后即焚消息提示  0 提示 1不提示-->
+  <isFirstShowBurnWin>0</isFirstShowBurnWin>
+  <!--单人阅后即焚模式 0非阅后即焚模式 1阅后即焚模式-->
+  <isBurnMode>0</isBurnMode>
+  <!--最新数据库版本号-->
+  <sqliteversion>1.0.1.5</sqliteversion>
+  <!--是否删除数据库 0删除 1不删除-->
+  <isDeleteDataBase>1</isDeleteDataBase>
+  <!--自动更新程序版本号-->
+  <upDataVersion>1.0</upDataVersion>
+  <!--是否全量获取组织架构-->
+  <isGetAllUser>true</isGetAllUser>
+</updateAntenna>
