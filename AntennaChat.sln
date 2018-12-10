@@ -29,6 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShareDLL", "ShareDLL", "{64
 		ShareDLL\d3dcompiler_43.dll = ShareDLL\d3dcompiler_43.dll
 		ShareDLL\d3dcompiler_47.dll = ShareDLL\d3dcompiler_47.dll
 		ShareDLL\devtools_resources.pak = ShareDLL\devtools_resources.pak
+		ShareDLL\ICSharpCode.SharpZipLib.dll = ShareDLL\ICSharpCode.SharpZipLib.dll
 		ShareDLL\icudtl.dat = ShareDLL\icudtl.dat
 		ShareDLL\Istrib.Sound.dll = ShareDLL\Istrib.Sound.dll
 		ShareDLL\Istrib.Sound.Mp3.dll = ShareDLL\Istrib.Sound.Mp3.dll
