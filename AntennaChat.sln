@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antenna.Model", "Antenna.Model\Antenna.Model.csproj", "{3D5913F7-1120-471B-ADF3-229295480A88}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -62,6 +62,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShareDLL", "ShareDLL", "{64
 		ShareDLL\nrtc.dll = ShareDLL\nrtc.dll
 		ShareDLL\nrtc_audio_process.dll = ShareDLL\nrtc_audio_process.dll
 		ShareDLL\OpenNETCF.Extensions.dll = ShareDLL\OpenNETCF.Extensions.dll
+		ShareDLL\SDK.AntSdk.dll = ShareDLL\SDK.AntSdk.dll
+		ShareDLL\SDK.Service.dll = ShareDLL\SDK.Service.dll
 		ShareDLL\snapshot_blob.bin = ShareDLL\snapshot_blob.bin
 		ShareDLL\System.Data.SQLite.dll = ShareDLL\System.Data.SQLite.dll
 		ShareDLL\System.Windows.Interactivity.dll = ShareDLL\System.Windows.Interactivity.dll
