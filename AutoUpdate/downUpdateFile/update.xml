@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<updateAntenna>
+  <title>标题</title>
+  <version>1.0.1.3</version>
+  <describe>更新内容</describe>
+  <url>x下载地址</url>
+  <updateType>更新类型 1:软更新，2：硬更新</updateType>
+  <fileMd5Value>MD5校验</fileMd5Value>
+  <isDownFileSucess>0</isDownFileSucess>
+</updateAntenna>
