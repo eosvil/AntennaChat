@@ -1,0 +1,1739 @@
+[1214/220013:VERBOSE1:pref_proxy_config_tracker_impl.cc(218)] 049EC828: set chrome proxy config service to 049ECB10
+[1214/220013:VERBOSE1:pref_proxy_config_tracker_impl.cc(355)] 049EC828: Done pushing proxy to UpdateProxyConfig
+[1214/220014:VERBOSE1:child_thread_impl.cc(357)] Mojo is disabled on child
+[1214/220020:VERBOSE1:statistics_recorder.cc(350)] Collections of all histograms
+Histogram: GPU.ANGLE.D3D11CreateDeviceMS recorded 1 samples, average = 19.0 (flags = 0x1)
+0   ... 
+17  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+20  ... 
+
+Histogram: GPU.ANGLE.D3D11FeatureLevel recorded 1 samples, average = 5.0 (flags = 0x1)
+0  ... 
+5  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+6  O                                                                         (0 = 0.0%) {100.0%}
+
+Histogram: GPU.ANGLE.D3D11InitializeResult recorded 1 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (1 = 100.0%)
+1  ... 
+
+Histogram: GPU.ANGLE.DisplayInitializeMS recorded 1 samples, average = 26.0 (flags = 0x1)
+0   ... 
+24  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+29  ... 
+
+Histogram: GPU.ANGLE.Renderer11InitializeDLLsMS recorded 1 samples, average = 5.0 (flags = 0x1)
+0  ... 
+5  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+6  ... 
+
+Histogram: GPU.ANGLE.Renderer11InitializeDeviceMS recorded 1 samples, average = 1.0 (flags = 0x1)
+0  O                                                                         (0 = 0.0%)
+1  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+2  ... 
+
+Histogram: GPU.ANGLE.SupportsDXGI1_2 recorded 1 samples, average = 1.0 (flags = 0x1)
+0  O                                                                         (0 = 0.0%)
+1  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+2  O                                                                         (0 = 0.0%) {100.0%}
+
+Histogram: GPU.CollectContextGraphicsInfo recorded 1 samples, average = 1.0 (flags = 0x1)
+0  O                                                                         (0 = 0.0%)
+1  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+2  ... 
+
+Histogram: GPU.EGLDisplayType recorded 1 samples, average = 4.0 (flags = 0x1)
+0  ... 
+4  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+5  ... 
+
+Histogram: GPU.InitializeOneOffMediumTime recorded 1 samples, average = 94.0 (flags = 0x1)
+0   ... 
+92  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+113 ... 
+
+Histogram: GPU.MaxMSAASampleCount recorded 1 samples (flags = 0x1)
+8  ------------------------------------------------------------------------O (1 = 100.0%)
+
+Histogram: V8.Initializer.LoadV8Snapshot.Result recorded 1 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (1 = 100.0%)
+1  ... 
+
+Histogram: V8.Initializer.OpenV8File.Result recorded 2 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (2 = 100.0%)
+1  ... 
+
+
+[1214/220043:VERBOSE1:pref_proxy_config_tracker_impl.cc(218)] 04F2D648: set chrome proxy config service to 04F2D930
+[1214/220043:VERBOSE1:pref_proxy_config_tracker_impl.cc(355)] 04F2D648: Done pushing proxy to UpdateProxyConfig
+[1214/220043:VERBOSE1:child_thread_impl.cc(357)] Mojo is disabled on child
+[1214/220043:VERBOSE1:webrtc_internals.cc(58)] Could not get the download directory.
+[1214/220043:VERBOSE1:gles2_cmd_decoder.cc(2771)] GL_OES_packed_depth_stencil supported.
+[1214/220043:INFO:systeminfo.cc(82)] Available number of cores: 8
+[1214/220043:VERBOSE1:child_thread_impl.cc(357)] Mojo is disabled on child
+[1214/220043:VERBOSE1:gles2_cmd_decoder.cc(2771)] GL_OES_packed_depth_stencil supported.
+[1214/220043:VERBOSE1:gles2_cmd_decoder.cc(2771)] GL_OES_packed_depth_stencil supported.
+[1214/220044:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  3BC94088
+  URL:                    https://www.baidu.com/
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220044:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220044:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 1
+[1214/220104:VERBOSE1:gles2_cmd_decoder.cc(2771)] GL_OES_packed_depth_stencil supported.
+[1214/220104:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  3BC96B08
+  URL:                    https://www.baidu.com/link?url=rcz479qAEpy5RQoPGVwDifPCjyIJUIZv4TG6VWoh3Ia&wd=&eqid=bbb0b0e6000072ad000000025c13b6b6
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220104:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220104:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 2
+[1214/220105:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 1
+[1214/220105:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  3BC96B08
+  URL:                    http://www.mp4pa.com/index.html
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220105:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220105:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 2
+[1214/220105:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/220105:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/220106:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://www.mp4pa.com/templets/default18/images/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.woff2
+[1214/220107:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: https://e.goodgz.cn/D.ashx?a=348&p=61&t=1&type=ms&tt=0.1377574419025107&n=Mozilla/5.0%20(Windows%20NT%206.1;%20WOW64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/49.0.2623.110%20Safari/537.36
+[1214/220108:VERBOSE1:child_thread_impl.cc(357)] Mojo is disabled on child
+[1214/220108:WARNING:ppapi_thread.cc(459)] InitModule failed with error -2
+[1214/220110:VERBOSE1:ppapi_plugin_process_host.cc(493)] PpapiPluginProcessHost::OnChannelError()
+[1214/220110:VERBOSE1:ppapi_plugin_process_host.cc(462)] ppapi plugin process crashed.
+[1214/220110:WARNING:plugin_module.cc(650)] Plugin doesn't support instance interface, failing.
+[1214/220110:WARNING:plugin_module.cc(650)] Plugin doesn't support instance interface, failing.
+[1214/220110:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 1
+[1214/220110:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/220110:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/220112:VERBOSE1:gles2_cmd_decoder.cc(2771)] GL_OES_packed_depth_stencil supported.
+[1214/220112:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  3BC97588
+  URL:                    https://www.baidu.com/link?url=tnUwMiNXC4kFL9wsWYRwMUqAytl5JP3jRohQ8fl0mdq&wd=&eqid=bbb0b0e6000072ad000000025c13b6b6
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220112:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220112:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 2
+[1214/220113:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 1
+[1214/220113:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  3BC97588
+  URL:                    http://www.mp4ba.com/
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220113:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220113:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 2
+[1214/220113:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/220113:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/220114:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 1
+[1214/220114:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/220114:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/220553:VERBOSE1:statistics_recorder.cc(350)] Collections of all histograms
+Histogram: GPU.ANGLE.D3D11CreateDeviceMS recorded 1 samples, average = 20.0 (flags = 0x1)
+0   ... 
+20  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+24  ... 
+
+Histogram: GPU.ANGLE.D3D11FeatureLevel recorded 1 samples, average = 5.0 (flags = 0x1)
+0  ... 
+5  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+6  O                                                                         (0 = 0.0%) {100.0%}
+
+Histogram: GPU.ANGLE.D3D11InitializeResult recorded 1 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (1 = 100.0%)
+1  ... 
+
+Histogram: GPU.ANGLE.D3DCompileMS recorded 8 samples, average = 6.0 (flags = 0x1)
+0   ... 
+2   ------------------------------------------------------------------------O (3 = 37.5%) {0.0%}
+3   O                                                                         (0 = 0.0%) {37.5%}
+4   ------------------------------------------------------------------------O (3 = 37.5%) {37.5%}
+5   O                                                                         (0 = 0.0%) {75.0%}
+6   ------------------------O                                                 (1 = 12.5%) {75.0%}
+7   ... 
+24  -----O                                                                    (1 = 12.5%) {87.5%}
+29  ... 
+
+Histogram: GPU.ANGLE.DisplayInitializeMS recorded 1 samples, average = 29.0 (flags = 0x1)
+0   ... 
+29  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+34  ... 
+
+Histogram: GPU.ANGLE.Renderer11InitializeDLLsMS recorded 1 samples, average = 7.0 (flags = 0x1)
+0  ... 
+7  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+8  ... 
+
+Histogram: GPU.ANGLE.Renderer11InitializeDeviceMS recorded 1 samples, average = 1.0 (flags = 0x1)
+0  O                                                                         (0 = 0.0%)
+1  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+2  ... 
+
+Histogram: GPU.ANGLE.SupportsDXGI1_2 recorded 1 samples, average = 1.0 (flags = 0x1)
+0  O                                                                         (0 = 0.0%)
+1  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+2  O                                                                         (0 = 0.0%) {100.0%}
+
+Histogram: GPU.CollectContextGraphicsInfo recorded 1 samples, average = 1.0 (flags = 0x1)
+0  O                                                                         (0 = 0.0%)
+1  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+2  ... 
+
+Histogram: GPU.DoLinkProgramTime recorded 10 samples, average = 6.3 (flags = 0x1)
+0   ------------------------------------------------------------------------O (6 = 60.0%)
+1   ... 
+8   ------------O                                                             (2 = 20.0%) {60.0%}
+10  ... 
+17  ----O                                                                     (1 = 10.0%) {80.0%}
+20  ... 
+29  --O                                                                       (1 = 10.0%) {90.0%}
+34  ... 
+
+Histogram: GPU.EGLDisplayType recorded 1 samples, average = 4.0 (flags = 0x1)
+0  ... 
+4  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+5  ... 
+
+Histogram: GPU.FenceSupport recorded 2 samples, average = 1.0 (flags = 0x1)
+0  O                                                                         (0 = 0.0%)
+1  ------------------------------------------------------------------------O (2 = 100.0%) {0.0%}
+2  O                                                                         (0 = 0.0%) {100.0%}
+
+Histogram: GPU.InitializeOneOffMediumTime recorded 1 samples, average = 200.0 (flags = 0x1)
+0    ... 
+171  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+210  ... 
+
+Histogram: GPU.MaxMSAASampleCount recorded 1 samples (flags = 0x1)
+8  ------------------------------------------------------------------------O (1 = 100.0%)
+
+Histogram: GPU.ProgramCache.BinaryCacheHitTime recorded 6 samples, average = 397.2 (flags = 0x1)
+0    ... 
+258  ------------------------------------------------------------------------O (2 = 33.3%) {0.0%}
+340  ------------------------------------------------------------------------O (2 = 33.3%) {33.3%}
+448  ------------------------------------------------------------------------O (2 = 33.3%) {66.7%}
+590  ... 
+
+Histogram: GPU.ProgramCache.BinaryCacheMissTime recorded 4 samples, average = 14227.8 (flags = 0x1)
+0      ... 
+5362   ------------------------------------------------------------------------O (1 = 25.0%) {0.0%}
+7439   ------------------------------------------------------------------------O (1 = 25.0%) {25.0%}
+10321  ------------------------------------------------------------------------O (1 = 25.0%) {50.0%}
+14319  ... 
+27562  ------------------------------------------------------------------------O (1 = 25.0%) {75.0%}
+38240  ... 
+
+Histogram: GPU.ProgramCache.CacheHit recorded 10 samples, average = 0.6 (flags = 0x1)
+0  ------------------------------------------------O                         (4 = 40.0%)
+1  ------------------------------------------------------------------------O (6 = 60.0%) {40.0%}
+2  O                                                                         (0 = 0.0%) {100.0%}
+
+Histogram: GPU.ProgramCache.LoadBinarySuccess recorded 6 samples, average = 1.0 (flags = 0x1)
+0  O                                                                         (0 = 0.0%)
+1  ------------------------------------------------------------------------O (6 = 100.0%) {0.0%}
+2  O                                                                         (0 = 0.0%) {100.0%}
+
+Histogram: GPU.ProgramCache.MemorySizeAfterKb recorded 4 samples, average = 16.0 (flags = 0x1)
+0   ... 
+5   ------------------------------------------------------------------------O (1 = 25.0%) {0.0%}
+7   ... 
+12  ------------------------------------O                                     (1 = 25.0%) {25.0%}
+16  -----------------------------O                                            (1 = 25.0%) {50.0%}
+21  -----------------------------O                                            (1 = 25.0%) {75.0%}
+28  ... 
+
+Histogram: GPU.ProgramCache.MemorySizeBeforeKb recorded 4 samples, average = 9.3 (flags = 0x1)
+0   ------------------------------------------------------------------------O (1 = 25.0%)
+1   ... 
+5   ------------------------------------O                                     (1 = 25.0%) {25.0%}
+7   ... 
+12  ------------------O                                                       (1 = 25.0%) {50.0%}
+16  --------------O                                                           (1 = 25.0%) {75.0%}
+21  ... 
+
+Histogram: GPU.ProgramCache.ProgramBinarySizeBytes recorded 4 samples, average = 6949.8 (flags = 0x1)
+0     ... 
+5338  ------------------------------------------------------------------------O (2 = 50.0%) {0.0%}
+7031  ------------------------------------------------------------------------O (2 = 50.0%) {50.0%}
+9260  ... 
+
+Histogram: GPU.TextureRG recorded 2 samples, average = 1.0 (flags = 0x1)
+0  O                                                                         (0 = 0.0%)
+1  ------------------------------------------------------------------------O (2 = 100.0%) {0.0%}
+2  O                                                                         (0 = 0.0%) {100.0%}
+
+Histogram: V8.Initializer.LoadV8Snapshot.Result recorded 1 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (1 = 100.0%)
+1  ... 
+
+Histogram: V8.Initializer.OpenV8File.Result recorded 2 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (2 = 100.0%)
+1  ... 
+
+
+[1214/220607:VERBOSE1:pref_proxy_config_tracker_impl.cc(218)] 04E795D0: set chrome proxy config service to 04E798B8
+[1214/220607:VERBOSE1:pref_proxy_config_tracker_impl.cc(355)] 04E795D0: Done pushing proxy to UpdateProxyConfig
+[1214/220607:VERBOSE1:child_thread_impl.cc(357)] Mojo is disabled on child
+[1214/220607:VERBOSE1:gles2_cmd_decoder.cc(2771)] GL_OES_packed_depth_stencil supported.
+[1214/220607:VERBOSE1:webrtc_internals.cc(58)] Could not get the download directory.
+[1214/220608:INFO:systeminfo.cc(82)] Available number of cores: 8
+[1214/220608:VERBOSE1:child_thread_impl.cc(357)] Mojo is disabled on child
+[1214/220608:VERBOSE1:gles2_cmd_decoder.cc(2771)] GL_OES_packed_depth_stencil supported.
+[1214/220608:VERBOSE1:gles2_cmd_decoder.cc(2771)] GL_OES_packed_depth_stencil supported.
+[1214/220608:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  4B294088
+  URL:                    http://baishi.baidu.com/watch/01038065080697220107.html?&page=videoMultiNeed
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220608:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220608:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 1
+[1214/220609:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  4B297088
+  URL:                    http://widget.weibo.com/relationship/followbutton.php?btn=red&style=3&uid=1886494563&width=220&height=24&language=zh_cn
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220609:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220609:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 2
+[1214/220609:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  4B297A88
+  URL:                    http://v.baidu.com/dev_proxy_watch.html?v=214556#action=get
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220609:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220609:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 3
+[1214/220609:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 2
+[1214/220609:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  4B297A88
+  URL:                    http://baishi.baidu.com/browse_static/common/html/proxy_blank.html
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220609:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220609:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 3
+[1214/220609:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/220609:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/220609:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 2
+[1214/220609:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/220609:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/220609:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  4B297708
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220609:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220609:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 3
+[1214/220610:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  4B296F08
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220610:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220610:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 4
+[1214/220610:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  4B297008
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220610:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220610:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 5
+[1214/220610:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  4B297508
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220610:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220610:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 6
+[1214/220610:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  4B7C8308
+  URL:                    http://pos.baidu.com/s?hei=120&wid=232&di=u3113299&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&psi=a37e69f2f7cc1850f10e9958ee877f72&pss=1200x2106&pis=232x120&dtm=HTML_POST&pcs=767x395&dis=1&cmi=4&par=1920x1040&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&tcn=1544796370&psr=1920x1080&cpl=3&dri=0&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E7%88%B1%E4%B8%8A%E4%BA%86%E8%8E%AB%E5%B1%B1%E5%B1%B1%2C%E5%8D%B4%E5%B8%8C%E6%9C%9B%E6%A1%91%E6%A1%91%E4%B9%9F%E8%83%BD%E5%96%9C%E6%AC%A2%E8%8E%AB%E5%B1%B1%E5%B1%B1%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&exps=111000,113000,110000&dai=1&tpr=1544796370225&ari=2&tlm=1544796370&ccd=24&cce=true&cec=UTF-8&cja=false&ps=0x0&dc=3&chi=1&cfv=0&cdo=-1&drs=3&ant=0&col=zh-CN
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220610:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220610:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 7
+[1214/220610:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  4B7C8408
+  URL:                    http://pos.baidu.com/s?hei=120&wid=960&di=u3113559&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&psi=76851b6eb5bb752621436820be1afb04&dri=0&tlm=1544796370&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E7%88%B1%E4%B8%8A%E4%BA%86%E8%8E%AB%E5%B1%B1%E5%B1%B1%2C%E5%8D%B4%E5%B8%8C%E6%9C%9B%E6%A1%91%E6%A1%91%E4%B9%9F%E8%83%BD%E5%96%9C%E6%AC%A2%E8%8E%AB%E5%B1%B1%E5%B1%B1%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&par=1920x1040&pss=1200x2106&exps=111000,110000&ari=2&pis=960x120&dc=3&cpl=3&ccd=24&pcs=767x395&dis=1&cec=UTF-8&dtm=HTML_POST&col=zh-CN&cce=true&cfv=0&cmi=4&tpr=1544796370256&drs=3&psr=1920x1080&tcn=1544796370&cja=false&ant=0&cdo=-1&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&ps=0x0&chi=1&dai=2
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220610:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220610:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 8
+[1214/220610:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  4B7C8508
+  URL:                    http://pos.baidu.com/s?hei=120&wid=960&di=u3111561&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&psi=40a9d9968db5454d1315a4810c17c115&chi=1&cec=UTF-8&ari=2&par=1920x1040&tpr=1544796370269&cce=true&dc=3&pcs=767x395&cpl=3&ps=0x0&pss=1200x2106&cmi=4&cja=false&cdo=-1&dri=0&dis=1&cfv=0&tlm=1544796370&col=zh-CN&pis=960x120&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E7%88%B1%E4%B8%8A%E4%BA%86%E8%8E%AB%E5%B1%B1%E5%B1%B1%2C%E5%8D%B4%E5%B8%8C%E6%9C%9B%E6%A1%91%E6%A1%91%E4%B9%9F%E8%83%BD%E5%96%9C%E6%AC%A2%E8%8E%AB%E5%B1%B1%E5%B1%B1%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&tcn=1544796370&psr=1920x1080&dtm=HTML_POST&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&ant=0&dai=3&ccd=24&drs=3&exps=111000,114011,110018
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220610:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220610:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 9
+[1214/220610:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  4B7C8608
+  URL:                    http://pos.baidu.com/s?hei=120&wid=232&di=u3113560&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&psi=8909f87811d27f80b6b9648553d12706&pss=1200x2106&dri=0&chi=1&dc=3&cja=false&cpl=3&pcs=767x395&ccd=24&cfv=0&tlm=1544796370&ari=2&tcn=1544796370&exps=111000,110000&dai=4&cmi=4&col=zh-CN&par=1920x1040&cdo=-1&ps=0x0&dis=1&drs=3&tpr=1544796370305&dtm=HTML_POST&cec=UTF-8&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E7%88%B1%E4%B8%8A%E4%BA%86%E8%8E%AB%E5%B1%B1%E5%B1%B1%2C%E5%8D%B4%E5%B8%8C%E6%9C%9B%E6%A1%91%E6%A1%91%E4%B9%9F%E8%83%BD%E5%96%9C%E6%AC%A2%E8%8E%AB%E5%B1%B1%E5%B1%B1%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&pis=232x120&psr=1920x1080&ant=0&cce=true&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220610:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220610:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 10
+[1214/220610:ERROR:render_media_log.cc(20)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[1214/220611:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=e03037cf07e6bc9f6022e4aa7bd668f9&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E9FB073B9419EFC2A51EA5C8C6A59DA1&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544796143.067&e=b9283a07e292fb370ac9759cf7c451c55f54c34f39129a53b0225db828aa800d&.stamp=0.837335160248845
+[1214/220611:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=e03037cf07e6bc9f6022e4aa7bd668f9&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E9FB073B9419EFC2A51EA5C8C6A59DA1&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544796143.0669&e=47eb3ed1f1100e02c3e95556d669df3e0977d7b40d004aa4e7393dfa26d1087d&.stamp=0.8304446368995957
+[1214/220611:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=119&b=7&rp=0&en=playPagePlayerPause&m=1461&transaction_id=c8b3d79638ec6da3dc591dd500068bc9&sellerid=6000&impid=1245&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=playPagePlayerPause&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E9FB073B9419EFC2A51EA5C8C6A59DA1&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544796143.0608&e=26a437fc0a1e72f336306c0a091140053dba94db5f9c67ceff51ac933841f3f9&.stamp=0.37009502441474207
+[1214/220611:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=80&b=3&rp=0&en=playPageColumn1&m=672&transaction_id=963604ed1eaf1576b140493d196c9fc8&sellerid=6000&impid=1154&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumn1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=B9137A83E7B309F44FBEBF52887DADD2&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544796143.5301&e=4311cf94d6852bb3a03c6613bdc2db57394126ea8c183fe0c4192dbd2e46a057&.stamp=0.8234988082237471
+[1214/220611:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=116&b=3&rp=0&en=playPageColumnRightBanner1&m=673&transaction_id=6e4db10364e1fb048018a25d81d684e0&sellerid=6000&impid=1233&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=B9137A83E7B309F44FBEBF52887DADD2&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544796143.4872&e=f9c68a5fab2441d3c7dc1406d5bbd06355bdb88db4511ec555e9602a69713110&.stamp=0.8173213511101927
+[1214/220611:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=78&b=3&rp=0&en=playPageBottomColumn&m=674&transaction_id=0812cce9dcb88376b8c9fc24fe870e54&sellerid=6000&impid=1155&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageBottomColumn&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=FEE919383BABD0E24771C18DFDF4F9EB&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544796143.621&e=416ff3a04b89272fabb8e2099354b532982a11f6a407ffe2146d0201f686b7f5&.stamp=0.3329639154602366
+[1214/220611:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=80&b=3&rp=0&en=playPageColumn1&m=672&transaction_id=963604ed1eaf1576b140493d196c9fc8&sellerid=6000&impid=1154&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumn1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=B9137A83E7B309F44FBEBF52887DADD2&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544796143.5305&e=ef0a6f49c1ae8768df293913f64ee1c26398e950949390451fe43bcd0f854ac4&.stamp=0.7063603091359385
+[1214/220611:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=117&b=3&rp=0&en=playPageColumnRightBanner2&m=675&transaction_id=0b4112f27170007a53023d6f302801e2&sellerid=6000&impid=1234&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner2&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=A12C19546BAF5527FD83F04228C9E524&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544796143.6218&e=2f7f4507462ee8a36a73303a0394b20a98bfe944ca067bce4b81f4780d76554a&.stamp=0.35325614150435336
+[1214/220611:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=116&b=3&rp=0&en=playPageColumnRightBanner1&m=673&transaction_id=6e4db10364e1fb048018a25d81d684e0&sellerid=6000&impid=1233&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=B9137A83E7B309F44FBEBF52887DADD2&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544796143.4873&e=bfc14652ce0038ff2759d53145784cfcf377f10197477d297231bc67c89c87c8&.stamp=0.10640084778095549
+[1214/220611:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=78&b=3&rp=0&en=playPageBottomColumn&m=674&transaction_id=0812cce9dcb88376b8c9fc24fe870e54&sellerid=6000&impid=1155&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageBottomColumn&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=FEE919383BABD0E24771C18DFDF4F9EB&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544796143.6212&e=21161e0a35cefdd0d869a0aee91e1f04a82c1ee59162b0e8496f374952abcd3d&.stamp=0.4623006889853951
+[1214/220611:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=117&b=3&rp=0&en=playPageColumnRightBanner2&m=675&transaction_id=0b4112f27170007a53023d6f302801e2&sellerid=6000&impid=1234&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner2&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=A12C19546BAF5527FD83F04228C9E524&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544796143.6219&e=9f339c4c736af4c518f03526a911fa017f08928abb85d3eb897aadf3198b66e2&.stamp=0.4367083749325089
+[1214/220611:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=e03037cf07e6bc9f6022e4aa7bd668f9&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E9FB073B9419EFC2A51EA5C8C6A59DA1&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=vshow&ts_s=1544796143.067&e=164c6f8dfb12a84d2d29a2c91951018cf5e04fbaa2791fa5c21e757e37773fe3&.stamp=0.8817986510915143
+[1214/220611:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=80&b=3&rp=0&en=playPageColumn1&m=672&transaction_id=963604ed1eaf1576b140493d196c9fc8&sellerid=6000&impid=1154&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumn1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=B9137A83E7B309F44FBEBF52887DADD2&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=vshow&ts_s=1544796143.5306&e=5f8b52df55cfa792ad068243b6e4000075eefde18a51dba2f4d3fa5b02067244&.stamp=0.32443474110499637
+[1214/220611:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=116&b=3&rp=0&en=playPageColumnRightBanner1&m=673&transaction_id=6e4db10364e1fb048018a25d81d684e0&sellerid=6000&impid=1233&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=B9137A83E7B309F44FBEBF52887DADD2&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=vshow&ts_s=1544796143.4874&e=225a3d8c89c47beb5c0ad02ccba2282d18dbdef59c6c49545ad09bf0142d65e7&.stamp=0.7033822315895313
+[1214/220613:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  4B297608
+  URL:                    https://pos.baidu.com/wh/o.htm?ltr=
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/220613:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/220613:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 11
+[1214/220613:VERBOSE1:child_thread_impl.cc(357)] Mojo is disabled on child
+[1214/220614:WARNING:ppapi_thread.cc(459)] InitModule failed with error -2
+[1214/220623:VERBOSE1:ppapi_plugin_process_host.cc(493)] PpapiPluginProcessHost::OnChannelError()
+[1214/220623:WARNING:plugin_module.cc(650)] Plugin doesn't support instance interface, failing.
+[1214/220623:VERBOSE1:ppapi_plugin_process_host.cc(462)] ppapi plugin process crashed.
+[1214/220623:WARNING:plugin_module.cc(650)] Plugin doesn't support instance interface, failing.
+[1214/220627:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 10
+[1214/220627:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[1214/220632:VERBOSE1:statistics_recorder.cc(350)] Collections of all histograms
+Histogram: GPU.ANGLE.D3D11CreateDeviceMS recorded 1 samples, average = 18.0 (flags = 0x1)
+0   ... 
+17  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+20  ... 
+
+Histogram: GPU.ANGLE.D3D11FeatureLevel recorded 1 samples, average = 5.0 (flags = 0x1)
+0  ... 
+5  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+6  O                                                                         (0 = 0.0%) {100.0%}
+
+Histogram: GPU.ANGLE.D3D11InitializeResult recorded 1 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (1 = 100.0%)
+1  ... 
+
+Histogram: GPU.ANGLE.D3DCompileMS recorded 10 samples, average = 6.7 (flags = 0x1)
+0   ... 
+2   ------------------------------------------------------------------------O (3 = 30.0%) {0.0%}
+3   ------------------------O                                                 (1 = 10.0%) {30.0%}
+4   O                                                                         (0 = 0.0%) {40.0%}
+5   ------------------------O                                                 (1 = 10.0%) {40.0%}
+6   ------------------------------------------------O                         (2 = 20.0%) {50.0%}
+7   ------------------------O                                                 (1 = 10.0%) {70.0%}
+8   O                                                                         (0 = 0.0%) {80.0%}
+10  ------------O                                                             (1 = 10.0%) {80.0%}
+12  ... 
+24  -----O                                                                    (1 = 10.0%) {90.0%}
+29  ... 
+
+Histogram: GPU.ANGLE.DisplayInitializeMS recorded 1 samples, average = 25.0 (flags = 0x1)
+0   ... 
+24  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+29  ... 
+
+Histogram: GPU.ANGLE.Renderer11InitializeDLLsMS recorded 1 samples, average = 5.0 (flags = 0x1)
+0  ... 
+5  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+6  ... 
+
+Histogram: GPU.ANGLE.Renderer11InitializeDeviceMS recorded 1 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (1 = 100.0%)
+1  ... 
+
+Histogram: GPU.ANGLE.SupportsDXGI1_2 recorded 1 samples, average = 1.0 (flags = 0x1)
+0  O                                                                         (0 = 0.0%)
+1  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+2  O                                                                         (0 = 0.0%) {100.0%}
+
+Histogram: GPU.CollectContextGraphicsInfo recorded 1 samples, average = 1.0 (flags = 0x1)
+0  O                                                                         (0 = 0.0%)
+1  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+2  ... 
+
+Histogram: GPU.DoLinkProgramTime recorded 5 samples, average = 16.8 (flags = 0x1)
+0   ... 
+10  ------------------------------------O                                     (1 = 20.0%) {0.0%}
+12  ------------------------------------------------------------------------O (2 = 40.0%) {20.0%}
+14  ... 
+20  ------------------O                                                       (1 = 20.0%) {60.0%}
+24  --------------O                                                           (1 = 20.0%) {80.0%}
+29  ... 
+
+Histogram: GPU.EGLDisplayType recorded 1 samples, average = 4.0 (flags = 0x1)
+0  ... 
+4  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+5  ... 
+
+Histogram: GPU.FenceSupport recorded 2 samples, average = 1.0 (flags = 0x1)
+0  O                                                                         (0 = 0.0%)
+1  ------------------------------------------------------------------------O (2 = 100.0%) {0.0%}
+2  O                                                                         (0 = 0.0%) {100.0%}
+
+Histogram: GPU.InitializeOneOffMediumTime recorded 1 samples, average = 122.0 (flags = 0x1)
+0    ... 
+113  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+139  ... 
+
+Histogram: GPU.MaxMSAASampleCount recorded 1 samples (flags = 0x1)
+8  ------------------------------------------------------------------------O (1 = 100.0%)
+
+Histogram: GPU.ProgramCache.BinaryCacheMissTime recorded 5 samples, average = 15676.2 (flags = 0x1)
+0      ... 
+10321  ------------------------------------------------------------------------O (3 = 60.0%) {0.0%}
+14319  ------------------------O                                                 (1 = 20.0%) {60.0%}
+19866  O                                                                         (0 = 0.0%) {80.0%}
+27562  ------------------------O                                                 (1 = 20.0%) {80.0%}
+38240  ... 
+
+Histogram: GPU.ProgramCache.CacheHit recorded 5 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (5 = 100.0%)
+1  ... 
+
+Histogram: GPU.ProgramCache.MemorySizeAfterKb recorded 5 samples, average = 20.2 (flags = 0x1)
+0   ... 
+5   ------------------------------------------------------------------------O (1 = 20.0%) {0.0%}
+7   ... 
+12  ------------------------------------O                                     (1 = 20.0%) {20.0%}
+16  -----------------------------O                                            (1 = 20.0%) {40.0%}
+21  -----------------------------O                                            (1 = 20.0%) {60.0%}
+28  O                                                                         (0 = 0.0%) {80.0%}
+37  -----------------------------O                                            (1 = 20.0%) {80.0%}
+49  ... 
+
+Histogram: GPU.ProgramCache.MemorySizeBeforeKb recorded 5 samples, average = 12.8 (flags = 0x1)
+0   ------------------------------------------------------------------------O (1 = 20.0%)
+1   ... 
+5   ------------------------------------O                                     (1 = 20.0%) {20.0%}
+7   ... 
+12  ------------------O                                                       (1 = 20.0%) {40.0%}
+16  --------------O                                                           (1 = 20.0%) {60.0%}
+21  --------------O                                                           (1 = 20.0%) {80.0%}
+28  ... 
+
+Histogram: GPU.ProgramCache.ProgramBinarySizeBytes recorded 5 samples, average = 7712.4 (flags = 0x1)
+0     ... 
+5338  ------------------------------------------------------------------------O (2 = 40.0%) {0.0%}
+7031  ------------------------------------------------------------------------O (2 = 40.0%) {40.0%}
+9260  ------------------------------------O                                     (1 = 20.0%) {80.0%}
+12196 ... 
+
+Histogram: GPU.TextureRG recorded 2 samples, average = 1.0 (flags = 0x1)
+0  O                                                                         (0 = 0.0%)
+1  ------------------------------------------------------------------------O (2 = 100.0%) {0.0%}
+2  O                                                                         (0 = 0.0%) {100.0%}
+
+Histogram: V8.Initializer.LoadV8Snapshot.Result recorded 1 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (1 = 100.0%)
+1  ... 
+
+Histogram: V8.Initializer.OpenV8File.Result recorded 2 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (2 = 100.0%)
+1  ... 
+
+
+[1214/222204:VERBOSE1:pref_proxy_config_tracker_impl.cc(218)] 02895650: set chrome proxy config service to 02895938
+[1214/222204:VERBOSE1:pref_proxy_config_tracker_impl.cc(355)] 02895650: Done pushing proxy to UpdateProxyConfig
+[1214/222204:VERBOSE1:webrtc_internals.cc(58)] Could not get the download directory.
+[1214/222205:INFO:systeminfo.cc(82)] Available number of cores: 8
+[1214/222205:VERBOSE1:child_thread_impl.cc(357)] Mojo is disabled on child
+[1214/222205:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  51C94088
+  URL:                    http://baishi.baidu.com/watch/01038065080697220107.html?&page=videoMultiNeed
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222205:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222205:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 1
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  51C94608
+  URL:                    http://v.baidu.com/dev_proxy_watch.html?v=214556#action=get
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222206:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 2
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  51C97908
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222206:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 3
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  51C97A08
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222206:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 4
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  51C97108
+  URL:                    http://widget.weibo.com/relationship/followbutton.php?btn=red&style=3&uid=1886494563&width=220&height=24&language=zh_cn
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222206:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 5
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  51C94508
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222206:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 6
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  51C94408
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222206:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 7
+[1214/222206:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 6
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  51C94608
+  URL:                    http://baishi.baidu.com/browse_static/common/html/proxy_blank.html
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222206:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 7
+[1214/222206:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222206:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222206:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 6
+[1214/222206:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222206:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222206:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=b907db10a93c1d375ca0d3d703e15647&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=0164CB53DF491F1FEE62F883D2951FDA&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797099.7621&e=7a69d62b966b12d86b9cb3b80cc47dd4e2783a04942ce9d75073de5401e4fa1d&.stamp=0.7619766036906737
+[1214/222206:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=b907db10a93c1d375ca0d3d703e15647&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=0164CB53DF491F1FEE62F883D2951FDA&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797099.7622&e=36096290beba38021c72bf3ac1f2370e61ebbe28767f058600cadbdf58f196c6&.stamp=0.9796099320104785
+[1214/222206:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=119&b=7&rp=0&en=playPagePlayerPause&m=1461&transaction_id=3398301f33725846be3b053683f593c0&sellerid=6000&impid=1245&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=playPagePlayerPause&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=0164CB53DF491F1FEE62F883D2951FDA&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797099.7708&e=1ce602090389f0e3a8cdea7933577029188c605698274bc39f92f5ee953b311e&.stamp=0.6418074070063846
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  521EC488
+  URL:                    http://pos.baidu.com/s?hei=120&wid=232&di=u3113560&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&psi=f5017ccb54c296b2a955bdcc40c9fe6d&cmi=4&pis=232x120&cpl=3&col=zh-CN&tcn=1544797327&par=960x520&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&tpr=1544797326732&cce=true&cja=false&dtm=HTML_POST&tlm=1544797326&chi=1&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E7%88%B1%E4%B8%8A%E4%BA%86%E8%8E%AB%E5%B1%B1%E5%B1%B1%2C%E5%8D%B4%E5%B8%8C%E6%9C%9B%E6%A1%91%E6%A1%91%E4%B9%9F%E8%83%BD%E5%96%9C%E6%AC%A2%E8%8E%AB%E5%B1%B1%E5%B1%B1%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&pcs=375x189&pss=1200x2106&exps=111000,110000&ccd=24&dri=0&drs=3&cec=UTF-8&dc=3&cfv=0&ant=0&dis=1&cdo=-1&psr=960x540&ps=0x0&dai=3&ari=2
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222206:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222206:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 7
+[1214/222207:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  521EC388
+  URL:                    http://pos.baidu.com/s?hei=120&wid=960&di=u3113559&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&psi=1512fd5014cce1528552f52c6cde67e7&tpr=1544797326714&exps=111000,114011,110000&par=960x520&ps=0x0&cja=false&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E7%88%B1%E4%B8%8A%E4%BA%86%E8%8E%AB%E5%B1%B1%E5%B1%B1%2C%E5%8D%B4%E5%B8%8C%E6%9C%9B%E6%A1%91%E6%A1%91%E4%B9%9F%E8%83%BD%E5%96%9C%E6%AC%A2%E8%8E%AB%E5%B1%B1%E5%B1%B1%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&drs=3&pss=1200x2106&dri=0&ccd=24&dis=1&cce=true&col=zh-CN&cfv=0&pis=960x120&chi=1&dai=2&cpl=3&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&ant=0&tcn=1544797327&dtm=HTML_POST&cec=UTF-8&pcs=375x189&tlm=1544797326&ari=2&cdo=-1&cmi=4&dc=3&psr=960x540
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222207:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222207:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 8
+[1214/222207:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  521EC288
+  URL:                    http://pos.baidu.com/s?hei=120&wid=960&di=u3111561&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&psi=7ebfd2a50eb56e6f0a9668a8bbe55bf8&tlm=1544797326&cfv=0&dis=1&drs=3&psr=960x540&dtm=HTML_POST&tcn=1544797327&pis=960x120&cpl=3&dc=3&cja=false&ccd=24&ps=0x0&dai=1&tpr=1544797326689&cdo=-1&pcs=375x189&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&par=960x520&dri=0&pss=1200x2106&cce=true&ant=0&col=zh-CN&cmi=4&chi=1&cec=UTF-8&exps=111000,110000&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E7%88%B1%E4%B8%8A%E4%BA%86%E8%8E%AB%E5%B1%B1%E5%B1%B1%2C%E5%8D%B4%E5%B8%8C%E6%9C%9B%E6%A1%91%E6%A1%91%E4%B9%9F%E8%83%BD%E5%96%9C%E6%AC%A2%E8%8E%AB%E5%B1%B1%E5%B1%B1%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&ari=2
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222207:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222207:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 9
+[1214/222207:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  521EC588
+  URL:                    http://pos.baidu.com/s?hei=120&wid=232&di=u3113299&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&psi=54eac3e69e3a7b0d4e70ddff86fd1330&cfv=0&dtm=HTML_POST&ari=2&tpr=1544797326748&dai=4&pis=232x120&exps=111000,110000&pss=1200x2106&dc=3&drs=3&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E7%88%B1%E4%B8%8A%E4%BA%86%E8%8E%AB%E5%B1%B1%E5%B1%B1%2C%E5%8D%B4%E5%B8%8C%E6%9C%9B%E6%A1%91%E6%A1%91%E4%B9%9F%E8%83%BD%E5%96%9C%E6%AC%A2%E8%8E%AB%E5%B1%B1%E5%B1%B1%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&dri=0&psr=960x540&cja=false&ps=0x0&cpl=3&cmi=4&tcn=1544797327&chi=1&col=zh-CN&par=960x520&dis=1&tlm=1544797326&cdo=-1&ccd=24&cec=UTF-8&ant=0&pcs=375x189&cce=true
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222207:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222207:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 10
+[1214/222207:ERROR:render_media_log.cc(20)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[1214/222207:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=80&b=3&rp=0&en=playPageColumn1&m=672&transaction_id=02c72e22dbdbc5d84764b893da9fbf4b&sellerid=6000&impid=1154&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumn1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797100.0599&e=9694724116a33c7c9c6ebfb897c780b168f46e5285d8997f3ad556d1c4a7b151&.stamp=0.8165338466471983
+[1214/222207:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=116&b=3&rp=0&en=playPageColumnRightBanner1&m=673&transaction_id=5e136b40a620361f526270d5cc27397a&sellerid=6000&impid=1233&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797100.0418&e=de5fdc2dace48656e031d426ac26b058162d8d69008e7467b5d6c826e163bc79&.stamp=0.1463743750479356
+[1214/222207:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=117&b=3&rp=0&en=playPageColumnRightBanner2&m=675&transaction_id=971f8c309214d1068ebb4e002b2e7570&sellerid=6000&impid=1234&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner2&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797100.1397&e=273190c99972ea44dbfdd3f29c6613c6ee4206c24d007b72a87cd89de089e920&.stamp=0.0007298337795327292
+[1214/222207:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=78&b=3&rp=0&en=playPageBottomColumn&m=674&transaction_id=6bdd35cf6cba1643325a8a3065433015&sellerid=6000&impid=1155&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageBottomColumn&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797100.1688&e=f06d93f9d493035e5ee1ee8459e390b7f5eaa4d370dab4ba9a454315339695c2&.stamp=0.5724906829402685
+[1214/222207:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=80&b=3&rp=0&en=playPageColumn1&m=672&transaction_id=02c72e22dbdbc5d84764b893da9fbf4b&sellerid=6000&impid=1154&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumn1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797100.0601&e=f9664e67c7d1445ebb712965810b44962a044b3397218b287b756c185ce3b8fd&.stamp=0.9725979968964846
+[1214/222207:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=116&b=3&rp=0&en=playPageColumnRightBanner1&m=673&transaction_id=5e136b40a620361f526270d5cc27397a&sellerid=6000&impid=1233&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797100.042&e=d130595949d67edafda33cdc9a93d29d50e908713eb76d13a1f6dfbce71f4bfd&.stamp=0.2172740974616223
+[1214/222207:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=78&b=3&rp=0&en=playPageBottomColumn&m=674&transaction_id=6bdd35cf6cba1643325a8a3065433015&sellerid=6000&impid=1155&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageBottomColumn&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797100.169&e=43e171f6b57f44f308da3e816c9f4398490d0f3d5fe6d57a427110b73dfb6bfb&.stamp=0.9690722496325987
+[1214/222207:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=117&b=3&rp=0&en=playPageColumnRightBanner2&m=675&transaction_id=971f8c309214d1068ebb4e002b2e7570&sellerid=6000&impid=1234&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner2&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797100.1398&e=fa5df55d50038c7adeb61224ac486fd4da8190bdb1e3c863c71a4019299e4517&.stamp=0.489187636875162
+[1214/222207:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=b907db10a93c1d375ca0d3d703e15647&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=0164CB53DF491F1FEE62F883D2951FDA&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=vshow&ts_s=1544797099.7623&e=bd02dc37e575daa42fbedbf886c9b68fe25e8344de49e332008b6ab753607681&.stamp=0.7434008690117584
+[1214/222209:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  51C97188
+  URL:                    https://pos.baidu.com/wh/o.htm?ltr=
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222209:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222209:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 11
+[1214/222210:VERBOSE1:child_thread_impl.cc(357)] Mojo is disabled on child
+[1214/222223:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 10
+[1214/222223:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 9
+[1214/222223:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 8
+[1214/222223:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 7
+[1214/222223:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 6
+[1214/222223:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 5
+[1214/222223:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 4
+[1214/222223:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 3
+[1214/222223:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 2
+[1214/222223:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 1
+[1214/222223:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 0
+[1214/222223:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  51C94088
+  URL:                    http://baishi.baidu.com/watch/2270003847920682244.html?&recFrom=site&list=1&&page=videoMultiNeed
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222223:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222223:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 1
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222223:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  51C97388
+  URL:                    http://widget.weibo.com/relationship/followbutton.php?btn=red&style=3&uid=1886494563&width=220&height=24&language=zh_cn
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222223:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222223:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 2
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  521EE408
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222224:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 3
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  521EC108
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222224:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 4
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  521EE508
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222224:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 5
+[1214/222224:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=3d422491621a8849c5203a9f6b361639&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797117.3449&e=e838db4f75f8b150319a8751843c57b9bfed0a8275daa1a7fe00ce78e26847ab&.stamp=0.8435253018011104
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  521EE588
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222224:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 6
+[1214/222224:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=3d422491621a8849c5203a9f6b361639&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797117.345&e=8bc31a4106c45d03f8e8a9ec944c72dbb2656fbccde80733939c8b57ba4ff258&.stamp=0.456380277742207
+[1214/222224:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=119&b=7&rp=0&en=playPagePlayerPause&m=1461&transaction_id=3df410ad4e8f9bfdf21a6201c9a1d95d&sellerid=6000&impid=1245&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=playPagePlayerPause&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797117.3487&e=fca4663c854c537d804bb33e22174ce930b66ba4c3d6031340f6fc2bbb368c29&.stamp=0.05255119749123116
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  521EE688
+  URL:                    http://pos.baidu.com/s?hei=120&wid=960&di=u3113559&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&psi=d6468ea2a2f6fa604b38bec0f6c184bb&dtm=HTML_POST&ltr=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&cdo=-1&tcn=1544797344&exps=111000,110000&psr=960x540&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E8%8A%B1%E5%BC%8F%E6%92%A9%E5%A6%B9%2C%E8%8E%AB%E5%B1%B1%E5%B1%B1%E8%A2%AB%E6%92%A9%E5%8A%A8%E5%BF%83%2C%E6%A1%91%E6%A1%91%E5%B4%A9%E6%BA%83%3A%E5%B0%91%E7%88%B7%E6%88%91%E5%96%9C%E6%AC%A2%E4%BD%A0%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&cec=UTF-8&tlm=1544797344&dri=0&ccd=24&chi=2&par=960x520&drs=3&cpl=3&dis=9&cfv=0&cce=true&ps=0x0&col=zh-CN&ari=2&pis=960x120&pss=1200x1983&dai=2&tpr=1544797344077&dc=3&pcs=943x492&ant=0&cmi=4&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&cja=false
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222224:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 7
+[1214/222224:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=116&b=3&rp=0&en=playPageColumnRightBanner1&m=673&transaction_id=d5cf65ea0fcd9ac419ce9cd27f61f9f8&sellerid=6000&impid=1233&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner1&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797117.6577&e=44d6c4bc3afd16dcaf61aaf96a63df1c2c626f91e3f3ed407b130dc0cd8cd37d&.stamp=0.017993038687290186
+[1214/222224:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=80&b=3&rp=0&en=playPageColumn1&m=672&transaction_id=f70a5e9d4ca4405121caba63c8511a6f&sellerid=6000&impid=1154&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumn1&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797117.689&e=b5d0d0d2bf9e0e024452d1123bd17d8cdc1c8cd9dd3db912b0be39c856d82f15&.stamp=0.6761026339363274
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  521EF008
+  URL:                    http://pos.baidu.com/s?hei=120&wid=232&di=u3113299&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&psi=7d3fe9565af3ddbb2dabc45264a338e6&cpl=3&cfv=0&cmi=4&ari=2&cec=UTF-8&psr=960x540&tcn=1544797344&dis=9&cce=true&drs=3&col=zh-CN&ant=0&dc=3&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E8%8A%B1%E5%BC%8F%E6%92%A9%E5%A6%B9%2C%E8%8E%AB%E5%B1%B1%E5%B1%B1%E8%A2%AB%E6%92%A9%E5%8A%A8%E5%BF%83%2C%E6%A1%91%E6%A1%91%E5%B4%A9%E6%BA%83%3A%E5%B0%91%E7%88%B7%E6%88%91%E5%96%9C%E6%AC%A2%E4%BD%A0%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&chi=2&tlm=1544797344&dtm=HTML_POST&ltr=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&cja=false&pcs=943x492&ccd=24&exps=111000,114011,110000&pis=232x120&dai=3&tpr=1544797344201&dri=0&ps=0x0&cdo=-1&pss=1200x2106&par=960x520
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222224:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 8
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  521EF088
+  URL:                    http://pos.baidu.com/s?hei=120&wid=960&di=u3111561&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&psi=edeae6eb251e8ce791123f8fb7b13951&dis=9&ps=0x0&exps=111000,114011,110000&tcn=1544797344&tpr=1544797344217&pss=1200x2106&ant=0&dri=0&pis=960x120&chi=2&cja=false&dai=4&psr=960x540&dc=3&cpl=3&cfv=0&tlm=1544797344&ccd=24&dtm=HTML_POST&cce=true&cec=UTF-8&par=960x520&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E8%8A%B1%E5%BC%8F%E6%92%A9%E5%A6%B9%2C%E8%8E%AB%E5%B1%B1%E5%B1%B1%E8%A2%AB%E6%92%A9%E5%8A%A8%E5%BF%83%2C%E6%A1%91%E6%A1%91%E5%B4%A9%E6%BA%83%3A%E5%B0%91%E7%88%B7%E6%88%91%E5%96%9C%E6%AC%A2%E4%BD%A0%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&ari=2&ltr=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&col=zh-CN&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&cmi=4&drs=3&cdo=-1&pcs=943x492
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222224:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 9
+[1214/222224:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=116&b=3&rp=0&en=playPageColumnRightBanner1&m=673&transaction_id=d5cf65ea0fcd9ac419ce9cd27f61f9f8&sellerid=6000&impid=1233&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner1&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797117.6578&e=b7bdf406ce22ac950484a456ae7d1b558b356445025213e49e407d3da50211ac&.stamp=0.22930965987571583
+[1214/222224:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=78&b=3&rp=0&en=playPageBottomColumn&m=674&transaction_id=1172da04fc4a32099aad2eddbc8f6126&sellerid=6000&impid=1155&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageBottomColumn&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797117.79&e=8a08b7589cd3af3b877eca845d6cef0e7a6efaa4fb82fbd0e8abceb98c1506a9&.stamp=0.37382173454378864
+[1214/222224:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=117&b=3&rp=0&en=playPageColumnRightBanner2&m=675&transaction_id=84208a990663f79a4ddf6b85ceb7ef14&sellerid=6000&impid=1234&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner2&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797117.7753&e=a2f3bc57347bbedbd2372be4908c57c3291ce7ace23fea2277e7ccd7eaffdfa6&.stamp=0.1454262824150554
+[1214/222224:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=117&b=3&rp=0&en=playPageColumnRightBanner2&m=675&transaction_id=84208a990663f79a4ddf6b85ceb7ef14&sellerid=6000&impid=1234&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner2&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797117.7754&e=14bd1f58f43931ca25ad10a303cd7199510e975ac66cab1aab909c05ce64eab2&.stamp=0.35367051811152983
+[1214/222224:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=78&b=3&rp=0&en=playPageBottomColumn&m=674&transaction_id=1172da04fc4a32099aad2eddbc8f6126&sellerid=6000&impid=1155&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageBottomColumn&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797117.7901&e=536a08ebec14d81a8c6f1dd5b187d711e637cd92997c8b5ffe5ca53fc4d4fe98&.stamp=0.14424000590662445
+[1214/222224:ERROR:render_media_log.cc(20)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  521EE788
+  URL:                    http://pos.baidu.com/s?hei=120&wid=232&di=u3113560&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&psi=6d351c98eef17a9d1d95370247066926&dc=3&dri=0&ltr=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&tpr=1544797344064&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&pcs=943x492&dtm=HTML_POST&cdo=-1&par=960x520&chi=2&col=zh-CN&ari=2&cja=false&cmi=4&cec=UTF-8&dai=1&ps=0x0&psr=960x540&tcn=1544797344&exps=111000,114011,110000&cce=true&ccd=24&drs=3&pis=232x120&dis=9&cpl=3&pss=1200x1983&tlm=1544797344&cfv=0&ant=0&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E8%8A%B1%E5%BC%8F%E6%92%A9%E5%A6%B9%2C%E8%8E%AB%E5%B1%B1%E5%B1%B1%E8%A2%AB%E6%92%A9%E5%8A%A8%E5%BF%83%2C%E6%A1%91%E6%A1%91%E5%B4%A9%E6%BA%83%3A%E5%B0%91%E7%88%B7%E6%88%91%E5%96%9C%E6%AC%A2%E4%BD%A0%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222224:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222224:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 10
+[1214/222225:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=3d422491621a8849c5203a9f6b361639&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=vshow&ts_s=1544797117.345&e=96498e5531370cffbe2b8fe0f61681348470cb5f30e8cd1c242f2d19236c0c34&.stamp=0.7740882188548324
+[1214/222239:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=80&b=3&rp=0&en=playPageColumn1&m=672&transaction_id=f70a5e9d4ca4405121caba63c8511a6f&sellerid=6000&impid=1154&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumn1&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=E5A1CEE69DB9408968C01F2EB1DA2227&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=vshow&ts_s=1544797117.6891&e=25d25e350af0e03542cdac280a52cdfe3fee653ea5a78c9e0e55bf3eb44e93ef&.stamp=0.4444421022969065
+[1214/222242:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 9
+[1214/222244:VERBOSE1:statistics_recorder.cc(350)] Collections of all histograms
+Histogram: Plugin.PpapiPluginLoadResult_pepflashplayer32_32_0_0_101.dll recorded 1 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (1 = 100.0%)
+1  ... 
+
+Histogram: Plugin.PpapiPluginLoadTime_pepflashplayer32_32_0_0_101.dll recorded 1 samples, average = 26.0 (flags = 0x1)
+0   ... 
+24  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+29  ... 
+
+Histogram: Plugin.PpapiSyncIPCTime recorded 116 samples, average = 0.2 (flags = 0x1)
+0   ------------------------------------------------------------------------O (113 = 97.4%)
+1   -O                                                                        (1 = 0.9%) {97.4%}
+2   -O                                                                        (1 = 0.9%) {98.3%}
+3   ... 
+17  O                                                                         (1 = 0.9%) {99.1%}
+20  ... 
+
+Histogram: V8.Initializer.LoadV8Snapshot.Result recorded 1 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (1 = 100.0%)
+1  ... 
+
+Histogram: V8.Initializer.OpenV8File.Result recorded 2 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (2 = 100.0%)
+1  ... 
+
+
+[1214/222454:VERBOSE1:pref_proxy_config_tracker_impl.cc(218)] 04D36430: set chrome proxy config service to 0B2F0FB0
+[1214/222454:VERBOSE1:pref_proxy_config_tracker_impl.cc(355)] 04D36430: Done pushing proxy to UpdateProxyConfig
+[1214/222455:VERBOSE1:webrtc_internals.cc(58)] Could not get the download directory.
+[1214/222455:INFO:systeminfo.cc(82)] Available number of cores: 8
+[1214/222455:VERBOSE1:child_thread_impl.cc(357)] Mojo is disabled on child
+[1214/222456:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A894088
+  URL:                    http://baishi.baidu.com/watch/01038065080697220107.html?&page=videoMultiNeed
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222456:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222456:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 1
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A897188
+  URL:                    http://widget.weibo.com/relationship/followbutton.php?btn=red&style=3&uid=1886494563&width=220&height=24&language=zh_cn
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222457:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 2
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A897288
+  URL:                    http://v.baidu.com/dev_proxy_watch.html?v=214556#action=get
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222457:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 3
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A897908
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222457:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 4
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A897A88
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222457:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 5
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A897B88
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222457:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 6
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A897088
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222457:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 7
+[1214/222457:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 6
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A897288
+  URL:                    http://baishi.baidu.com/browse_static/common/html/proxy_blank.html
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222457:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 7
+[1214/222457:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222457:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222457:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 6
+[1214/222457:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222457:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222457:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=40becbd604c52721a24a9e41ee30f79b&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=69400A9D3572C3BC6E07D04A16A1F321&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797270.5668&e=1e2d0fe40ea83a15d5ca849d5d31571c3c988a97a8d247ed361bd1d3237af665&.stamp=0.5292929138741032
+[1214/222457:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=40becbd604c52721a24a9e41ee30f79b&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=69400A9D3572C3BC6E07D04A16A1F321&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797270.5669&e=5398c5261cc6a0c5b2ddccbbb26aba60c67e9a4437b2d23c1a2ccc211ee06479&.stamp=0.7062646320708483
+[1214/222457:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=119&b=7&rp=0&en=playPagePlayerPause&m=1461&transaction_id=5ef206f24a3450d5681182e9edcb65c0&sellerid=6000&impid=1245&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=playPagePlayerPause&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=69400A9D3572C3BC6E07D04A16A1F321&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797270.5657&e=8e85fef931477504c73f0a86d87c5ffa4dd6ea07c0c8f31e96032c91e2115db6&.stamp=0.5838859556683755
+[1214/222457:ERROR:render_media_log.cc(20)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2AD84208
+  URL:                    http://pos.baidu.com/s?hei=120&wid=232&di=u3113560&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&psi=eba59162921281bd4d3f3773899af7b1&pss=1200x2106&chi=1&pcs=375x189&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&cce=true&col=zh-CN&psr=960x540&exps=111000,110000&dai=1&ari=2&tpr=1544797497481&ps=0x0&dc=3&dis=1&dri=0&cfv=0&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E7%88%B1%E4%B8%8A%E4%BA%86%E8%8E%AB%E5%B1%B1%E5%B1%B1%2C%E5%8D%B4%E5%B8%8C%E6%9C%9B%E6%A1%91%E6%A1%91%E4%B9%9F%E8%83%BD%E5%96%9C%E6%AC%A2%E8%8E%AB%E5%B1%B1%E5%B1%B1%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&cja=false&drs=3&cdo=-1&dtm=HTML_POST&cmi=4&cec=UTF-8&par=960x520&tlm=1544797497&ccd=24&pis=232x120&cpl=3&tcn=1544797497&ant=0
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222457:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 7
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2AD84308
+  URL:                    http://pos.baidu.com/s?hei=120&wid=232&di=u3113299&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&psi=34ca66a12e982500f207049e3a0682a8&col=zh-CN&dtm=HTML_POST&tlm=1544797497&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E7%88%B1%E4%B8%8A%E4%BA%86%E8%8E%AB%E5%B1%B1%E5%B1%B1%2C%E5%8D%B4%E5%B8%8C%E6%9C%9B%E6%A1%91%E6%A1%91%E4%B9%9F%E8%83%BD%E5%96%9C%E6%AC%A2%E8%8E%AB%E5%B1%B1%E5%B1%B1%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&cec=UTF-8&pss=1200x2106&cfv=0&dai=2&dis=1&pcs=375x189&cce=true&exps=111000,110000&ari=2&tpr=1544797497508&cdo=-1&par=960x520&cpl=3&tcn=1544797498&ccd=24&dc=3&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&chi=1&cja=false&pis=232x120&drs=3&psr=960x540&dri=0&ps=0x0&ant=0&cmi=4
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222457:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 8
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2AD84508
+  URL:                    http://pos.baidu.com/s?hei=120&wid=960&di=u3113559&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&psi=83b15d762d627c25e63619c9bf7b6fa3&col=zh-CN&dai=4&drs=3&dc=3&pis=960x120&ari=2&ps=0x0&cfv=0&cdo=-1&cja=false&cmi=4&dtm=HTML_POST&cce=true&exps=111000,110000&chi=1&cpl=3&tcn=1544797498&ccd=24&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&pss=1200x2106&par=960x520&psr=960x540&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E7%88%B1%E4%B8%8A%E4%BA%86%E8%8E%AB%E5%B1%B1%E5%B1%B1%2C%E5%8D%B4%E5%B8%8C%E6%9C%9B%E6%A1%91%E6%A1%91%E4%B9%9F%E8%83%BD%E5%96%9C%E6%AC%A2%E8%8E%AB%E5%B1%B1%E5%B1%B1%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&pcs=375x189&tlm=1544797497&cec=UTF-8&ant=0&dis=1&tpr=1544797497537&dri=0
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222457:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 9
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2AD84408
+  URL:                    http://pos.baidu.com/s?hei=120&wid=960&di=u3111561&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&psi=f374c37d4498b210f95914ca373e933b&dtm=HTML_POST&cpl=3&pis=960x120&cdo=-1&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E7%88%B1%E4%B8%8A%E4%BA%86%E8%8E%AB%E5%B1%B1%E5%B1%B1%2C%E5%8D%B4%E5%B8%8C%E6%9C%9B%E6%A1%91%E6%A1%91%E4%B9%9F%E8%83%BD%E5%96%9C%E6%AC%A2%E8%8E%AB%E5%B1%B1%E5%B1%B1%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&ps=0x0&cmi=4&ari=2&exps=111000,110000&psr=960x540&dis=1&dri=0&tcn=1544797498&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&cja=false&pss=1200x2106&cce=true&cfv=0&chi=1&col=zh-CN&drs=3&tlm=1544797497&dc=3&pcs=375x189&cec=UTF-8&par=960x520&ccd=24&ant=0&tpr=1544797497523&dai=3
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222457:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222457:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 10
+[1214/222458:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=80&b=3&rp=0&en=playPageColumn1&m=672&transaction_id=4b05c2036ccaa3d6f5eb5886d8ed5188&sellerid=6000&impid=1154&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumn1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=C8CB094C3FB80DC4A0771D09D554C9D0&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797270.906&e=5b5b0d71af2d1610663b62422ca6eb17b1330afde134c38ed5c8d5c7664d968e&.stamp=0.15453044167919483
+[1214/222458:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=116&b=3&rp=0&en=playPageColumnRightBanner1&m=673&transaction_id=3939c56e95ccb14ddc0a3d45054b3817&sellerid=6000&impid=1233&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=C8CB094C3FB80DC4A0771D09D554C9D0&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797270.8795&e=cae707210a8cd8a54323e57300b86c6fd393c616c5a56448c47d36ce0542f4d8&.stamp=0.3782810568295203
+[1214/222458:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=78&b=3&rp=0&en=playPageBottomColumn&m=674&transaction_id=b8f54b0e115df2565f4d7e4b11c927e4&sellerid=6000&impid=1155&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageBottomColumn&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=C4C487CBD595F3E8397DA0D308256BA0&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797270.9836&e=d89b2caf98ab1890ccafa015313868c3b93ac8e539e9d8b1917d5d1c181ba978&.stamp=0.9792106567920513
+[1214/222458:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=116&b=3&rp=0&en=playPageColumnRightBanner1&m=673&transaction_id=3939c56e95ccb14ddc0a3d45054b3817&sellerid=6000&impid=1233&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=C8CB094C3FB80DC4A0771D09D554C9D0&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797270.8797&e=03483dc99124b944d98042c3d743feb53f66429859ae3f92ad4eb45080e69ce0&.stamp=0.47638092761237316
+[1214/222458:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=117&b=3&rp=0&en=playPageColumnRightBanner2&m=675&transaction_id=8622f0120b8f42cdf4ec30c1b8c06254&sellerid=6000&impid=1234&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner2&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=C8CB094C3FB80DC4B4F3DA626544B973&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797270.9947&e=b1d38198bf0dd7ed0e34fd05da7b50b6c9ff320e76ef783f706e5862afd14bd4&.stamp=0.45245134904683426
+[1214/222458:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=80&b=3&rp=0&en=playPageColumn1&m=672&transaction_id=4b05c2036ccaa3d6f5eb5886d8ed5188&sellerid=6000&impid=1154&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumn1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=C8CB094C3FB80DC4A0771D09D554C9D0&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797270.9062&e=f41e676ed4fe79921a52686642dc8739606db58ec84503440a4bcc703d3d97e6&.stamp=0.16520417480720617
+[1214/222458:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=78&b=3&rp=0&en=playPageBottomColumn&m=674&transaction_id=b8f54b0e115df2565f4d7e4b11c927e4&sellerid=6000&impid=1155&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageBottomColumn&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=C4C487CBD595F3E8397DA0D308256BA0&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797270.9837&e=6361e9b80b177e1470b0ba6cc21479c54956db7e6387525a84410423dfbec420&.stamp=0.10009672575539152
+[1214/222458:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=40becbd604c52721a24a9e41ee30f79b&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=69400A9D3572C3BC6E07D04A16A1F321&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=vshow&ts_s=1544797270.567&e=e511e5d71c63449d7b1205ea9e146661c177f979263dc36f64272c7a539becb7&.stamp=0.524775934950797
+[1214/222458:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=117&b=3&rp=0&en=playPageColumnRightBanner2&m=675&transaction_id=8622f0120b8f42cdf4ec30c1b8c06254&sellerid=6000&impid=1234&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner2&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=C8CB094C3FB80DC4B4F3DA626544B973&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797270.9948&e=6004d20b118e21db175a7a403f561b2a3fa929841ff011e1268c05560293b710&.stamp=0.49064791407717556
+[1214/222501:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A897388
+  URL:                    https://pos.baidu.com/wh/o.htm?ltr=
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222501:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222501:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 11
+[1214/222501:VERBOSE1:child_thread_impl.cc(357)] Mojo is disabled on child
+[1214/222530:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=80&b=3&rp=0&en=playPageColumn1&m=672&transaction_id=4b05c2036ccaa3d6f5eb5886d8ed5188&sellerid=6000&impid=1154&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumn1&works_id=01038065080697220107&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=C8CB094C3FB80DC4A0771D09D554C9D0&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=vshow&ts_s=1544797270.9062&e=54a227456f47d3d45f6448ea342d769c6e2a5a0ac0e31c3db816c1324a494a0c&.stamp=0.9096548660113999
+[1214/222534:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 10
+[1214/222534:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 9
+[1214/222534:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 8
+[1214/222534:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 7
+[1214/222534:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 6
+[1214/222534:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 5
+[1214/222534:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 4
+[1214/222534:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 3
+[1214/222534:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 2
+[1214/222534:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 1
+[1214/222534:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 0
+[1214/222534:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A894088
+  URL:                    http://baishi.baidu.com/watch/2270003847920682244.html?&recFrom=site&list=1&&page=videoMultiNeed
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222534:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222534:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 1
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(118)] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[1214/222534:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2AD85F08
+  URL:                    http://widget.weibo.com/relationship/followbutton.php?btn=red&style=3&uid=1886494563&width=220&height=24&language=zh_cn
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222534:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222534:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 2
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A896088
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222535:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 3
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A895F88
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222535:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 4
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A895788
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222535:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 5
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A895708
+  URL:                    about:blank
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222535:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 6
+[1214/222535:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=b510047bc5d61b47afcc42a6244e5aee&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=EF5B3AD74D1FFC0FA7967898D03C56F1&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797308.635&e=9241de1afa3bb4569842e486d3c5e1e0fdc72ec03c5ad435c53a7313478a4a6c&.stamp=0.7433564862921878
+[1214/222535:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=b510047bc5d61b47afcc42a6244e5aee&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=EF5B3AD74D1FFC0FA7967898D03C56F1&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797308.6351&e=8763cee548b8727c593a3ac19a90fb48e60733b5a03cb4b3bf2ba31424066941&.stamp=0.7013015242502925
+[1214/222535:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=119&b=7&rp=0&en=playPagePlayerPause&m=1461&transaction_id=1560e9a018c55dd24f1b85444dcd30ab&sellerid=6000&impid=1245&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=playPagePlayerPause&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=EF5B3AD74D1FFC0FA7967898D03C56F1&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797308.6392&e=8a3d01ec1c098686296f11089ab17da2db70dd969fa1f8803b397ceb3782df27&.stamp=0.9353698094801783
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A896108
+  URL:                    http://pos.baidu.com/s?hei=120&wid=232&di=u3113560&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&psi=13c630660b65dda577280436ea15d47d&cdo=-1&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&cec=UTF-8&cmi=4&psr=960x540&cfv=0&ps=0x0&dai=2&cpl=3&dri=0&pcs=943x492&tpr=1544797535349&cja=false&chi=2&tlm=1544797535&tcn=1544797535&col=zh-CN&par=960x520&dc=3&dtm=HTML_POST&exps=111000,110000&cce=true&ant=0&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E8%8A%B1%E5%BC%8F%E6%92%A9%E5%A6%B9%2C%E8%8E%AB%E5%B1%B1%E5%B1%B1%E8%A2%AB%E6%92%A9%E5%8A%A8%E5%BF%83%2C%E6%A1%91%E6%A1%91%E5%B4%A9%E6%BA%83%3A%E5%B0%91%E7%88%B7%E6%88%91%E5%96%9C%E6%AC%A2%E4%BD%A0%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&pss=1200x1983&pis=232x120&drs=3&ltr=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&ccd=24&dis=9&ari=2
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222535:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 7
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A895E08
+  URL:                    http://pos.baidu.com/s?hei=120&wid=960&di=u3113559&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&psi=937285a9031446814e1fe3621139b1fe&ari=2&pcs=943x492&tlm=1544797535&cfv=0&cja=false&par=960x520&dai=1&ltr=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&ccd=24&col=zh-CN&dtm=HTML_POST&drs=3&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E8%8A%B1%E5%BC%8F%E6%92%A9%E5%A6%B9%2C%E8%8E%AB%E5%B1%B1%E5%B1%B1%E8%A2%AB%E6%92%A9%E5%8A%A8%E5%BF%83%2C%E6%A1%91%E6%A1%91%E5%B4%A9%E6%BA%83%3A%E5%B0%91%E7%88%B7%E6%88%91%E5%96%9C%E6%AC%A2%E4%BD%A0%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&psr=960x540&cec=UTF-8&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&cdo=-1&ant=0&cpl=3&dri=0&cmi=4&tcn=1544797535&dis=9&cce=true&pss=1200x1983&chi=2&tpr=1544797535315&exps=111000,113000,110000&pis=960x120&ps=0x0&dc=3
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222535:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 8
+[1214/222535:ERROR:render_media_log.cc(20)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A895588
+  URL:                    http://pos.baidu.com/s?hei=120&wid=960&di=u3111561&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&psi=b789deaf469dfc8f48cf28aaa51fc9ea&tlm=1544797535&ccd=24&cce=true&ari=2&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E8%8A%B1%E5%BC%8F%E6%92%A9%E5%A6%B9%2C%E8%8E%AB%E5%B1%B1%E5%B1%B1%E8%A2%AB%E6%92%A9%E5%8A%A8%E5%BF%83%2C%E6%A1%91%E6%A1%91%E5%B4%A9%E6%BA%83%3A%E5%B0%91%E7%88%B7%E6%88%91%E5%96%9C%E6%AC%A2%E4%BD%A0%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&col=zh-CN&cmi=4&pis=960x120&cfv=0&cdo=-1&pcs=943x492&dc=3&ant=0&exps=111000,110000&ltr=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&dtm=HTML_POST&cec=UTF-8&par=960x520&psr=960x540&cja=false&dis=9&tcn=1544797535&tpr=1544797535492&dai=3&ps=0x0&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&dri=0&pss=1200x2106&cpl=3&drs=3&chi=2
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222535:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 9
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A894D08
+  URL:                    http://pos.baidu.com/s?hei=120&wid=232&di=u3113299&ltu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&psi=bdbfbdcb607bd9e921c0cde3e182deb5&dc=3&dtm=HTML_POST&exps=111000,110000&psr=960x540&ltr=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F01038065080697220107.html%3F%26page%3DvideoMultiNeed&cfv=0&par=960x520&pcs=943x492&cce=true&ps=0x0&col=zh-CN&cec=UTF-8&dri=0&ant=0&ccd=24&dai=4&cja=false&cpl=3&cmi=4&pis=232x120&drs=3&cdo=-1&tlm=1544797535&dis=9&pss=1200x2106&liu=http%3A%2F%2Fbaishi.baidu.com%2Fwatch%2F2270003847920682244.html%3F%26recFrom%3Dsite%26list%3D1%26%26page%3DvideoMultiNeed&ari=2&chi=2&ti=%E3%80%8A%E5%B0%86%E5%A4%9C%E3%80%8B%E5%AE%81%E7%BC%BA%E8%8A%B1%E5%BC%8F%E6%92%A9%E5%A6%B9%2C%E8%8E%AB%E5%B1%B1%E5%B1%B1%E8%A2%AB%E6%92%A9%E5%8A%A8%E5%BF%83%2C%E6%A1%91%E6%A1%91%E5%B4%A9%E6%BA%83%3A%E5%B0%91%E7%88%B7%E6%88%91%E5%96%9C%E6%AC%A2%E4%BD%A0%20_%E9%AB%98%E6%B8%85%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B_%E7%99%BE%E5%BA%A6%E8%A7%86%E9%A2%91&tcn=1544797536&tpr=1544797535507
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222535:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222535:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 10
+[1214/222536:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=80&b=3&rp=0&en=playPageColumn1&m=672&transaction_id=b0af7a5f469e7cfb3a4f4bc6b6602315&sellerid=6000&impid=1154&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumn1&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=ECC7B56C8EB9FB7E0BFB65F9B7858422&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797308.9223&e=538780fbbe65d120ef4f5de1bddb86fabe87aa6f9a3de42e8e019fd316bf617e&.stamp=0.05298250517367453
+[1214/222536:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=80&b=3&rp=0&en=playPageColumn1&m=672&transaction_id=b0af7a5f469e7cfb3a4f4bc6b6602315&sellerid=6000&impid=1154&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumn1&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=ECC7B56C8EB9FB7E0BFB65F9B7858422&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797308.9225&e=a1ceba94b7da132ae317e1be43877c9fdade257626178e4ad231459ef0add31b&.stamp=0.37661233670818905
+[1214/222536:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=116&b=3&rp=0&en=playPageColumnRightBanner1&m=673&transaction_id=dca052940f5045c2dd4d3eb1d83f7d3c&sellerid=6000&impid=1233&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner1&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=ECC7B56C8EB9FB7E0BFB65F9B7858422&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797308.9162&e=ab2eb87609d76645b5e5321e430c2824e778f78f705518d4b35891311c8383e0&.stamp=0.27154316841373727
+[1214/222536:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=116&b=3&rp=0&en=playPageColumnRightBanner1&m=673&transaction_id=dca052940f5045c2dd4d3eb1d83f7d3c&sellerid=6000&impid=1233&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner1&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=ECC7B56C8EB9FB7E0BFB65F9B7858422&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797308.9161&e=9de04cc79d64ea413de056be7d69523dc6b024d39b1383ab82d402a3114f13df&.stamp=0.7201741777395096
+[1214/222536:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=78&b=3&rp=0&en=playPageBottomColumn&m=674&transaction_id=dc3a315ccb64f4abea1557d943a7385e&sellerid=6000&impid=1155&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageBottomColumn&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=ECC7B56C8EB9FB7E0BFB65F9B7858422&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797309.0618&e=7098f8071cf0658167ce19ca81224cb3495775fd8bf398a930d04113710971b5&.stamp=0.850808461518616
+[1214/222536:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=78&b=3&rp=0&en=playPageBottomColumn&m=674&transaction_id=dc3a315ccb64f4abea1557d943a7385e&sellerid=6000&impid=1155&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageBottomColumn&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=ECC7B56C8EB9FB7E0BFB65F9B7858422&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797309.0619&e=276738b3a860180b180623d73769d79a202c0d73d99470501d4d5c8cb1e88afb&.stamp=0.6502048960844229
+[1214/222536:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=117&b=3&rp=0&en=playPageColumnRightBanner2&m=675&transaction_id=bcbd654152af49afa390075aaa1890f4&sellerid=6000&impid=1234&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner2&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=ECC7B56C8EB9FB7E0BFB65F9B7858422&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=request&ts_s=1544797309.0395&e=86618292debc72272153d6fa7efd707dc3922028d6b76528076507f2eb82c548&.stamp=0.8089995455951426
+[1214/222536:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=117&b=3&rp=0&en=playPageColumnRightBanner2&m=675&transaction_id=bcbd654152af49afa390075aaa1890f4&sellerid=6000&impid=1234&p=vs&dealid=3&fp=200&sp=0&terminal=pc&position=playPageColumnRightBanner2&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=ECC7B56C8EB9FB7E0BFB65F9B7858422&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=show&ts_s=1544797309.0397&e=3b3dd3fd7ed70597367048f0d30b2213f8a87f774f5d9910ffe906e70ffec575&.stamp=0.04481064903452303
+[1214/222536:VERBOSE1:mime_type_resource_handler.cc(269)] To buffer: http://app.video.baidu.com/adver/?a=7824&b=7&rp=0&en=videoPlayPageSkin&m=1854&transaction_id=b510047bc5d61b47afcc42a6244e5aee&sellerid=6000&impid=1145&p=vs&dealid=7&fp=200&sp=0&terminal=pc&position=videoPlayPageSkin&works_id=2270003847920682244&block_sign=&video_type=&play_channel=&site=http%3A%2F%2Fbaishi.baidu.com%2F&online=1&cuid=EF5B3AD74D1FFC0FA7967898D03C56F1&version=0.0.0&device=&os=0&os_version=&locale=&vendor=&model=&screen_width=0&screen_height=0&idfa=&android_id=&mac=&imei=&connection_type=2&operator_type=0&orientation=&dpi=0&d=vshow&ts_s=1544797308.6351&e=7b07881f1a348b27a2f2af9f85398aca400ba8d38d294b94ee94ca55d0cc8484&.stamp=0.8269914265044203
+[1214/222538:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  2A895888
+  URL:                    https://pos.baidu.com/wh/o.htm?ltr=
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[1214/222538:VERBOSE1:script_context.cc(111)] Created context:
+  extension id:           (none)
+  frame:                  00000000
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[1214/222538:VERBOSE1:dispatcher.cc(333)] Num tracked contexts: 11
+[1214/222753:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 10
+[1214/222753:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 9
+[1214/222753:WARNING:raw_channel_win.cc(532)] WriteFile: 管道正在被关闭。 (0xE8)
+[1214/222753:ERROR:ipc_channel_win.cc(512)] pipe error: 232
+[1214/222753:VERBOSE1:dispatcher.cc(441)] Num tracked contexts: 8
+[1214/222755:VERBOSE1:statistics_recorder.cc(350)] Collections of all histograms
+Histogram: Plugin.PpapiPluginLoadResult_pepflashplayer.dll recorded 1 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (1 = 100.0%)
+1  ... 
+
+Histogram: Plugin.PpapiPluginLoadTime_pepflashplayer.dll recorded 1 samples, average = 21.0 (flags = 0x1)
+0   ... 
+20  ------------------------------------------------------------------------O (1 = 100.0%) {0.0%}
+24  ... 
+
+Histogram: Plugin.PpapiSyncIPCTime recorded 461 samples, average = 0.2 (flags = 0x1)
+0   ------------------------------------------------------------------------O (451 = 97.8%)
+1   O                                                                         (3 = 0.7%) {97.8%}
+2   O                                                                         (2 = 0.4%) {98.5%}
+3   O                                                                         (0 = 0.0%) {98.9%}
+4   O                                                                         (1 = 0.2%) {98.9%}
+5   O                                                                         (0 = 0.0%) {99.1%}
+6   O                                                                         (1 = 0.2%) {99.1%}
+7   ... 
+14  O                                                                         (2 = 0.4%) {99.3%}
+17  ... 
+24  O                                                                         (1 = 0.2%) {99.8%}
+29  ... 
+
+Histogram: V8.Initializer.LoadV8Snapshot.Result recorded 1 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (1 = 100.0%)
+1  ... 
+
+Histogram: V8.Initializer.OpenV8File.Result recorded 2 samples, average = 0.0 (flags = 0x1)
+0  ------------------------------------------------------------------------O (2 = 100.0%)
+1  ... 
+
+
+[1214/223105:ERROR:render_media_log.cc(20)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[1214/223118:ERROR:render_media_log.cc(20)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[1214/223242:ERROR:ipc_channel_win.cc(475)] pipe error: 109
+[1214/223242:ERROR:ipc_channel_win.cc(512)] pipe error: 232
+[1214/223242:ERROR:gles2_cmd_decoder.cc(12228)] Context lost because SwapBuffers failed.
+[1214/223242:ERROR:gles2_cmd_decoder.cc(12546)] Onscreen context lost via ARB/EXT_robustness. Reset status = GL_UNKNOWN_CONTEXT_RESET_KHR
+[1214/223242:ERROR:gles2_cmd_decoder.cc(4471)] Error: 5 for Command kPostSubBufferCHROMIUM
+[1214/223242:ERROR:gpu_command_buffer_stub.cc(1224)] Exiting GPU process because some drivers cannot recover from problems.
+[1214/223307:ERROR:render_media_log.cc(20)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[1214/223342:ERROR:ipc_channel_win.cc(475)] pipe error: 109
+[1214/223348:ERROR:render_media_log.cc(20)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[1214/223456:WARNING:raw_channel_win.cc(532)] WriteFile: 管道正在被关闭。 (0xE8)
+[1214/224634:WARNING:raw_channel_win.cc(532)] WriteFile: 管道正在被关闭。 (0xE8)
+[1214/224634:WARNING:channel.cc(359)] RawChannel write error
+[1214/225041:WARNING:raw_channel_win.cc(532)] WriteFile: 管道正在被关闭。 (0xE8)
+[1214/225041:WARNING:channel.cc(359)] RawChannel write error

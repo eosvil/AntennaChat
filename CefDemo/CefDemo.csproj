@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6682F9F-314C-4078-9D73-118EDC45F545}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CefDemo</RootNamespace>
+    <AssemblyName>CefDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CefSharp, Version=49.0.0.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ShareDLL\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.BrowserSubprocess.Core, Version=49.0.0.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ShareDLL\CefSharp.BrowserSubprocess.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core, Version=49.0.0.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ShareDLL\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms, Version=49.0.0.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ShareDLL\CefSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ShareDLL\cef.pak" />
+    <None Include="ShareDLL\cef_100_percent.pak" />
+    <None Include="ShareDLL\cef_200_percent.pak" />
+    <None Include="ShareDLL\cef_extensions.pak" />
+    <None Include="ShareDLL\devtools_resources.pak" />
+    <None Include="ShareDLL\locales\am.pak" />
+    <None Include="ShareDLL\locales\ar.pak" />
+    <None Include="ShareDLL\locales\bg.pak" />
+    <None Include="ShareDLL\locales\bn.pak" />
+    <None Include="ShareDLL\locales\ca.pak" />
+    <None Include="ShareDLL\locales\cs.pak" />
+    <None Include="ShareDLL\locales\da.pak" />
+    <None Include="ShareDLL\locales\de.pak" />
+    <None Include="ShareDLL\locales\el.pak" />
+    <None Include="ShareDLL\locales\en-GB.pak" />
+    <None Include="ShareDLL\locales\en-US.pak" />
+    <None Include="ShareDLL\locales\es-419.pak" />
+    <None Include="ShareDLL\locales\es.pak" />
+    <None Include="ShareDLL\locales\et.pak" />
+    <None Include="ShareDLL\locales\fa.pak" />
+    <None Include="ShareDLL\locales\fi.pak" />
+    <None Include="ShareDLL\locales\fil.pak" />
+    <None Include="ShareDLL\locales\fr.pak" />
+    <None Include="ShareDLL\locales\gu.pak" />
+    <None Include="ShareDLL\locales\he.pak" />
+    <None Include="ShareDLL\locales\hi.pak" />
+    <None Include="ShareDLL\locales\hr.pak" />
+    <None Include="ShareDLL\locales\hu.pak" />
+    <None Include="ShareDLL\locales\id.pak" />
+    <None Include="ShareDLL\locales\it.pak" />
+    <None Include="ShareDLL\locales\ja.pak" />
+    <None Include="ShareDLL\locales\kn.pak" />
+    <None Include="ShareDLL\locales\ko.pak" />
+    <None Include="ShareDLL\locales\lt.pak" />
+    <None Include="ShareDLL\locales\lv.pak" />
+    <None Include="ShareDLL\locales\ml.pak" />
+    <None Include="ShareDLL\locales\mr.pak" />
+    <None Include="ShareDLL\locales\ms.pak" />
+    <None Include="ShareDLL\locales\nb.pak" />
+    <None Include="ShareDLL\locales\nl.pak" />
+    <None Include="ShareDLL\locales\pl.pak" />
+    <None Include="ShareDLL\locales\pt-BR.pak" />
+    <None Include="ShareDLL\locales\pt-PT.pak" />
+    <None Include="ShareDLL\locales\ro.pak" />
+    <None Include="ShareDLL\locales\ru.pak" />
+    <None Include="ShareDLL\locales\sk.pak" />
+    <None Include="ShareDLL\locales\sl.pak" />
+    <None Include="ShareDLL\locales\sr.pak" />
+    <None Include="ShareDLL\locales\sv.pak" />
+    <None Include="ShareDLL\locales\sw.pak" />
+    <None Include="ShareDLL\locales\ta.pak" />
+    <None Include="ShareDLL\locales\te.pak" />
+    <None Include="ShareDLL\locales\th.pak" />
+    <None Include="ShareDLL\locales\tr.pak" />
+    <None Include="ShareDLL\locales\uk.pak" />
+    <None Include="ShareDLL\locales\vi.pak" />
+    <None Include="ShareDLL\locales\zh-CN.pak" />
+    <None Include="ShareDLL\locales\zh-TW.pak" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ShareDLL\CefSharp.BrowserSubprocess.Core.dll" />
+    <Content Include="ShareDLL\CefSharp.BrowserSubprocess.exe" />
+    <Content Include="ShareDLL\CefSharp.Core.dll" />
+    <Resource Include="ShareDLL\CefSharp.Core.xml" />
+    <Content Include="ShareDLL\CefSharp.dll" />
+    <Content Include="ShareDLL\CefSharp.WinForms.dll" />
+    <Resource Include="ShareDLL\CefSharp.WinForms.xml" />
+    <Resource Include="ShareDLL\CefSharp.xml" />
+    <Content Include="ShareDLL\d3dcompiler_43.dll" />
+    <Content Include="ShareDLL\d3dcompiler_47.dll" />
+    <Content Include="ShareDLL\debug.log" />
+    <Content Include="ShareDLL\icudtl.dat" />
+    <Content Include="ShareDLL\libcef.dll" />
+    <Content Include="ShareDLL\libEGL.dll" />
+    <Content Include="ShareDLL\libGLESv2.dll" />
+    <Content Include="ShareDLL\natives_blob.bin" />
+    <Content Include="ShareDLL\pepflashplayer.dll" />
+    <Content Include="ShareDLL\snapshot_blob.bin" />
+    <Content Include="ShareDLL\widevinecdmadapter.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
